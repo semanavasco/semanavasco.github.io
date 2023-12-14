@@ -1,12 +1,13 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    background-color: #282A36;
 }
 
 h1 {
-    color: #333;
+    color: #BD93F9;
 }
 
 p {
-    color: #666;
+    color: #FF79C6;
 }
