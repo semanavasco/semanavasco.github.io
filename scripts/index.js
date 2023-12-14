@@ -1,3 +1,13 @@
+var dossierActuel = "~";
+
+var correspondanceDossiers = [
+  {
+    dossierActuel: "~",
+    dossierPWD: "/home/visitor",
+    sousDossiers: ["AboutMe", "Studies", "Projects", "Ideas", "SocialMedia"],
+  },
+];
+
 // Trouver le div terminal
 var terminal = document.getElementById("terminal");
 
@@ -12,14 +22,14 @@ logo.className = "ancienneLigne";
 var welcome = terminal.appendChild(document.createElement("p"));
 welcome.insertAdjacentHTML(
   "beforeend",
-  'Welcome to the <span class="information">terminal portfolio</span>, presented by <span class="information">svasco</span>.'
+  `Welcome to the <span class="information">terminal portfolio</span>, presented by <span class="information">svasco</span>.`
 );
 welcome.className = "ancienneLigne";
 
 var help = terminal.appendChild(document.createElement("p"));
 help.insertAdjacentHTML(
   "beforeend",
-  "Use <span class=\"important\">'help'</span> to get a list of the available commands."
+  `Use <span class=\"important\">'help'</span> to get a list of the available commands.`
 );
 help.className = "ancienneLigne";
 
@@ -28,7 +38,7 @@ var paragraphe = terminal.appendChild(document.createElement("p"));
 paragraphe.className = "lignes";
 paragraphe.insertAdjacentHTML(
   "beforeend",
-  '<span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">~</span><span class="information">$ </span> '
+  `<span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">${dossierActuel}</span><span class="information">$ </span> `
 );
 
 // Ajouter un écouteur d'événement pour détecter les touches du clavier
@@ -40,7 +50,7 @@ document.addEventListener("keydown", function (event) {
     if (
       paragraphe.innerHTML
         .replace(
-          '<span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">~</span><span class="information">$ </span>',
+          `<span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">${dossierActuel}</span><span class="information">$ </span>`,
           ""
         )
         .trim().length === 0
@@ -55,12 +65,12 @@ document.addEventListener("keydown", function (event) {
 
       paragraphe.insertAdjacentHTML(
         "beforeend",
-        '<span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">~</span><span class="information">$ </span> '
+        `<span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">${dossierActuel}</span><span class="information">$ </span> `
       );
     } else {
       switch (
         paragraphe.innerHTML.replace(
-          '<span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">~</span><span class="information">$ </span> ',
+          `<span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">${dossierActuel}</span><span class="information">$ </span> `,
           ""
         )
       ) {
@@ -76,10 +86,11 @@ document.addEventListener("keydown", function (event) {
           paragraphe.insertAdjacentHTML(
             "beforeend",
             `<p>
-                   <span class="comment">pwd</span>            <span class="question">Renvoie votre position actuelle.</span><br/>
-                   <span class="comment">ls</span>             <span class="question">Affiche le contenu du dossier actuel.</span><br/>
-                   <span class="comment">cd</span>             <span class="question">Vous déplace vers le dossier mentionné.</span><br/>
-                   <span class="comment">clear</span>          <span class="question">Efface le contenu du terminal.</span><br/>
+                   <span class="comment">help</span>           <span class="question">It seems like you already know what this does.</span><br/>
+                   <span class="comment">pwd</span>            <span class="question">Shows you the path of the current directory you are in within the file system.</span><br/>
+                   <span class="comment">ls</span>             <span class="question">Provides a listing of the contents of the specified directory.</span><br/>
+                   <span class="comment">cd</span>             <span class="question">Changes your current working directory to the specified directory.</span><br/>
+                   <span class="comment">clear</span>          <span class="question">Removes all previous commands and output from the terminal.</span><br/>
             </p>`
           );
 
@@ -93,14 +104,70 @@ document.addEventListener("keydown", function (event) {
 
           paragraphe.insertAdjacentHTML(
             "beforeend",
-            '<span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">~</span><span class="information">$ </span> '
+            `<span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">${dossierActuel}</span><span class="information">$ </span> `
           );
           break;
 
         case "pwd":
+          // Déplacer l'ancien paragraphe dans une nouvelle classe
+          paragraphe.className = "ancienneLigne";
+
+          // Créer un nouveau paragraphe dans le terminal
+          paragraphe = terminal.appendChild(document.createElement("p"));
+
+          paragraphe.className = "lignes";
+
+          paragraphe.insertAdjacentHTML(
+            "beforeend",
+            `<p>
+                   <span class="comment">${
+                correspondanceDossiers.find(
+                  (val) => val.dossierActuel === dossierActuel
+                ).dossierPWD
+              }</span>
+            </p>`
+          );
+
+          // Déplacer l'ancien paragraphe dans une nouvelle classe
+          paragraphe.className = "ancienneLigne";
+
+          // Créer un nouveau paragraphe dans le terminal
+          paragraphe = terminal.appendChild(document.createElement("p"));
+
+          paragraphe.className = "lignes";
+
+          paragraphe.insertAdjacentHTML(
+            "beforeend",
+            `<span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">${dossierActuel}</span><span class="information">$ </span> `
+          );
           break;
 
         case "ls":
+          // Déplacer l'ancien paragraphe dans une nouvelle classe
+          paragraphe.className = "ancienneLigne";
+
+          // Créer un nouveau paragraphe dans le terminal
+          paragraphe = terminal.appendChild(document.createElement("p"));
+
+          paragraphe.className = "lignes";
+
+          paragraphe.insertAdjacentHTML(
+            "beforeend",
+            `<p><span class="question">   ${correspondanceDossiers.find(val => val.dossierActuel === dossierActuel).sousDossiers.join("   ")}</span></p>`
+          );
+
+          // Déplacer l'ancien paragraphe dans une nouvelle classe
+          paragraphe.className = "ancienneLigne";
+
+          // Créer un nouveau paragraphe dans le terminal
+          paragraphe = terminal.appendChild(document.createElement("p"));
+
+          paragraphe.className = "lignes";
+
+          paragraphe.insertAdjacentHTML(
+            "beforeend",
+            `<span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">${dossierActuel}</span><span class="information">$ </span> `
+          );
           break;
 
         case "cd":
@@ -117,7 +184,7 @@ document.addEventListener("keydown", function (event) {
 
           paragraphe.insertAdjacentHTML(
             "beforeend",
-            '<span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">~</span><span class="information">$ </span> '
+            `<span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">${dossierActuel}</span><span class="information">$ </span> `
           );
 
           // Sélectionner tous les éléments avec la classe "ancienneLigne"
