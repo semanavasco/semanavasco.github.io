@@ -17,21 +17,21 @@ logo.insertAdjacentHTML(
   "beforeend",
   "░██████╗███████╗███╗░░░███╗░█████╗░███╗░░██╗░█████╗░<br />██╔════╝██╔════╝████╗░████║██╔══██╗████╗░██║██╔══██╗<br />╚█████╗░█████╗░░██╔████╔██║███████║██╔██╗██║███████║<br />░╚═══██╗██╔══╝░░██║╚██╔╝██║██╔══██║██║╚████║██╔══██║<br />██████╔╝███████╗██║░╚═╝░██║██║░░██║██║░╚███║██║░░██║<br />╚═════╝░╚══════╝╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚═╝<br />━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 );
-logo.className = "ancienneLigne";
+logo.className = "terminalInfos";
 
 var welcome = terminal.appendChild(document.createElement("p"));
 welcome.insertAdjacentHTML(
   "beforeend",
   `Welcome to the <span class="information">terminal portfolio</span>, presented by <span class="information">svasco</span>.`
 );
-welcome.className = "ancienneLigne";
+welcome.className = "terminalInfos";
 
 var help = terminal.appendChild(document.createElement("p"));
 help.insertAdjacentHTML(
   "beforeend",
   `Use <span class=\"important\">'help'</span> to get a list of the available commands.`
 );
-help.className = "ancienneLigne";
+help.className = "terminalInfos";
 
 // Créer un nouveau paragraphe dans le terminal
 var paragraphe = terminal.appendChild(document.createElement("p"));
