@@ -1,5 +1,10 @@
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url('../assets/fonts/JetBrainsMono-Regular.ttf');
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "JetBrains Mono", sans-serif;
     margin: 20px;
     background-color: #282A36;
 }
@@ -10,4 +15,40 @@ h1 {
 
 p {
     color: #FF79C6;
+}
+
+span.normalized {
+    color: #F8F8F2;
+}
+
+span.command {
+    color: #FF79C6;
+}
+
+span.information {
+    color: #BD93F9;
+}
+
+span.comment {
+    color: #6272A4;
+}
+
+span.error {
+    color: #FF5555;
+}
+
+span.success {
+    color: #50FA7B;
+}
+
+span.important {
+    color: #FFB86C;
+}
+
+span.warning {
+    color: #F1FA8C;
+}
+
+span.question {
+    color: #8BE9FD;
 }
