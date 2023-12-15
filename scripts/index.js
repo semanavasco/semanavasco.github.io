@@ -18,7 +18,9 @@ document.addEventListener("click", function () {
 document.addEventListener("keydown", async function (event) {
   var toucheAppuyee = event.key;
 
-  if (toucheAppuyee === "ArrowUp") {
+  if (toucheAppuyee === "Tab") {
+    event.preventDefault();
+  } else if (toucheAppuyee === "ArrowUp") {
     var zoneTexte = document.getElementById("zonetexte");
 
     if (historiqueCommandesArrowUp.length > 0) {
