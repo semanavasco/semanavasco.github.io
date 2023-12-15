@@ -31,11 +31,8 @@ dossiers = [
     terminal: "/home/visitor/Studies",
     pwd: "/home/visitor/Studies",
     type: "folder",
-    childs: ["highschool.txt", "university.txt"],
-    ls: [
-      '<span class="normalized">highschool.txt</span>',
-      '<span class="normalized">university.txt</span>',
-    ],
+    childs: ["bts_sio_slam.txt"],
+    ls: ['<span class="normalized">bts_sio_slam.txt</span>'],
   },
   {
     name: "Projects",
@@ -62,5 +59,33 @@ dossiers = [
     pwd: "/home/visitor/AboutMe",
     type: "file",
     content: `<span class="normalized">Hi, I'm Vasco, an 18 year old Portuguese student in France, pursuing my BTS SIO specialized in Software Solutions (SLAM). I'm passionate about coding, and I love learning new stuff ! I make video-games, websites, bash scripts, discord bots, and more for fun !</span>`,
+  },
+  {
+    name: "bts_sio_slam.txt",
+    terminal: "/home/visitor/Studies/bts_sio_slam.txt",
+    pwd: "/home/visitor/Studies",
+    type: "file",
+    content: `<span class="normalized">I am currently on my first year of the BTS SIO degree with a specialization in Software Solutions (SLAM). I'm an apprentice at SAB System, a company that I really enjoy working at since I always learn new stuff ! So far I've been working on an automation project with bash on Linux. It's actually what has pushed me into starting this new project of recreating a Linux Terminal as a portfolio, I really enjoy using it at work.</span>`,
+  },
+  {
+    name: "personal.txt",
+    terminal: "/home/visitor/Projects/personal.txt",
+    pwd: "/home/visitor/Projects",
+    type: "file",
+    content: `<span class="normalized">Not written yet.</span>`,
+  },
+  {
+    name: "professional.txt",
+    terminal: "/home/visitor/Projects/professional.txt",
+    pwd: "/home/visitor/Projects",
+    type: "file",
+    content: `<span class="normalized">Not written yet.</span>`,
+  },
+  {
+    name: "games.txt",
+    terminal: "/home/visitor/Ideas/games.txt",
+    pwd: "/home/visitor/Ideas",
+    type: "file",
+    content: `<span class="normalized">Not written yet.</span>`,
   },
 ];
