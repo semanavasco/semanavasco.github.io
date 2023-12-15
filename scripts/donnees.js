@@ -31,10 +31,10 @@ dossiers = [
     terminal: "/home/visitor/Studies",
     pwd: "/home/visitor/Studies",
     type: "folder",
-    childs: ["HighSchool.txt", "University.txt"],
+    childs: ["highschool.txt", "university.txt"],
     ls: [
-      '<span class="normalized">HighSchool.txt</span>',
-      '<span class="normalized">University.txt</span>',
+      '<span class="normalized">highschool.txt</span>',
+      '<span class="normalized">university.txt</span>',
     ],
   },
   {
@@ -42,10 +42,10 @@ dossiers = [
     terminal: "/home/visitor/Projects",
     pwd: "/home/visitor/Projects",
     type: "folder",
-    childs: ["Personal.txt", "Professional.txt"],
+    childs: ["personal.txt", "professional.txt"],
     ls: [
-      '<span class="normalized">Personal.txt</span>',
-      '<span class="normalized">Professional.txt</span>',
+      '<span class="normalized">personal.txt</span>',
+      '<span class="normalized">professional.txt</span>',
     ],
   },
   {
@@ -53,7 +53,14 @@ dossiers = [
     terminal: "/home/visitor/Ideas",
     pwd: "/home/visitor/Ideas",
     type: "folder",
-    childs: ["Games.txt"],
-    ls: ['<span class="normalized">Games.txt</span>'],
+    childs: ["games.txt"],
+    ls: ['<span class="normalized">games.txt</span>'],
+  },
+  {
+    name: "whoami.txt",
+    terminal: "/home/visitor/AboutMe/whoami.txt",
+    pwd: "/home/visitor/AboutMe",
+    type: "file",
+    content: `<span class="normalized">Hi, I'm Vasco, an 18 year old Portuguese student in France, pursuing my BTS SIO specialized in Software Solutions (SLAM). I'm passionate about coding, and I love learning new stuff ! I make video-games, websites, bash scripts, discord bots, and more for fun !</span>`,
   },
 ];

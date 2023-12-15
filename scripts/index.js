@@ -130,6 +130,38 @@ document.addEventListener("keydown", async function (event) {
       }</span>
      </p>`
       );
+    } else if (arguments[0] === "cat") {
+      if (arguments.length === 1)
+        reponseTerminal(
+          `<p>   <span class="error">error: "cat" command requires a file name</span></p>`
+        );
+      else if (
+        dossiers
+          .find((dossier) => dossier.name === dossierActuel)
+          .childs.includes(arguments[1])
+      ) {
+        reponseTerminal(
+          `<p>   ${
+            dossiers.find((dossier) => dossier.name === arguments[1]).content
+          }</p>`
+        );
+      } else if (
+        arguments[1].includes("/") &&
+        dossiers
+          .find((dossier) => dossier.name === arguments[1].split("/")[0])
+          .childs.includes(arguments[1].split("/")[1])
+      ) {
+        reponseTerminal(
+          `<p>   ${
+            dossiers.find(
+              (dossier) => dossier.name === arguments[1].split("/")[1]
+            ).content
+          }</p>`
+        );
+      } else
+        reponseTerminal(
+          `<p>   <span class="error">error: file "${arguments[1]}" does not exist</span></p>`
+        );
     } else if (commande.trim().length >= 1) {
       reponseTerminal(
         `<p>   <span class="error">error: "${commande}" command not found</span></p>`
