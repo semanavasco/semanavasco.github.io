@@ -16,6 +16,10 @@ div.lignes {
   margin-top: -20px;
 }
 
+p {
+  line-height: 30px;
+}
+
 /* Modification du style de la balise <input> */
 input {
   font-family: "JetBrains Mono", sans-serif;
