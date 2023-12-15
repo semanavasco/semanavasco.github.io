@@ -1,3 +1,8 @@
+var dossierActuel = "~";
+
+var historiqueCommandesArrowUp = [];
+var historiqueCommandesArrowDown = [];
+
 dossiers = [
   {
     name: "~",

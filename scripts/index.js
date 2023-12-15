@@ -1,5 +1,3 @@
-var dossierActuel = "~";
-
 document.addEventListener("DOMContentLoaded", function () {
   // Sélectionner l'élément input par son ID
   var zoneTexte = document.getElementById("zonetexte");
@@ -20,7 +18,25 @@ document.addEventListener("click", function () {
 document.addEventListener("keydown", async function (event) {
   var toucheAppuyee = event.key;
 
-  if (toucheAppuyee === "Enter") {
+  if (toucheAppuyee === "ArrowUp") {
+    var zoneTexte = document.getElementById("zonetexte");
+
+    if (historiqueCommandesArrowUp.length > 0) {
+      zoneTexte.value =
+        historiqueCommandesArrowUp[historiqueCommandesArrowUp.length - 1];
+      historiqueCommandesArrowUp.pop();
+      historiqueCommandesArrowDown.push(zoneTexte.value);
+    } else zoneTexte.value = "";
+  } else if (toucheAppuyee === "ArrowDown") {
+    var zoneTexte = document.getElementById("zonetexte");
+
+    if (historiqueCommandesArrowDown.length > 0) {
+      zoneTexte.value =
+        historiqueCommandesArrowDown[historiqueCommandesArrowDown.length - 1];
+      historiqueCommandesArrowDown.pop();
+      historiqueCommandesArrowUp.push(zoneTexte.value);
+    } else zoneTexte.value = "";
+  } else if (toucheAppuyee === "Enter") {
     // Obtenir la valeur de la commande
     var commande = document.getElementById("zonetexte").value;
 
@@ -38,6 +54,9 @@ document.addEventListener("keydown", async function (event) {
     // Séparer la commande en arguments
     var arguments = commande.split(" ");
 
+    // Ajouter la commande à la liste des commandes tapées
+    historiqueCommandesArrowUp.push(commande);
+
     // Vérifier la commande
     if (arguments[0] === "help") {
       if (arguments.length > 1)
@@ -52,6 +71,7 @@ document.addEventListener("keydown", async function (event) {
            <span class="comment">ls</span>             <span class="question">Provides a listing of the contents of the specified directory.</span><br/>
            <span class="comment">cd</span>             <span class="question">Changes your current working directory to the specified directory.</span><br/>
            <span class="comment">clear</span>          <span class="question">Removes all previous commands and output from the terminal.</span><br/>
+           <span class="comment">cat</span>          <span class="question">Prints the content of a specified file.</span><br/>
        </p>`
         );
     } else if (arguments[0] === "ls") {
