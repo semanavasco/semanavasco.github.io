@@ -77,7 +77,7 @@ document.addEventListener("keydown", async function (event) {
           `<p>   <span class="error">error: folder "${arguments[1]}" does not exist</span></p>`
         );
     } else if (arguments[0] === "cd") {
-      if (arguments.length === 1) dossierActuel = "~";
+      if (arguments.length === 1 || arguments[1] === "") dossierActuel = "~";
       else if (
         dossierActuel === "~" &&
         dossiers
