@@ -1,211 +1,90 @@
-var dossierActuel = "~";
+document.addEventListener("DOMContentLoaded", function () {
+  // Sélectionner l'élément input par son ID
+  var zoneTexte = document.getElementById("zonetexte");
 
-var correspondanceDossiers = [
-  {
-    dossierActuel: "~",
-    dossierPWD: "/home/visitor",
-    sousDossiers: ["AboutMe", "Studies", "Projects", "Ideas", "SocialMedia"],
-  },
-];
+  zoneTexte.focus();
+  zoneTexte.value = "";
+});
 
-// Trouver le div terminal
-var terminal = document.getElementById("terminal");
+// Écouter le clic de la souris sur la page pour donner le focus à l'élément input
+document.addEventListener("click", function () {
+  // Sélectionner l'élément input par son ID
+  var zoneTexte = document.getElementById("zonetexte");
 
-// Créer la mise en page principale
-var logo = terminal.appendChild(document.createElement("h1"));
-logo.insertAdjacentHTML(
-  "beforeend",
-  "░██████╗███████╗███╗░░░███╗░█████╗░███╗░░██╗░█████╗░<br />██╔════╝██╔════╝████╗░████║██╔══██╗████╗░██║██╔══██╗<br />╚█████╗░█████╗░░██╔████╔██║███████║██╔██╗██║███████║<br />░╚═══██╗██╔══╝░░██║╚██╔╝██║██╔══██║██║╚████║██╔══██║<br />██████╔╝███████╗██║░╚═╝░██║██║░░██║██║░╚███║██║░░██║<br />╚═════╝░╚══════╝╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚═╝<br />━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-);
-logo.className = "terminalInfos";
+  zoneTexte.focus();
+});
 
-var welcome = terminal.appendChild(document.createElement("p"));
-welcome.insertAdjacentHTML(
-  "beforeend",
-  `Welcome to the <span class="information">terminal portfolio</span>, presented by <span class="information">svasco</span>.`
-);
-welcome.className = "terminalInfos";
-
-var help = terminal.appendChild(document.createElement("p"));
-help.insertAdjacentHTML(
-  "beforeend",
-  `Use <span class=\"important\">'help'</span> to get a list of the available commands.`
-);
-help.className = "terminalInfos";
-
-// Créer un nouveau paragraphe dans le terminal
-var paragraphe = terminal.appendChild(document.createElement("p"));
-paragraphe.className = "lignes";
-paragraphe.insertAdjacentHTML(
-  "beforeend",
-  `<span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">${dossierActuel}</span><span class="information">$ </span> `
-);
-
-// Ajouter un écouteur d'événement pour détecter les touches du clavier
-document.addEventListener("keydown", function (event) {
-  // La propriété "key" de l'objet event contient la valeur de la touche pressée
+// Écouter les touches du clavier pour détecter la touche Entrée
+document.addEventListener("keydown", async function (event) {
   var toucheAppuyee = event.key;
 
   if (toucheAppuyee === "Enter") {
-    if (
-      paragraphe.innerHTML
-        .replace(
-          `<span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">${dossierActuel}</span><span class="information">$ </span>`,
-          ""
-        )
-        .trim().length === 0
-    ) {
-      // Déplacer l'ancien paragraphe dans une nouvelle classe
-      paragraphe.className = "ancienneLigne";
+    // Obtenir la valeur de la commande
+    var commande = document.getElementById("zonetexte").value;
 
-      // Créer un nouveau paragraphe dans le terminal
-      paragraphe = terminal.appendChild(document.createElement("p"));
+    // Créer un élément HTML <div>
+    var ancienneLigne = document
+      .getElementById("terminal")
+      .appendChild(document.createElement("div"));
+    ancienneLigne.classList.add("lignes");
+    ancienneLigne.classList.add("ancienneLigne");
+    ancienneLigne.innerHTML = `<p><span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">~</span><span class="information">$</span> </p>
+         <p>${commande}</p>`;
 
-      paragraphe.className = "lignes";
-
-      paragraphe.insertAdjacentHTML(
-        "beforeend",
-        `<span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">${dossierActuel}</span><span class="information">$ </span> `
+    // Vérifier la commande
+    if (commande === "help") {
+      reponseTerminal(
+        `<p>
+           <span class="comment">help</span>           <span class="question">It seems like you already know what this does.</span><br/>
+           <span class="comment">pwd</span>            <span class="question">Shows you the path of the current directory you are in within the file system.</span><br/>
+           <span class="comment">ls</span>             <span class="question">Provides a listing of the contents of the specified directory.</span><br/>
+           <span class="comment">cd</span>             <span class="question">Changes your current working directory to the specified directory.</span><br/>
+           <span class="comment">clear</span>          <span class="question">Removes all previous commands and output from the terminal.</span><br/>
+       </p>`
       );
-    } else {
-      switch (
-        paragraphe.innerHTML.replace(
-          `<span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">${dossierActuel}</span><span class="information">$ </span> `,
-          ""
-        )
-      ) {
-        case "help":
-          // Déplacer l'ancien paragraphe dans une nouvelle classe
-          paragraphe.className = "ancienneLigne";
+    } else if (commande === "clear") {
+      // Sélectionner tous les éléments avec la classe "ancienneLigne"
+      var elements = document.getElementsByClassName("ancienneLigne");
 
-          // Créer un nouveau paragraphe dans le terminal
-          paragraphe = terminal.appendChild(document.createElement("p"));
+      // Convertir la collection d'éléments en un tableau
+      var elementsArray = Array.from(elements);
 
-          paragraphe.className = "lignes";
-
-          paragraphe.insertAdjacentHTML(
-            "beforeend",
-            `<p>
-                   <span class="comment">help</span>           <span class="question">It seems like you already know what this does.</span><br/>
-                   <span class="comment">pwd</span>            <span class="question">Shows you the path of the current directory you are in within the file system.</span><br/>
-                   <span class="comment">ls</span>             <span class="question">Provides a listing of the contents of the specified directory.</span><br/>
-                   <span class="comment">cd</span>             <span class="question">Changes your current working directory to the specified directory.</span><br/>
-                   <span class="comment">clear</span>          <span class="question">Removes all previous commands and output from the terminal.</span><br/>
-            </p>`
-          );
-
-          // Déplacer l'ancien paragraphe dans une nouvelle classe
-          paragraphe.className = "ancienneLigne";
-
-          // Créer un nouveau paragraphe dans le terminal
-          paragraphe = terminal.appendChild(document.createElement("p"));
-
-          paragraphe.className = "lignes";
-
-          paragraphe.insertAdjacentHTML(
-            "beforeend",
-            `<span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">${dossierActuel}</span><span class="information">$ </span> `
-          );
-          break;
-
-        case "pwd":
-          // Déplacer l'ancien paragraphe dans une nouvelle classe
-          paragraphe.className = "ancienneLigne";
-
-          // Créer un nouveau paragraphe dans le terminal
-          paragraphe = terminal.appendChild(document.createElement("p"));
-
-          paragraphe.className = "lignes";
-
-          paragraphe.insertAdjacentHTML(
-            "beforeend",
-            `<p>
-                   <span class="comment">${
-                correspondanceDossiers.find(
-                  (val) => val.dossierActuel === dossierActuel
-                ).dossierPWD
-              }</span>
-            </p>`
-          );
-
-          // Déplacer l'ancien paragraphe dans une nouvelle classe
-          paragraphe.className = "ancienneLigne";
-
-          // Créer un nouveau paragraphe dans le terminal
-          paragraphe = terminal.appendChild(document.createElement("p"));
-
-          paragraphe.className = "lignes";
-
-          paragraphe.insertAdjacentHTML(
-            "beforeend",
-            `<span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">${dossierActuel}</span><span class="information">$ </span> `
-          );
-          break;
-
-        case "ls":
-          // Déplacer l'ancien paragraphe dans une nouvelle classe
-          paragraphe.className = "ancienneLigne";
-
-          // Créer un nouveau paragraphe dans le terminal
-          paragraphe = terminal.appendChild(document.createElement("p"));
-
-          paragraphe.className = "lignes";
-
-          paragraphe.insertAdjacentHTML(
-            "beforeend",
-            `<p><span class="question">   ${correspondanceDossiers.find(val => val.dossierActuel === dossierActuel).sousDossiers.join("   ")}</span></p>`
-          );
-
-          // Déplacer l'ancien paragraphe dans une nouvelle classe
-          paragraphe.className = "ancienneLigne";
-
-          // Créer un nouveau paragraphe dans le terminal
-          paragraphe = terminal.appendChild(document.createElement("p"));
-
-          paragraphe.className = "lignes";
-
-          paragraphe.insertAdjacentHTML(
-            "beforeend",
-            `<span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">${dossierActuel}</span><span class="information">$ </span> `
-          );
-          break;
-
-        case "cd":
-          break;
-
-        case "clear":
-          // Déplacer l'ancien paragraphe dans une nouvelle classe
-          paragraphe.className = "ancienneLigne";
-
-          // Créer un nouveau paragraphe dans le terminal
-          paragraphe = terminal.appendChild(document.createElement("p"));
-
-          paragraphe.className = "lignes";
-
-          paragraphe.insertAdjacentHTML(
-            "beforeend",
-            `<span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">${dossierActuel}</span><span class="information">$ </span> `
-          );
-
-          // Sélectionner tous les éléments avec la classe "ancienneLigne"
-          var elements = document.getElementsByClassName("ancienneLigne");
-
-          // Convertir la collection d'éléments en un tableau
-          var elementsArray = Array.from(elements);
-
-          // Supprimer chaque élément du tableau
-          elementsArray.forEach(function (element) {
-            element.remove();
-          });
-          break;
-      }
+      // Supprimer chaque élément du tableau
+      elementsArray.forEach(function (element) {
+        element.remove();
+      });
+    } else if (commande.trim().length >= 1) {
+      reponseTerminal(
+        `<p>   <span class="error">error: "${commande}" command not found</span></p>`
+      );
     }
-  } else if (toucheAppuyee === "Backspace") {
-    paragraphe.innerHTML = paragraphe.innerHTML.slice(0, -1);
-  } else if (toucheAppuyee.length > 1) {
-    return;
-  } else {
-    if (toucheAppuyee === " ") toucheAppuyee = " ";
-    paragraphe.insertAdjacentHTML("beforeend", toucheAppuyee);
+
+    var ligneActuelle = document.getElementsByClassName("ligneActuelle")[0];
+    ligneActuelle.remove();
+
+    ligneActuelle = document
+      .getElementById("terminal")
+      .appendChild(document.createElement("div"));
+
+    ligneActuelle.classList.add("lignes");
+    ligneActuelle.classList.add("ligneActuelle");
+
+    ligneActuelle.innerHTML = `<p><span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">~</span><span class="information">$</span> </p>
+         <input type="text" name="zonetexte" id="zonetexte" autofocus>`;
+
+    var zoneTexte = document.getElementById("zonetexte");
+
+    zoneTexte.focus();
   }
 });
+
+function reponseTerminal(reponse) {
+  var reponseTerminal = document
+    .getElementById("terminal")
+    .appendChild(document.createElement("div"));
+
+  reponseTerminal.classList.add("lignes");
+  reponseTerminal.classList.add("ancienneLigne");
+
+  reponseTerminal.innerHTML = reponse;
+}
