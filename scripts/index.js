@@ -63,18 +63,19 @@ document.addEventListener("keydown", async function (event) {
     if (arguments[0] === "help") {
       if (arguments.length > 1)
         reponseTerminal(
-          `<p>   <span class="error">error: "help" command does not take any argument</span></p>`
+          `<p>   <span class="error">${localisationTextes.helpErreur[lang]}</span></p>`
         );
       else
         reponseTerminal(
           `<p>
-           <span class="comment">help</span>           <span class="question">It seems like you already know what this does.</span><br/>
-           <span class="comment">pwd</span>            <span class="question">Shows you the path of the current directory you are in within the file system.</span><br/>
-           <span class="comment">ls</span>             <span class="question">Provides a listing of the contents of the specified directory.</span><br/>
-           <span class="comment">cd</span>             <span class="question">Changes your current working directory to the specified directory.</span><br/>
-           <span class="comment">clear</span>          <span class="question">Removes all previous commands and output from the terminal.</span><br/>
-           <span class="comment">cat</span>            <span class="question">Prints the content of a specified file.</span><br/>
-           <span class="comment">theme</span>          <span class="question">Changes the look of the portfolio terminal.</span><br/>
+           <span class="comment">help</span>           <span class="question">${localisationTextes.helpDescription[lang]}</span><br/>
+           <span class="comment">pwd</span>            <span class="question">${localisationTextes.pwdDescription[lang]}</span><br/>
+           <span class="comment">ls</span>             <span class="question">${localisationTextes.lsDescription[lang]}</span><br/>
+           <span class="comment">cd</span>             <span class="question">${localisationTextes.cdDescription[lang]}</span><br/>
+           <span class="comment">clear</span>          <span class="question">${localisationTextes.clearDescription[lang]}</span><br/>
+           <span class="comment">cat</span>            <span class="question">${localisationTextes.catDescription[lang]}</span><br/>
+           <span class="comment">theme</span>          <span class="question">${localisationTextes.themeDescription[lang]}</span><br/>
+           <span class="comment">lang</span>           <span class="question">${localisationTextes.langDescription[lang]}</span><br/>
        </p>`
         );
     } else if (arguments[0] === "ls") {
@@ -97,7 +98,7 @@ document.addEventListener("keydown", async function (event) {
         );
       } else
         reponseTerminal(
-          `<p>   <span class="error">error: folder "${arguments[1]}" does not exist</span></p>`
+          `<p>   <span class="error">${localisationTextes.dossierErreur[lang]}"${arguments[1]}"${localisationTextes.existepasErreur[lang]}</span></p>`
         );
     } else if (arguments[0] === "cd") {
       if (arguments.length === 1 || arguments[1] === "") dossierActuel = "~";
@@ -112,7 +113,7 @@ document.addEventListener("keydown", async function (event) {
         dossierActuel = "~";
       } else
         reponseTerminal(
-          `<p>   <span class="error">error: folder "${arguments[1]}" does not exist</span></p>`
+          `<p>   <span class="error">${localisationTextes.dossierErreur[lang]}"${arguments[1]}"${localisationTextes.existepasErreur[lang]}</span></p>`
         );
     } else if (arguments[0] === "clear") {
       // Sélectionner tous les éléments avec la classe "ancienneLigne"
@@ -136,7 +137,7 @@ document.addEventListener("keydown", async function (event) {
     } else if (arguments[0] === "cat") {
       if (arguments.length === 1)
         reponseTerminal(
-          `<p>   <span class="error">error: "cat" command requires a file name</span></p>`
+          `<p>   <span class="error">${localisationTextes.catErreur[lang]}</span></p>`
         );
       else if (
         dossiers
@@ -163,17 +164,23 @@ document.addEventListener("keydown", async function (event) {
         );
       } else
         reponseTerminal(
-          `<p>   <span class="error">error: file "${arguments[1]}" does not exist</span></p>`
+          `<p>   <span class="error">${localisationTextes.fichierErreur[lang]}"${arguments[1]}"${localisationTextes.existepasErreur[lang]}</span></p>`
         );
     } else if (arguments[0] === "theme") {
       if (arguments.length === 1)
         reponseTerminal(
-          `<p>   <span class="error">error: "theme" command requires a theme number (0-9)</span></p>`
+          `<p>   <span class="error">${localisationTextes.themeErreur[lang]}</span></p>`
         );
       else changerTheme(arguments[1]);
+    } else if (arguments[0] === "lang") {
+      if (arguments.length === 1)
+        reponseTerminal(
+          `<p>   <span class="error">${localisationTextes.changementLangueErreur[lang]}</span></p>`
+        );
+      else changerLangue(arguments[1]);
     } else if (commande.trim().length >= 1) {
       reponseTerminal(
-        `<p>   <span class="error">error: "${commande}" command not found</span></p>`
+        `<p>   <span class="error">${localisationTextes.erreur[lang]}"${commande}"${localisationTextes.existepasErreur[lang]}</span></p>`
       );
     }
 
@@ -212,7 +219,7 @@ function reponseTerminal(reponse) {
 function changerTheme(theme) {
   if (isNaN(theme) || Number(theme) < 0 || Number(theme) > 9)
     return reponseTerminal(
-      `<p>   <span class="error">error: no such theme "${theme}" number must be between 0 and 9</span></p>`
+      `<p>   <span class="error">${localisationTextes.themeInexistantErreur[lang]}"${theme}"${localisationTextes.themeEntreErreur[lang]}</span></p>`
     );
 
   var styleLink = document.getElementById("lienStyle");
@@ -220,6 +227,25 @@ function changerTheme(theme) {
   styleLink.href = `styles/theme${theme}.css`;
 
   return reponseTerminal(
-    `<p>   <span class="comment">Theme changed to "${theme}".</span></p>`
+    `<p>   <span class="comment">${localisationTextes.themeChange[lang]}"${theme}".</span></p>`
+  );
+}
+
+function changerLangue(langue) {
+  if (langue !== "fr" && langue !== "en")
+    return reponseTerminal(
+      `<p>   <span class="error">${localisationTextes.changementLangueErreur[lang]}</span></p>`
+    );
+
+  lang = langue;
+
+  var welcomeMessage = document.getElementById("welcomeMessage");
+  welcomeMessage.innerHTML = localisationTextes.welcomeMessage[lang];
+
+  var helpMessage = document.getElementById("helpMessage");
+  helpMessage.innerHTML = localisationTextes.helpMessage[lang];
+
+  return reponseTerminal(
+    `<p>   <span class="comment">${localisationTextes.changementLangue[lang]}"${langue}".</span></p>`
   );
 }
