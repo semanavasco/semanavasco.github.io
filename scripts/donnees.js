@@ -4,7 +4,7 @@ var dossierActuel = "~";
 var historiqueCommandesArrowUp = [];
 var historiqueCommandesArrowDown = [];
 
-dossiers = [
+var dossiers = [
   {
     name: "~",
     terminal: "~",
