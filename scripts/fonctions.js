@@ -117,8 +117,15 @@ function ouvrirProjet(projet) {
 
       // Ajout du contenu dans la fenêtre du projet
       var contenu = contenuFenetre.appendChild(document.createElement("p"));
-      contenu.innerHTML = "<span class=\"normalized\">Solo Leveling - RPG Discord</span>";
-      
+      contenu.innerHTML =
+        '<span class="normalized">Solo Leveling - RPG Discord</span>';
+
+      break;
+
+    default:
+      reponseTerminal(
+        `<p>   <span class="error">${localisationTextes.ouvertureProjetErreur[lang]}</span></p>`
+      );
       break;
   }
 }
