@@ -97,6 +97,10 @@ var localisationTextes = {
     fr: `Bienvenue sur le <span class="information">portfolio terminal</span>, présenté par <span class="information">svasco</span>.`,
     en: `Welcome to the <span class="information">terminal portfolio</span>, presented by <span class="information">svasco</span>.`,
   },
+  helpMessage: {
+    fr: `Tapez <span class="important">'help'</span> pour afficher la liste des commandes disponibles.`,
+    en: `Type <span class="important">'help'</span> to get a list of the available commands.`,
+  },
   helpDescription: {
     fr: "Il semblerait que vous sachiez déjà ce que cela fait.",
     en: "It seems like you already know what this does.",
@@ -130,8 +134,8 @@ var localisationTextes = {
     en: "Changes the language of the portfolio terminal.",
   },
   helpErreur: {
-    fr: 'erreur: la commande "help" ne prend aucun argument',
-    en: 'error: "help" command does not take any argument',
+    fr: "erreur: la commande 'help' ne prend aucun argument",
+    en: "error: 'help' command does not take any argument",
   },
   dossierErreur: {
     fr: "erreur: le dossier ",
@@ -146,12 +150,12 @@ var localisationTextes = {
     en: " does not exist",
   },
   catErreur: {
-    fr: 'erreur: la commande "cat" requiert un nom de fichier en argument',
+    fr: "erreur: la commande 'cat' requiert un nom de fichier en argument",
     en: 'error: "cat" command requires a file name as argument',
   },
   themeErreur: {
-    fr: 'erreur: la commande "theme" requiert un numéro de thème (0-9)',
-    en: 'error: "theme" command requires a theme number (0-9)',
+    fr: "erreur: la commande 'theme' requiert un numéro de thème (0-9)",
+    en: "error: 'theme' command requires a theme number (0-9)",
   },
   erreur: {
     fr: "erreur: ",

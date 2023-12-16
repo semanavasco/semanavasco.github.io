@@ -164,7 +164,7 @@ document.addEventListener("keydown", async function (event) {
         );
       } else
         reponseTerminal(
-          `<p>   <span class="error">${localisationTextes.fichierErreur[lang]}"${arguments[1]}"${localisationTextes.existepasErreur[lang]}</span></p>`
+          `<p>   <span class="error">${localisationTextes.fichierErreur[lang]}'${arguments[1]}'${localisationTextes.existepasErreur[lang]}</span></p>`
         );
     } else if (arguments[0] === "theme") {
       if (arguments.length === 1)
@@ -180,7 +180,7 @@ document.addEventListener("keydown", async function (event) {
       else changerLangue(arguments[1]);
     } else if (commande.trim().length >= 1) {
       reponseTerminal(
-        `<p>   <span class="error">${localisationTextes.erreur[lang]}"${commande}"${localisationTextes.existepasErreur[lang]}</span></p>`
+        `<p>   <span class="error">${localisationTextes.erreur[lang]}'${commande}'${localisationTextes.existepasErreur[lang]}</span></p>`
       );
     }
 
@@ -219,7 +219,7 @@ function reponseTerminal(reponse) {
 function changerTheme(theme) {
   if (isNaN(theme) || Number(theme) < 0 || Number(theme) > 9)
     return reponseTerminal(
-      `<p>   <span class="error">${localisationTextes.themeInexistantErreur[lang]}"${theme}"${localisationTextes.themeEntreErreur[lang]}</span></p>`
+      `<p>   <span class="error">${localisationTextes.themeInexistantErreur[lang]}'${theme}'${localisationTextes.themeEntreErreur[lang]}</span></p>`
     );
 
   var styleLink = document.getElementById("lienStyle");
@@ -227,7 +227,7 @@ function changerTheme(theme) {
   styleLink.href = `styles/theme${theme}.css`;
 
   return reponseTerminal(
-    `<p>   <span class="comment">${localisationTextes.themeChange[lang]}"${theme}".</span></p>`
+    `<p>   <span class="comment">${localisationTextes.themeChange[lang]}'${theme}'.</span></p>`
   );
 }
 
@@ -246,6 +246,6 @@ function changerLangue(langue) {
   helpMessage.innerHTML = localisationTextes.helpMessage[lang];
 
   return reponseTerminal(
-    `<p>   <span class="comment">${localisationTextes.changementLangue[lang]}"${langue}".</span></p>`
+    `<p>   <span class="comment">${localisationTextes.changementLangue[lang]}'${langue}'.</span></p>`
   );
 }
