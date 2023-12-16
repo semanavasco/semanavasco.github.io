@@ -74,6 +74,7 @@ document.addEventListener("keydown", async function (event) {
            <span class="comment">cd</span>             <span class="question">Changes your current working directory to the specified directory.</span><br/>
            <span class="comment">clear</span>          <span class="question">Removes all previous commands and output from the terminal.</span><br/>
            <span class="comment">cat</span>            <span class="question">Prints the content of a specified file.</span><br/>
+           <span class="comment">theme</span>          <span class="question">Changes the look of the portfolio terminal.</span><br/>
        </p>`
         );
     } else if (arguments[0] === "ls") {
