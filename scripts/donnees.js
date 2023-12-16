@@ -59,14 +59,14 @@ var dossiers = [
     terminal: "/home/visitor/AboutMe/whoami.txt",
     pwd: "/home/visitor/AboutMe",
     type: "file",
-    content: `<span class="normalized">Hi, I'm Vasco, an 18 year old Portuguese student in France, pursuing my BTS SIO specialized in Software Solutions (SLAM). I'm passionate about coding, and I love learning new stuff ! I make video-games, websites, bash scripts, discord bots, and more for fun !</span>`,
+    content: `<span class="normalized">${localisationTextes.whoamiText[lang]}</span>`,
   },
   {
     name: "bts_sio_slam.txt",
     terminal: "/home/visitor/Studies/bts_sio_slam.txt",
     pwd: "/home/visitor/Studies",
     type: "file",
-    content: `<span class="normalized">I am currently on my first year of the BTS SIO degree with a specialization in Software Solutions (SLAM). I'm an apprentice at SAB System, a company that I really enjoy working at since I always learn new stuff ! So far I've been working on an automation project with bash on Linux. It's actually what has pushed me into starting this new project of recreating a Linux Terminal as a portfolio, I really enjoy using it at work.</span>`,
+    content: `<span class="normalized">${localisationTextes.btsSIOSLAMText[lang]}</span>`,
   },
   {
     name: "personal.txt",
@@ -103,6 +103,14 @@ var localisationTextes = {
   helpMessage: {
     fr: `Tapez <span class="important">'help'</span> pour afficher la liste des commandes disponibles.`,
     en: `Type <span class="important">'help'</span> to get a list of the available commands.`,
+  },
+  whoamiText: {
+    fr: `Bonjour, je suis Vasco, un étudiant portugais de 18 ans résidant en France, je commande mon BTS SIO spécialisé en Solutions Logicielles (SLAM). Je suis passionné par la programmation, et j'adore apprendre de nouvelles choses ! Je fais des jeux-vidéos, des sites web, des scripts bash, des bots discord, et bien plus pour le fun !`,
+    en: `Hi, I'm Vasco, an 18 year old Portuguese student in France, pursuing my BTS SIO specialized in Software Solutions (SLAM). I'm passionate about coding, and I love learning new stuff ! I make video-games, websites, bash scripts, discord bots, and more for fun !`,
+  },
+  btsSIOSLAMText: {
+    fr: `Je suis actuellement en première année d'un BTS SIO spécialisé en Solutions Logicielles (SLAM). Je suis apprenti chez SAB System, une entreprise que j'apprécie beaucoup car j'y apprends toujours de nouvelles choses ! J'ai travaillé sur un projet d'automatisation avec bash sur Linux. C'est d'ailleurs ce qui m'a poussé à commencer ce nouveau projet de recréer un Terminal Linux en tant que portfolio, j'adore utiliser un terminal au travail.`,
+    en: `I am currently on my first year of the BTS SIO degree with a specialization in Software Solutions (SLAM). I'm an apprentice at SAB System, a company that I really enjoy working at since I always learn new stuff ! So far I've been working on an automation project with bash on Linux. It's actually what has pushed me into starting this new project of recreating a Linux Terminal as a portfolio, I really enjoy using it at work.`,
   },
   helpDescription: {
     fr: "Il semblerait que vous sachiez déjà ce que cela fait.",
