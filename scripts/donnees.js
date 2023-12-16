@@ -189,8 +189,8 @@ var localisationTextes = {
     en: "error: 'lang' command requires an argument (fr/en)",
   },
   ouvertureProjetErreur: {
-    fr: "erreur: la commande 'project' requiert un nom de projet en argument",
-    en: "error: 'project' command requires a project name as argument",
+    fr: "erreur: la commande 'project' requiert un nom de projet en argument (sololeveling)",
+    en: "error: 'project' command requires a project name as argument (sololeveling)",
   },
   ouvertureProjet: {
     fr: "Ouverture du projet ",
