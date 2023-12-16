@@ -157,9 +157,7 @@ document.addEventListener("keydown", async function (event) {
             .childs.includes(arguments[1])
         ) {
           reponseTerminal(
-            `<p>   ${
-              dossiers.find((dossier) => dossier.name === arguments[1]).content
-            }</p>`
+            `<p>   ${localisationTextes[arguments[1]][lang]}</p>`
           );
         } else if (
           arguments[1].includes("/") &&
@@ -168,11 +166,7 @@ document.addEventListener("keydown", async function (event) {
             .childs.includes(arguments[1].split("/")[1])
         ) {
           reponseTerminal(
-            `<p>   ${
-              dossiers.find(
-                (dossier) => dossier.name === arguments[1].split("/")[1]
-              ).content
-            }</p>`
+            `<p>   ${localisationTextes[arguments[1].split("/")[1]][lang]}</p>`
           );
         } else
           reponseTerminal(
