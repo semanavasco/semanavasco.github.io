@@ -195,6 +195,20 @@ document.addEventListener("keydown", async function (event) {
         else changerLangue(arguments[1]);
         break;
 
+      case "project":
+        if (arguments.length === 1)
+          reponseTerminal(
+            `<p>   <span class="error">${localisationTextes.ouvertureProjetErreur[lang]}</span></p>`
+          );
+        else {
+          reponseTerminal(
+            `<p>   <span class="comment">${localisationTextes.ouvertureProjet[lang]}'${arguments[1]}'.</span></p>`
+          );
+
+          ouvrirProjet(arguments[1]);
+        }
+        break;
+
       default:
         reponseTerminal(
           `<p>   <span class="error">${localisationTextes.erreur[lang]}'${commande}'${localisationTextes.existepasErreur[lang]}</span></p>`

@@ -184,4 +184,12 @@ var localisationTextes = {
     fr: "erreur: la commande 'lang' requiert un argument (fr/en)",
     en: "error: 'lang' command requires an argument (fr/en)",
   },
+  ouvertureProjetErreur: {
+    fr: "erreur: la commande 'project' requiert un nom de projet en argument",
+    en: "error: 'project' command requires a project name as argument",
+  },
+  ouvertureProjet: {
+    fr: "Ouverture du projet ",
+    en: "Opening project ",
+  },
 };
