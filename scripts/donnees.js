@@ -204,4 +204,48 @@ var localisationTextes = {
     fr: "Ouverture du projet ",
     en: "Opening project ",
   },
+  projetSoloLevelingDescription1: {
+    fr: "Le projet Solo Leveling consistait à créer un Bot Discord de type RPG basé sur le manhwa Solo Leveling. Celui-ci offrait la possiblité de créer un personnage, l'équiper avec plus de 500 pièces d'équipement pour affronter des ennemis avec nos amis.",
+    en: "The Solo Leveling project consisted in creating a Discord Bot of RPG type based on the Solo Leveling manhwa. It offered the possibility to create a character, equip it with more than 500 pieces of equipment to fight enemies with our friends.",
+  },
+  projetSoloLevelingDescription2: {
+    fr: "- C'est un projet développé en JavaScript à l'aide de la librairie Discord.JS.",
+    en: "- It is a project developed in JavaScript using the Discord.JS library.",
+  },
+  projetSoloLevelingDescription3: {
+    fr: "- Je l'ai développé entièrement seul et l'ai recommencé plusieurs fois au fûr et à mesure que j'apprenais de nouvelles choses.",
+    en: "- I developed it entirely alone and restarted it several times as I learned new things.",
+  },
+  projetSoloLevelingDescription4: {
+    fr: "- Retour lors de la création du personnage récapitulant toutes les informations de celui-ci (classe, métier, etc).",
+    en: "- Feedback when creating the character summarizing all its information (class, profession, etc.).",
+  },
+  projetSoloLevelingDescription5: {
+    fr: "- Affichage du profil du joueur avec la commande /profil. Les barres de vie, mana et exp sont réactives.",
+    en: "- Display of the player's profile with the command /profil. The life, mana and exp bars are reactive.",
+  },
+  projetSoloLevelingDescription6: {
+    fr: "- Affichage de l'inventaire du joueur avec la commande /inventaire, celui-ci se mets à jour automatiquement lorsque le joueur déséquipe/équipe un item avec /déséquiper ou /équiper.",
+    en: "- Display of the player's inventory with the command /inventory, it is updated automatically when the player unequips/equips an item with /unequip or /equip.",
+  },
+  projetSoloLevelingDescription7: {
+    fr: "- Affichage de la monnaie (ayant une vraie valeur économique, elle permet d'acheter des items, appartements, etc) du joueur ainsi que la quantité de cristaux (matériau d'amélioration) possédés.",
+    en: "- Display of the player's currency (that has a real economic value, it allows to buy items, apartments, etc.) as well as the amount of crystals (improvement material) owned.",
+  },
+  projetSoloLevelingDescription8: {
+    fr: "- Affichage du groupe du joueur avec la commande /groupe. Ce groupe permets aux joueurs d'automatiquement partager les récompenses entre eux lors des affrontements.",
+    en: "- Display of the player's group with the command /group. This group allows players to automatically share rewards between them during confrontations.",
+  },
+  projetSoloLevelingDescription9: {
+    fr: "- Système d'intéractions avec  des PNJs (personnages non joueurs), ayant chacun des dialogues et possiblités différentes. Plus de 50 PNJs ont été créés, cela englobe leur histoire, leur caractère, leurs dialogues, etc.",
+    en: "- Interaction system with NPCs (non-player characters), each with different dialogues and possibilities. More than 50 NPCs have been created, this includes their history, their personality, their dialogues, etc.",
+  },
+  projetSoloLevelingDescription10: {
+    fr: "- Système d'échange entre joueurs et de gestion de l'inventaire en permettant aux joueurs de lâcher des objets dans la carte.",
+    en: "- Exchange system between players and inventory management by allowing players to drop items on the map.",
+  },
+  projetSoloLevelingDescription11: {
+    fr: "- Un système de récompenses basé sur l'activité du joueur et proposant une version payante (mais pouvant être obtenue gratuitement par la complétion de certaines quêtes).",
+    en: "- A reward system based on the player's activity and offering a paid version (but which can be obtained for free by completing certain quests).",
+  },
 };

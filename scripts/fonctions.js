@@ -127,9 +127,27 @@ function ouvrirProjet(projet) {
 
       contenu = contenuFenetre.appendChild(document.createElement("p"));
       contenu.classList.add("courteDescriptionProjet");
-      contenu.innerHTML = `<span class="normalized">Le projet Solo Leveling consistait à créer un Bot Discord de type RPG basé sur le manhwa Solo Leveling. Celui-ci offrait la possiblité de créer un personnage, l'équiper avec plus de 500 pièces d'équipement pour affronter des ennemis avec nos amis.</span>`;
+      contenu.innerHTML = `<span class="normalized">${localisationTextes.projetSoloLevelingDescription1[lang]}</span>`;
       contenu.style.marginLeft = "10%";
       contenu.style.marginRight = "10%";
+
+      contenu = contenuFenetre.appendChild(document.createElement("div"));
+      contenu.classList.add("technologiesProjet");
+      contenu.style.marginTop = "2%";
+      contenu.style.marginBottom = "2%";
+      contenu.style.display = "flex";
+      contenu.style.justifyContent = "space-around";
+      contenu.style.alignItems = "center";
+      contenu = contenu.appendChild(document.createElement("img"));
+      contenu.src = "/assets/images/discord.png";
+      contenu.alt = "Discord logo.";
+      contenu.style.width = "10%";
+      contenu.style.height = "auto";
+      contenu = document.getElementsByClassName("technologiesProjet")[0].appendChild(document.createElement("img"));
+      contenu.src = "/assets/images/nodejs.png";
+      contenu.alt = "NodeJS logo.";
+      contenu.style.width = "10%";
+      contenu.style.height = "auto";
 
       contenu = contenuFenetre.appendChild(document.createElement("p"));
       contenu.classList.add("sousTitre1Projet");
@@ -140,7 +158,7 @@ function ouvrirProjet(projet) {
 
       contenu = contenuFenetre.appendChild(document.createElement("p"));
       contenu.classList.add("courteDescriptionProjet");
-      contenu.innerHTML = `<span class="normalized">- C'est un projet développé en JavaScript à l'aide de la librairie Discord.JS.</span><br/><span class="normalized">- Je l'ai développé entièrement seul et l'ai recommencé plusieurs fois au fûr et à mesure que j'apprenais de nouvelles choses.</span>`;
+      contenu.innerHTML = `<span class="normalized">${localisationTextes.projetSoloLevelingDescription2[lang]}</span><br/><span class="normalized">${localisationTextes.projetSoloLevelingDescription3[lang]}</span>`;
       contenu.style.marginLeft = "10%";
       contenu.style.marginRight = "10%";
 
@@ -153,7 +171,7 @@ function ouvrirProjet(projet) {
 
       contenu = contenuFenetre.appendChild(document.createElement("p"));
       contenu.classList.add("courteDescriptionProjet");
-      contenu.innerHTML = `<span class="normalized">- Retour lors de la création du personnage récapitulant toutes les informations de celui-ci (classe, métier, etc).</span>`;
+      contenu.innerHTML = `<span class="normalized">${localisationTextes.projetSoloLevelingDescription4[lang]}</span>`;
       contenu.style.marginLeft = "10%";
       contenu.style.marginRight = "10%";
 
@@ -168,7 +186,7 @@ function ouvrirProjet(projet) {
 
       contenu = contenuFenetre.appendChild(document.createElement("p"));
       contenu.classList.add("courteDescriptionProjet");
-      contenu.innerHTML = `<span class="normalized">- Affichage du profil du joueur avec la commande /profil. Les barres de vie, mana et exp sont réactives.</span>`;
+      contenu.innerHTML = `<span class="normalized">${localisationTextes.projetSoloLevelingDescription5[lang]}</span>`;
       contenu.style.marginLeft = "10%";
       contenu.style.marginRight = "10%";
 
@@ -183,7 +201,7 @@ function ouvrirProjet(projet) {
 
       contenu = contenuFenetre.appendChild(document.createElement("p"));
       contenu.classList.add("courteDescriptionProjet");
-      contenu.innerHTML = `<span class="normalized">- Affichage de l'inventaire du joueur avec la commande /inventaire, celui-ci se mets à jour automatiquement lorsque le joueur déséquipe/équipe un item avec /déséquiper ou /équiper.</span>`;
+      contenu.innerHTML = `<span class="normalized">${localisationTextes.projetSoloLevelingDescription6[lang]}</span>`;
       contenu.style.marginLeft = "10%";
       contenu.style.marginRight = "10%";
 
@@ -198,7 +216,7 @@ function ouvrirProjet(projet) {
 
       contenu = contenuFenetre.appendChild(document.createElement("p"));
       contenu.classList.add("courteDescriptionProjet");
-      contenu.innerHTML = `<span class="normalized">- Affichage de la monnaie (ayant une vraie valeur économique, elle permet d'acheter des items, appartements, etc) du joueur ainsi que la quantité de cristaux (matériau d'amélioration) possédés.</span>`;
+      contenu.innerHTML = `<span class="normalized">${localisationTextes.projetSoloLevelingDescription7[lang]}</span>`;
       contenu.style.marginLeft = "10%";
       contenu.style.marginRight = "10%";
 
@@ -213,7 +231,7 @@ function ouvrirProjet(projet) {
 
       contenu = contenuFenetre.appendChild(document.createElement("p"));
       contenu.classList.add("courteDescriptionProjet");
-      contenu.innerHTML = `<span class="normalized">- Affichage du groupe du joueur avec la commande /groupe. Ce groupe permets aux joueurs d'automatiquement partager les récompenses entre eux lors des affrontements.</span>`;
+      contenu.innerHTML = `<span class="normalized">${localisationTextes.projetSoloLevelingDescription8[lang]}</span>`;
       contenu.style.marginLeft = "10%";
       contenu.style.marginRight = "10%";
 
@@ -228,7 +246,7 @@ function ouvrirProjet(projet) {
 
       contenu = contenuFenetre.appendChild(document.createElement("p"));
       contenu.classList.add("courteDescriptionProjet");
-      contenu.innerHTML = `<span class="normalized">- Système d'intéractions avec  des PNJs (personnages non joueurs), ayant chacun des dialogues et possiblités différentes. Plus de 50 PNJs ont été créés, cela englobe leur histoire, leur caractère, leurs dialogues, etc.</span>`;
+      contenu.innerHTML = `<span class="normalized">${localisationTextes.projetSoloLevelingDescription9[lang]}</span>`;
       contenu.style.marginLeft = "10%";
       contenu.style.marginRight = "10%";
 
@@ -243,7 +261,7 @@ function ouvrirProjet(projet) {
 
       contenu = contenuFenetre.appendChild(document.createElement("p"));
       contenu.classList.add("courteDescriptionProjet");
-      contenu.innerHTML = `<span class="normalized">- Système d'échange entre joueurs et de gestion de l'inventaire en permettant aux joueurs de lâcher des objets dans la carte.</span>`;
+      contenu.innerHTML = `<span class="normalized">${localisationTextes.projetSoloLevelingDescription10[lang]}</span>`;
       contenu.style.marginLeft = "10%";
       contenu.style.marginRight = "10%";
 
@@ -258,7 +276,7 @@ function ouvrirProjet(projet) {
 
       contenu = contenuFenetre.appendChild(document.createElement("p"));
       contenu.classList.add("courteDescriptionProjet");
-      contenu.innerHTML = `<span class="normalized">- Un système de récompenses basé sur l'activité du joueur et proposant une version payante (mais pouvant être obtenue gratuitement par la complétion de certaines quêtes).</span>`;
+      contenu.innerHTML = `<span class="normalized">${localisationTextes.projetSoloLevelingDescription11[lang]}</span>`;
       contenu.style.marginLeft = "10%";
       contenu.style.marginRight = "10%";
 
