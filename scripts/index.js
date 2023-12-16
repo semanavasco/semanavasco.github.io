@@ -75,6 +75,7 @@ document.addEventListener("keydown", async function (event) {
            <span class="comment">cd</span>             <span class="question">${localisationTextes.cdDescription[lang]}</span><br/>
            <span class="comment">clear</span>          <span class="question">${localisationTextes.clearDescription[lang]}</span><br/>
            <span class="comment">cat</span>            <span class="question">${localisationTextes.catDescription[lang]}</span><br/>
+           <span class="comment">project</span>        <span class="question">${localisationTextes.projectDescription[lang]}</span><br/>
            <span class="comment">theme</span>          <span class="question">${localisationTextes.themeDescription[lang]}</span><br/>
            <span class="comment">lang</span>           <span class="question">${localisationTextes.langDescription[lang]}</span><br/>
        </p>`

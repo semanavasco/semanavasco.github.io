@@ -128,6 +128,10 @@ var localisationTextes = {
     fr: "Affiche le contenu d'un fichier spécifié.",
     en: "Prints the content of a specified file.",
   },
+  projectDescription: {
+    fr: "Ouvre un projet spécifié dans une nouvelle fenêtre.",
+    en: "Opens a specified project in a new window.",
+  },
   themeDescription: {
     fr: "Change l'apparence du terminal portfolio.",
     en: "Changes the look of the portfolio terminal.",
