@@ -192,6 +192,14 @@ var localisationTextes = {
     fr: "erreur: la commande 'project' requiert un nom de projet en argument (sololeveling)",
     en: "error: 'project' command requires a project name as argument (sololeveling)",
   },
+  ouvertureProjetInexistantErreur: {
+    fr: "erreur: aucun projet avec le nom ",
+    en: "error: no such project ",
+  },
+  ouvertureProjetInexistantErreur2: {
+    fr: " projets actuels : sololeveling",
+    en: " current projects : sololeveling",
+  },
   ouvertureProjet: {
     fr: "Ouverture du projet ",
     en: "Opening project ",

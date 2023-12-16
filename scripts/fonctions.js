@@ -124,7 +124,7 @@ function ouvrirProjet(projet) {
 
     default:
       reponseTerminal(
-        `<p>   <span class="error">${localisationTextes.ouvertureProjetErreur[lang]}</span></p>`
+        `<p>   <span class="error">${localisationTextes.ouvertureProjetInexistantErreur[lang]}'${projet}'${localisationTextes.ouvertureProjetInexistantErreur2[lang]}</span></p>`
       );
       break;
   }
