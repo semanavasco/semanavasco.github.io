@@ -203,7 +203,7 @@ document.addEventListener("keydown", async function (event) {
           );
         else if (arguments[1] !== "sololeveling") {
           reponseTerminal(
-            `<p>   <span class="error">${localisationTextes.ouvertureProjetInexistantErreur[lang]}'${projet}'${localisationTextes.ouvertureProjetInexistantErreur2[lang]}</span></p>`
+            `<p>   <span class="error">${localisationTextes.ouvertureProjetInexistantErreur[lang]}'${arguments[1]}'${localisationTextes.ouvertureProjetInexistantErreur2[lang]}</span></p>`
           );
         } else {
           reponseTerminal(
