@@ -1,3 +1,4 @@
+// Mise en place du système de navigation des dossiers
 var dossierActuel = "~";
 
 var historiqueCommandesArrowUp = [];
@@ -89,6 +90,8 @@ dossiers = [
     content: `<span class="normalized">Not written yet.</span>`,
   },
 ];
+
+// Configuration des options de localisation
 
 var lang = "en";
 
