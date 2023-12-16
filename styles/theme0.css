@@ -85,16 +85,3 @@ span.important {
 span.warning {
   color: #f1fa8c;
 }
-
-/* Cursor */
-p.lignes::after {
-  content: "|";
-  color: #ff79c6;
-  animation: cursor 0.8s infinite;
-}
-
-@keyframes cursor {
-  to {
-    color: #ff79c600;
-  }
-}

@@ -164,6 +164,12 @@ document.addEventListener("keydown", async function (event) {
         reponseTerminal(
           `<p>   <span class="error">error: file "${arguments[1]}" does not exist</span></p>`
         );
+    } else if (arguments[0] === "theme") {
+      if (arguments.length === 1)
+        reponseTerminal(
+          `<p>   <span class="error">error: "theme" command requires a theme number (0-9)</span></p>`
+        );
+      else changerTheme(arguments[1]);
     } else if (commande.trim().length >= 1) {
       reponseTerminal(
         `<p>   <span class="error">error: "${commande}" command not found</span></p>`
@@ -200,4 +206,19 @@ function reponseTerminal(reponse) {
   reponseTerminal.classList.add("ancienneLigne");
 
   reponseTerminal.innerHTML = reponse;
+}
+
+function changerTheme(theme) {
+  if (isNaN(theme) || Number(theme) < 0 || Number(theme) > 9)
+    return reponseTerminal(
+      `<p>   <span class="error">error: no such theme "${theme}" number must be between 0 and 9</span></p>`
+    );
+
+  var styleLink = document.getElementById("lienStyle");
+
+  styleLink.href = `styles/theme${theme}.css`;
+
+  return reponseTerminal(
+    `<p>   <span class="comment">Theme changed to "${theme}".</span></p>`
+  );
 }

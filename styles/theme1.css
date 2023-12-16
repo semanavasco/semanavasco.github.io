@@ -1,0 +1,87 @@
+/* Importation de la police d'écriture personnalisée */
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../assets/fonts/JetBrainsMono-Regular.ttf");
+}
+
+/* Configuration générale du style de la page */
+body {
+  font-family: "JetBrains Mono", sans-serif;
+  font-size: large;
+  margin: 20px;
+  background-color: #2c2d31;
+}
+
+div.lignes {
+  margin-top: -20px;
+}
+
+p {
+  line-height: 30px;
+}
+
+/* Modification du style de la balise <input> */
+input {
+  font-family: "JetBrains Mono", sans-serif;
+  background-color: transparent;
+  color: #f8f8f2;
+  font-size: large;
+  border: transparent;
+  width: 75%;
+  color: #fff279;
+}
+
+/* Enlever la bordure bleue qui entoure l'input lorsqu'il est sélectionné */
+input:focus {
+  outline: none;
+}
+
+/* Mettre les élements du div lignes sur la même ligne */
+.lignes {
+  display: flex;
+}
+
+/* Colors */
+h1 {
+  color: #ff886a;
+}
+
+p {
+  color: #fff279;
+}
+
+span.normalized {
+  color: #f8f8f2;
+}
+
+span.command {
+  color: #fff279;
+}
+
+span.information {
+  color: #ff886a;
+}
+
+span.comment {
+  color: #c3ff55;
+}
+
+span.question {
+  color: #a47a62;
+}
+
+span.error {
+  color: #ff3d3d;
+}
+
+span.success {
+  color: #50fa7b;
+}
+
+span.important {
+  color: #ff6c6c;
+}
+
+span.warning {
+  color: #f1fa8c;
+}
