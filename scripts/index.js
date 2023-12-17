@@ -157,7 +157,7 @@ document.addEventListener("keydown", async function (event) {
             .childs.includes(arguments[1])
         ) {
           reponseTerminal(
-            `<p>   ${localisationTextes[arguments[1]][lang]}</p>`
+            `<p class="cat">${localisationTextes[arguments[1]][lang]}</p>`
           );
         } else if (
           arguments[1].includes("/") &&
@@ -166,7 +166,9 @@ document.addEventListener("keydown", async function (event) {
             .childs.includes(arguments[1].split("/")[1])
         ) {
           reponseTerminal(
-            `<p>   ${localisationTextes[arguments[1].split("/")[1]][lang]}</p>`
+            `<p class="cat">${
+              localisationTextes[arguments[1].split("/")[1]][lang]
+            }</p>`
           );
         } else
           reponseTerminal(

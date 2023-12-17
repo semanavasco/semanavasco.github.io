@@ -20,6 +20,10 @@ p {
   line-height: 30px;
 }
 
+.cat {
+  margin-left: 30px;
+}
+
 /* Modification du style de la balise <input> */
 input {
   font-family: "JetBrains Mono", sans-serif;
