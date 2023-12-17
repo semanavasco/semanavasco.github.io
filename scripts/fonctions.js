@@ -14,7 +14,7 @@ function reponseTerminal(reponse) {
 function changerTheme(theme) {
   if (isNaN(theme) || Number(theme) < 0 || Number(theme) > 9)
     return reponseTerminal(
-      `<p>   <span class="error">${localisationTextes.themeInexistantErreur[lang]}'${theme}'${localisationTextes.themeEntreErreur[lang]}</span></p>`
+      `<p class="terminalOutput"><span class="error">${localisationTextes.themeInexistantErreur[lang]}'${theme}'${localisationTextes.themeEntreErreur[lang]}</span></p>`
     );
 
   var styleLink = document.getElementById("lienStyle");
@@ -22,7 +22,7 @@ function changerTheme(theme) {
   styleLink.href = `styles/theme${theme}.css`;
 
   return reponseTerminal(
-    `<p>   <span class="comment">${localisationTextes.themeChange[lang]}'${theme}'.</span></p>`
+    `<p class="terminalOutput"><span class="comment">${localisationTextes.themeChange[lang]}'${theme}'.</span></p>`
   );
 }
 
@@ -30,7 +30,7 @@ function changerTheme(theme) {
 function changerLangue(langue) {
   if (langue !== "fr" && langue !== "en")
     return reponseTerminal(
-      `<p>   <span class="error">${localisationTextes.changementLangueErreur[lang]}</span></p>`
+      `<p class="terminalOutput"><span class="error">${localisationTextes.changementLangueErreur[lang]}</span></p>`
     );
 
   lang = langue;
@@ -42,7 +42,7 @@ function changerLangue(langue) {
   helpMessage.innerHTML = localisationTextes.helpMessage[lang];
 
   return reponseTerminal(
-    `<p>   <span class="comment">${localisationTextes.changementLangue[lang]}'${langue}'.</span></p>`
+    `<p class="terminalOutput"><span class="comment">${localisationTextes.changementLangue[lang]}'${langue}'.</span></p>`
   );
 }
 

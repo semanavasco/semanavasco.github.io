@@ -64,20 +64,20 @@ document.addEventListener("keydown", async function (event) {
       case "help":
         if (arguments.length > 1)
           reponseTerminal(
-            `<p>   <span class="error">${localisationTextes.helpErreur[lang]}</span></p>`
+            `<p class="terminalOutput"><span class="error">${localisationTextes.helpErreur[lang]}</span></p>`
           );
         else
           reponseTerminal(
-            `<p>
-           <span class="comment">help</span>           <span class="question">${localisationTextes.helpDescription[lang]}</span><br/>
-           <span class="comment">pwd</span>            <span class="question">${localisationTextes.pwdDescription[lang]}</span><br/>
-           <span class="comment">ls</span>             <span class="question">${localisationTextes.lsDescription[lang]}</span><br/>
-           <span class="comment">cd</span>             <span class="question">${localisationTextes.cdDescription[lang]}</span><br/>
-           <span class="comment">clear</span>          <span class="question">${localisationTextes.clearDescription[lang]}</span><br/>
-           <span class="comment">cat</span>            <span class="question">${localisationTextes.catDescription[lang]}</span><br/>
-           <span class="comment">project</span>        <span class="question">${localisationTextes.projectDescription[lang]}</span><br/>
-           <span class="comment">theme</span>          <span class="question">${localisationTextes.themeDescription[lang]}</span><br/>
-           <span class="comment">lang</span>           <span class="question">${localisationTextes.langDescription[lang]}</span><br/>
+            `<p class="terminalOutput">
+        <span class="comment">help</span>           <span class="question">${localisationTextes.helpDescription[lang]}</span><br/>
+        <span class="comment">pwd</span>            <span class="question">${localisationTextes.pwdDescription[lang]}</span><br/>
+        <span class="comment">ls</span>             <span class="question">${localisationTextes.lsDescription[lang]}</span><br/>
+        <span class="comment">cd</span>             <span class="question">${localisationTextes.cdDescription[lang]}</span><br/>
+        <span class="comment">clear</span>          <span class="question">${localisationTextes.clearDescription[lang]}</span><br/>
+        <span class="comment">cat</span>            <span class="question">${localisationTextes.catDescription[lang]}</span><br/>
+        <span class="comment">project</span>        <span class="question">${localisationTextes.projectDescription[lang]}</span><br/>
+        <span class="comment">theme</span>          <span class="question">${localisationTextes.themeDescription[lang]}</span><br/>
+        <span class="comment">lang</span>           <span class="question">${localisationTextes.langDescription[lang]}</span><br/>
        </p>`
           );
         break;
@@ -85,7 +85,7 @@ document.addEventListener("keydown", async function (event) {
       case "ls":
         if (arguments.length === 1)
           reponseTerminal(
-            `<p>   ${dossiers
+            `<p class="terminalOutput">${dossiers
               .find((dossier) => dossier.name === dossierActuel)
               .ls.join("   ")}</p>`
           );
@@ -96,13 +96,13 @@ document.addEventListener("keydown", async function (event) {
             .childs.includes(arguments[1])
         ) {
           reponseTerminal(
-            `<p>   ${dossiers
+            `<p class="terminalOutput">${dossiers
               .find((dossier) => dossier.name === arguments[1])
               .ls.join("   ")}</p>`
           );
         } else
           reponseTerminal(
-            `<p>   <span class="error">${localisationTextes.dossierErreur[lang]}"${arguments[1]}"${localisationTextes.existepasErreur[lang]}</span></p>`
+            `<p class="terminalOutput"><span class="error">${localisationTextes.dossierErreur[lang]}"${arguments[1]}"${localisationTextes.existepasErreur[lang]}</span></p>`
           );
         break;
 
@@ -119,7 +119,7 @@ document.addEventListener("keydown", async function (event) {
           dossierActuel = "~";
         } else
           reponseTerminal(
-            `<p>   <span class="error">${localisationTextes.dossierErreur[lang]}"${arguments[1]}"${localisationTextes.existepasErreur[lang]}</span></p>`
+            `<p class="terminalOutput"><span class="error">${localisationTextes.dossierErreur[lang]}"${arguments[1]}"${localisationTextes.existepasErreur[lang]}</span></p>`
           );
         break;
 
@@ -138,8 +138,7 @@ document.addEventListener("keydown", async function (event) {
 
       case "pwd":
         reponseTerminal(
-          `<p>
-             <span class="comment">${
+          `<p class="terminalOutput"><span class="comment">${
             dossiers.find((dossier) => dossier.name === dossierActuel).pwd
           }</span>
          </p>`
@@ -149,7 +148,7 @@ document.addEventListener("keydown", async function (event) {
       case "cat":
         if (arguments.length === 1)
           reponseTerminal(
-            `<p>   <span class="error">${localisationTextes.catErreur[lang]}</span></p>`
+            `<p class="terminalOutput"><span class="error">${localisationTextes.catErreur[lang]}</span></p>`
           );
         else if (
           dossiers
@@ -157,7 +156,9 @@ document.addEventListener("keydown", async function (event) {
             .childs.includes(arguments[1])
         ) {
           reponseTerminal(
-            `<p class="cat">${localisationTextes[arguments[1]][lang]}</p>`
+            `<p class="terminalOutput">${
+              localisationTextes[arguments[1]][lang]
+            }</p>`
           );
         } else if (
           arguments[1].includes("/") &&
@@ -166,20 +167,20 @@ document.addEventListener("keydown", async function (event) {
             .childs.includes(arguments[1].split("/")[1])
         ) {
           reponseTerminal(
-            `<p class="cat">${
+            `<p class="terminalOutput">${
               localisationTextes[arguments[1].split("/")[1]][lang]
             }</p>`
           );
         } else
           reponseTerminal(
-            `<p>   <span class="error">${localisationTextes.fichierErreur[lang]}'${arguments[1]}'${localisationTextes.existepasErreur[lang]}</span></p>`
+            `<p class="terminalOutput"><span class="error">${localisationTextes.fichierErreur[lang]}'${arguments[1]}'${localisationTextes.existepasErreur[lang]}</span></p>`
           );
         break;
 
       case "theme":
         if (arguments.length === 1)
           reponseTerminal(
-            `<p>   <span class="error">${localisationTextes.themeErreur[lang]}</span></p>`
+            `<p class="terminalOutput"><span class="error">${localisationTextes.themeErreur[lang]}</span></p>`
           );
         else changerTheme(arguments[1]);
         break;
@@ -187,7 +188,7 @@ document.addEventListener("keydown", async function (event) {
       case "lang":
         if (arguments.length === 1)
           reponseTerminal(
-            `<p>   <span class="error">${localisationTextes.changementLangueErreur[lang]}</span></p>`
+            `<p class="terminalOutput"><span class="error">${localisationTextes.changementLangueErreur[lang]}</span></p>`
           );
         else changerLangue(arguments[1]);
         break;
@@ -195,15 +196,15 @@ document.addEventListener("keydown", async function (event) {
       case "project":
         if (arguments.length === 1)
           reponseTerminal(
-            `<p>   <span class="error">${localisationTextes.ouvertureProjetErreur[lang]}</span></p>`
+            `<p class="terminalOutput"><span class="error">${localisationTextes.ouvertureProjetErreur[lang]}</span></p>`
           );
         else if (arguments[1] !== "sololeveling") {
           reponseTerminal(
-            `<p>   <span class="error">${localisationTextes.ouvertureProjetInexistantErreur[lang]}'${arguments[1]}'${localisationTextes.ouvertureProjetInexistantErreur2[lang]}</span></p>`
+            `<p class="terminalOutput"><span class="error">${localisationTextes.ouvertureProjetInexistantErreur[lang]}'${arguments[1]}'${localisationTextes.ouvertureProjetInexistantErreur2[lang]}</span></p>`
           );
         } else {
           reponseTerminal(
-            `<p>   <span class="comment">${localisationTextes.ouvertureProjet[lang]}'${arguments[1]}'.</span></p>`
+            `<p class="terminalOutput"><span class="comment">${localisationTextes.ouvertureProjet[lang]}'${arguments[1]}'.</span></p>`
           );
 
           ouvrirProjet(arguments[1]);
@@ -212,7 +213,7 @@ document.addEventListener("keydown", async function (event) {
 
       default:
         reponseTerminal(
-          `<p>   <span class="error">${localisationTextes.erreur[lang]}'${commande}'${localisationTextes.existepasErreur[lang]}</span></p>`
+          `<p class="terminalOutput"><span class="error">${localisationTextes.erreur[lang]}'${commande}'${localisationTextes.existepasErreur[lang]}</span></p>`
         );
         break;
     }
