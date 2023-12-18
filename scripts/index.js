@@ -81,6 +81,7 @@ document.addEventListener("keydown", async function (event) {
         <span class="comment">project</span>        <span class="question">${localisationTextes.projectDescription[lang]}</span><br/>
         <span class="comment">theme</span>          <span class="question">${localisationTextes.themeDescription[lang]}</span><br/>
         <span class="comment">lang</span>           <span class="question">${localisationTextes.langDescription[lang]}</span><br/>
+        <span class="comment">bash</span>           <span class="question">${localisationTextes.bashDescription[lang]}</span><br/>
        </p>`
           );
         break;
@@ -225,11 +226,7 @@ document.addEventListener("keydown", async function (event) {
             .childs.includes(arguments[1]) &&
           arguments[1].endsWith(".sh")
         ) {
-          eval(
-            dossiers.find(
-              (dossier) => dossier.name === arguments[1]
-            ).bash
-          );
+          eval(dossiers.find((dossier) => dossier.name === arguments[1]).bash);
         } else if (
           arguments[1].includes("/") &&
           dossiers

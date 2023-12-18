@@ -228,6 +228,10 @@ var localisationTextes = {
     fr: "Change la langue du terminal portfolio.",
     en: "Changes the language of the portfolio terminal.",
   },
+  bashDescription: {
+    fr: "Exécute un script bash spécifié.",
+    en: "Executes a specified bash script.",
+  },
   helpErreur: {
     fr: "erreur: la commande 'help' ne prend aucun argument",
     en: "error: 'help' command does not take any argument",
