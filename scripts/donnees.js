@@ -60,7 +60,12 @@ var dossiers = [
     pwd: "/home/visitor/SocialMedia",
     type: "folder",
     childs: [],
-    ls: ['<span class="normalized">games.txt</span>'],
+    ls: [
+      '<span class="success">instagram.sh</span>',
+      '<span class="success">discord.sh</span>',
+      '<span class="success">linkedin.sh</span>',
+      '<span class="success">github.sh</span>',
+    ],
   },
   {
     name: "whoami.txt",
