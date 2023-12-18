@@ -63,11 +63,11 @@ span.command {
 }
 
 span.information {
-  color: #33cc33;
+  color: #00cccc;
 }
 
 span.comment {
-  color: #808080;
+  color: #33cc33;
 }
 
 span.question {
