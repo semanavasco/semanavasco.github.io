@@ -55,6 +55,14 @@ var dossiers = [
     ls: ['<span class="normalized">games.txt</span>'],
   },
   {
+    name: "SocialMedia",
+    terminal: "/home/visitor/SocialMedia",
+    pwd: "/home/visitor/SocialMedia",
+    type: "folder",
+    childs: [],
+    ls: ['<span class="normalized">games.txt</span>'],
+  },
+  {
     name: "whoami.txt",
     terminal: "/home/visitor/AboutMe/whoami.txt",
     pwd: "/home/visitor/AboutMe",

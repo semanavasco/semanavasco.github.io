@@ -9,7 +9,7 @@ body {
   font-family: "JetBrains Mono", sans-serif;
   font-size: large;
   margin: 20px;
-  background-color: #282a36;
+  background-color: #2d2d2d;
 }
 
 div.lignes {
@@ -32,7 +32,7 @@ input {
   font-size: large;
   border: transparent;
   width: 70%;
-  color: #ff79c6;
+  color: #999999;
 }
 
 /* Enlever la bordure bleue qui entoure l'input lorsqu'il est sélectionné */
@@ -47,11 +47,11 @@ input:focus {
 
 /* Colors */
 h1 {
-  color: #bd93f9;
+  color: #00cccc;
 }
 
 p {
-  color: #ff79c6;
+  color: #999999;
 }
 
 span.normalized {
@@ -59,35 +59,35 @@ span.normalized {
 }
 
 span.command {
-  color: #ff79c6;
+  color: #61dafb;
 }
 
 span.information {
-  color: #bd93f9;
+  color: #33cc33;
 }
 
 span.comment {
-  color: #8be9fd;
+  color: #808080;
 }
 
 span.question {
-  color: #6272a4;
+  color: #cc66cc;
 }
 
 span.error {
-  color: #ff5555;
+  color: #ff0000;
 }
 
 span.success {
-  color: #50fa7b;
+  color: #33cc33;
 }
 
 span.important {
-  color: #ffb86c;
+  color: #ff4500;
 }
 
 span.warning {
-  color: #f1fa8c;
+  color: #ffa500;
 }
 
 /* fenetres */
