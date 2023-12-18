@@ -61,6 +61,9 @@ document.addEventListener("keydown", async function (event) {
 
     // Vérifier la commande
     switch (arguments[0]) {
+      case "":
+        break;
+
       case "help":
         if (arguments.length > 1)
           reponseTerminal(
