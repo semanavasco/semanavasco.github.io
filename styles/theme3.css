@@ -9,7 +9,7 @@ body {
   font-family: "JetBrains Mono", sans-serif;
   font-size: large;
   margin: 20px;
-  background-color: #2c2d31;
+  background-color: #f8f8f8;
 }
 
 div.lignes {
@@ -20,7 +20,7 @@ p {
   line-height: 30px;
 }
 
-.cat {
+.terminalOutput {
   margin-left: 30px;
 }
 
@@ -32,7 +32,7 @@ input {
   font-size: large;
   border: transparent;
   width: 70%;
-  color: #fff279;
+  color: #555555;
 }
 
 /* Enlever la bordure bleue qui entoure l'input lorsqu'il est sélectionné */
@@ -47,65 +47,65 @@ input:focus {
 
 /* Colors */
 h1 {
-  color: #ff886a;
+  color: #008080;
 }
 
 p {
-  color: #fff279;
+  color: #555555;
 }
 
 span.normalized {
-  color: #f8f8f2;
+  color: #252525;
 }
 
 span.command {
-  color: #fff279;
+  color: #000080;
 }
 
 span.information {
-  color: #ff886a;
+  color: #008000;
 }
 
 span.comment {
-  color: #c3ff55;
+  color: #808080;
 }
 
 span.question {
-  color: #a47a62;
+  color: #800080;
 }
 
 span.error {
-  color: #ff3d3d;
+  color: #ff0000;
 }
 
 span.success {
-  color: #50fa7b;
+  color: #008000;
 }
 
 span.important {
-  color: #ff6c6c;
+  color: #ff4500;
 }
 
 span.warning {
-  color: #f1fa8c;
+  color: #ffa500;
 }
 
 /* fenetres */
 .fenetre {
   width: 600px;
   height: 450px;
-  background: #262629;
+  background: #1e2029;
   position: fixed;
   top: 25%;
   left: 25%;
   border-radius: 10px;
-  border: 2px solid #19191b;
+  border: 2px solid #191b22;
 }
 
 .navigationFenetre {
   width: 100%;
   height: 30px;
-  background: #19191b;
+  background: #191b22;
   position: absolute;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
