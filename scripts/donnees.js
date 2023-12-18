@@ -59,7 +59,7 @@ var dossiers = [
     terminal: "/home/visitor/SocialMedia",
     pwd: "/home/visitor/SocialMedia",
     type: "folder",
-    childs: [],
+    childs: ["instagram.sh", "discord.sh", "linkedin.sh", "github.sh"],
     ls: [
       '<span class="success">instagram.sh</span>',
       '<span class="success">discord.sh</span>',
@@ -97,6 +97,34 @@ var dossiers = [
     pwd: "/home/visitor/Ideas",
     type: "file",
   },
+  {
+    name: "instagram.sh",
+    terminal: "/home/visitor/SocialMedia/instagram.sh",
+    pwd: "/home/visitor/SocialMedia",
+    type: "executable",
+    bash: `openSocialMedia("instagram");`,
+  },
+  {
+    name: "discord.sh",
+    terminal: "/home/visitor/SocialMedia/discord.sh",
+    pwd: "/home/visitor/SocialMedia",
+    type: "executable",
+    bash: `openSocialMedia("discord");`,
+  },
+  {
+    name: "linkedin.sh",
+    terminal: "/home/visitor/SocialMedia/linkedin.sh",
+    pwd: "/home/visitor/SocialMedia",
+    type: "executable",
+    bash: `openSocialMedia("linkedin");`,
+  },
+  {
+    name: "github.sh",
+    terminal: "/home/visitor/SocialMedia/github.sh",
+    pwd: "/home/visitor/SocialMedia",
+    type: "executable",
+    bash: `openSocialMedia("github");`,
+  },
 ];
 
 // Configuration des options de localisation
@@ -131,6 +159,22 @@ var localisationTextes = {
   "games.txt": {
     fr: `<span class="normalized">Pas encore rédigé.</span>`,
     en: `<span class="normalized">Not written yet.</span>`,
+  },
+  ouvertureInstagram: {
+    fr: `<span class="normalized">Ouverture d'Instagram...</span>`,
+    en: `<span class="normalized">Opening Instagram...</span>`,
+  },
+  ouvertureDiscord: {
+    fr: `<span class="normalized">Ouverture de Discord...</span>`,
+    en: `<span class="normalized">Opening Discord...</span>`,
+  },
+  ouvertureLinkedin: {
+    fr: `<span class="normalized">Ouverture de LinkedIn...</span>`,
+    en: `<span class="normalized">Opening LinkedIn...</span>`,
+  },
+  ouvertureGithub: {
+    fr: `<span class="normalized">Ouverture de GitHub...</span>`,
+    en: `<span class="normalized">Opening GitHub...</span>`,
   },
   helpDescription: {
     fr: "Il semblerait que vous sachiez déjà ce que cela fait.",
@@ -191,6 +235,10 @@ var localisationTextes = {
   themeErreur: {
     fr: "erreur: la commande 'theme' requiert un numéro de thème (0-9)",
     en: "error: 'theme' command requires a theme number (0-9)",
+  },
+  bashError: {
+    fr: "erreur: la commande 'bash' requiert un nom de fichier en argument",
+    en: 'error: "bash" command requires a file name as argument',
   },
   erreur: {
     fr: "erreur: ",

@@ -214,6 +214,40 @@ document.addEventListener("keydown", async function (event) {
         }
         break;
 
+      case "bash":
+        if (arguments.length === 1)
+          reponseTerminal(
+            `<p class="terminalOutput"><span class="error">${localisationTextes.bashError[lang]}</span></p>`
+          );
+        else if (
+          dossiers
+            .find((dossier) => dossier.name === dossierActuel)
+            .childs.includes(arguments[1]) &&
+          arguments[1].endsWith(".sh")
+        ) {
+          eval(
+            dossiers.find(
+              (dossier) => dossier.name === arguments[1]
+            ).bash
+          );
+        } else if (
+          arguments[1].includes("/") &&
+          dossiers
+            .find((dossier) => dossier.name === arguments[1].split("/")[0])
+            .childs.includes(arguments[1].split("/")[1]) &&
+          arguments[1].split("/")[1].endsWith(".sh")
+        ) {
+          eval(
+            dossiers.find(
+              (dossier) => dossier.name === arguments[1].split("/")[1]
+            ).bash
+          );
+        } else
+          reponseTerminal(
+            `<p class="terminalOutput"><span class="error">${localisationTextes.fichierErreur[lang]}'${arguments[1]}'${localisationTextes.existepasErreur[lang]}</span></p>`
+          );
+        break;
+
       default:
         reponseTerminal(
           `<p class="terminalOutput"><span class="error">${localisationTextes.erreur[lang]}'${commande}'${localisationTextes.existepasErreur[lang]}</span></p>`

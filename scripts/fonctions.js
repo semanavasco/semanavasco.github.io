@@ -46,6 +46,30 @@ function changerLangue(langue) {
   );
 }
 
+function openSocialMedia(socialMedia) {
+  if (socialMedia === "instagram") {
+    window.open("https://www.instagram.com/vasco.smn/", "_blank");
+    reponseTerminal(
+      `<p class="terminalOutput">${localisationTextes.ouvertureInstagram[lang]}</p>`
+    );
+  } else if (socialMedia === "discord") {
+    window.open("https://discord.com/users/svasco", "_blank");
+    reponseTerminal(
+      `<p class="terminalOutput">${localisationTextes.ouvertureDiscord[lang]}</p>`
+    );
+  } else if (socialMedia === "linkedin") {
+    window.open("https://www.linkedin.com/in/vascosemana/", "_blank");
+    reponseTerminal(
+      `<p class="terminalOutput">${localisationTextes.ouvertureLinkedin[lang]}</p>`
+    );
+  } else if (socialMedia === "github") {
+    window.open("https://github.com/semanavasco", "_blank");
+    reponseTerminal(
+      `<p class="terminalOutput">${localisationTextes.ouvertureGithub[lang]}</p>`
+    );
+  }
+}
+
 function ouvrirProjet(projet) {
   switch (projet) {
     case "sololeveling":
@@ -143,7 +167,9 @@ function ouvrirProjet(projet) {
       contenu.alt = "Discord logo.";
       contenu.style.width = "10%";
       contenu.style.height = "auto";
-      contenu = document.getElementsByClassName("technologiesProjet")[0].appendChild(document.createElement("img"));
+      contenu = document
+        .getElementsByClassName("technologiesProjet")[0]
+        .appendChild(document.createElement("img"));
       contenu.src = "/assets/images/nodejs.png";
       contenu.alt = "NodeJS logo.";
       contenu.style.width = "10%";
