@@ -20,6 +20,21 @@ document.addEventListener("keydown", async function (event) {
 
   if (toucheAppuyee === "Tab") {
     event.preventDefault();
+
+    var zoneTexte = document.getElementById("zonetexte");
+
+    var argumentActuel =
+      zoneTexte.value.split(" ")[zoneTexte.value.split(" ").length - 1];
+
+    var valeurSuggeree = await autoCompletion(
+      argumentActuel,
+      zoneTexte.value.split(" ").length - 1
+    );
+
+    zoneTexte.value =
+      zoneTexte.value.split(" ").length <= 1
+        ? valeurSuggeree
+        : zoneTexte.value.split(" ")[0] + " " + valeurSuggeree;
   } else if (toucheAppuyee === "ArrowUp") {
     var zoneTexte = document.getElementById("zonetexte");
 

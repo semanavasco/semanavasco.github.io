@@ -127,6 +127,47 @@ var dossiers = [
   },
 ];
 
+// Définition de la liste d'auto-complétion
+
+var autoCompletionArgument0 = [
+  "cd",
+  "ls",
+  "pwd",
+  "clear",
+  "cat",
+  "theme",
+  "lang",
+  "bash",
+  "help",
+  "project",
+];
+
+var autoCompletionArgument1 = [
+  "AboutMe",
+  "Studies",
+  "Projects",
+  "Ideas",
+  "SocialMedia",
+  "AboutMe/whoami.txt",
+  "whoami.txt",
+  "Studies/bts_sio_slam.txt",
+  "bts_sio_slam.txt",
+  "Projects/personal.txt",
+  "personal.txt",
+  "Projects/professional.txt",
+  "professional.txt",
+  "Ideas/games.txt",
+  "games.txt",
+  "SocialMedia/discord.sh",
+  "discord.sh",
+  "github.sh",
+  "sololeveling",
+  "SocialMedia/instagram.sh",
+  "instagram.sh",
+  "SocialMedia/linkedin.sh",
+  "linkedin.sh",
+];
+
 // Configuration des options de localisation
 
 var lang = "en";

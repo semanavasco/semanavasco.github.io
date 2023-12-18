@@ -10,6 +10,19 @@ function reponseTerminal(reponse) {
   reponseTerminal.innerHTML = reponse;
 }
 
+// Trouve la valeur d'auto-complétion
+function autoCompletion(argument, position) {
+  const valeursCompletion =
+    position === 0 ? autoCompletionArgument0 : autoCompletionArgument1;
+
+  const suggestions = valeursCompletion.filter((valeur) =>
+    valeur.startsWith(argument)
+  );
+
+  if (suggestions.length === 0) return argument;
+  else return suggestions[0];
+}
+
 // Change le thème du terminal
 function changerTheme(theme) {
   if (isNaN(theme) || Number(theme) < 0 || Number(theme) > 9)
@@ -46,6 +59,7 @@ function changerLangue(langue) {
   );
 }
 
+// Ouvre une nouvelle page et affiche le message d'ouverture
 function openSocialMedia(socialMedia) {
   if (socialMedia === "instagram") {
     window.open("https://www.instagram.com/vasco.smn/", "_blank");
@@ -70,6 +84,7 @@ function openSocialMedia(socialMedia) {
   }
 }
 
+// Ouvre un projet dans une nouvelle fenêtre à l'intérieur de la page web
 function ouvrirProjet(projet) {
   switch (projet) {
     case "sololeveling":
