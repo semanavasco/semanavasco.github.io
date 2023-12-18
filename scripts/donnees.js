@@ -113,7 +113,7 @@ var localisationTextes = {
     en: `Type <span class="important">'help'</span> to get a list of the available commands.`,
   },
   "whoami.txt": {
-    fr: `<span class="normalized">Bonjour, je suis Vasco, un étudiant portugais de 18 ans résidant en France, je commande mon BTS SIO spécialisé en Solutions Logicielles (SLAM). Je suis passionné par la programmation, et j'adore apprendre de nouvelles choses ! Je fais des jeux-vidéos, des sites web, des scripts bash, des bots discord, et bien plus pour le fun !</span>`,
+    fr: `<span class="normalized">Bonjour, je suis Vasco, un étudiant portugais de 18 ans résidant en France, je commence mon BTS SIO spécialisé en Solutions Logicielles (SLAM). Je suis passionné par la programmation, et j'adore apprendre de nouvelles choses ! Je fais des jeux-vidéos, des sites web, des scripts bash, des bots discord, et bien plus pour le fun !</span>`,
     en: `<span class="normalized">Hi, I'm Vasco, an 18 year old Portuguese student in France, pursuing my BTS SIO specialized in Software Solutions (SLAM). I'm passionate about coding, and I love learning new stuff ! I make video-games, websites, bash scripts, discord bots, and more for fun !</span>`,
   },
   "bts_sio_slam.txt": {
