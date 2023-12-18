@@ -160,6 +160,22 @@ var localisationTextes = {
     fr: `<span class="normalized">Pas encore rédigé.</span>`,
     en: `<span class="normalized">Not written yet.</span>`,
   },
+  "instagram.sh": {
+    fr: `<span class="normalized">#!/bin/bash</span><br/><span class="normalized">open https://www.instagram.com/vasco.smn/</span><br/><span class="normalized">echo "Ouverture d'Instagram..."</span>`,
+    en: `<span class="normalized">#!/bin/bash</span><br/><span class="normalized">open https://www.instagram.com/vasco.smn/</span><br/><span class="normalized">echo "Opening Instagram..."</span>`,
+  },
+  "discord.sh": {
+    fr: `<span class="normalized">#!/bin/bash</span><br/><span class="normalized">open https://discord.com/users/svasco</span><br/><span class="normalized">echo "Ouverture de Discord..."</span>`,
+    en: `<span class="normalized">#!/bin/bash</span><br/><span class="normalized">open https://discord.com/users/svasco</span><br/><span class="normalized">echo "Opening Discord..."</span>`,
+  },
+  "linkedin.sh": {
+    fr: `<span class="normalized">#!/bin/bash</span><br/><span class="normalized">open https://www.linkedin.com/in/vascosemana/</span><br/><span class="normalized">echo "Ouverture de LinkedIn..."</span>`,
+    en: `<span class="normalized">#!/bin/bash</span><br/><span class="normalized">open https://www.linkedin.com/in/vascosemana/</span><br/><span class="normalized">echo "Opening LinkedIn..."</span>`,
+  },
+  "github.sh": {
+    fr: `<span class="normalized">#!/bin/bash</span><br/><span class="normalized">open https://github.com/semanavasco</span><br/><span class="normalized">echo "Ouverture de Github..."</span>`,
+    en: `<span class="normalized">#!/bin/bash</span><br/><span class="normalized">open https://github.com/semanavasco</span><br/><span class="normalized">echo "Opening Github..."</span>`,
+  },
   ouvertureInstagram: {
     fr: `<span class="normalized">Ouverture d'Instagram...</span>`,
     en: `<span class="normalized">Opening Instagram...</span>`,
