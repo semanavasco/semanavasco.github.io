@@ -294,8 +294,8 @@ var localisationTextes = {
     en: 'error: "cat" command requires a file name as argument',
   },
   themeErreur: {
-    fr: "erreur: la commande 'theme' requiert un numéro de thème (0-9)",
-    en: "error: 'theme' command requires a theme number (0-9)",
+    fr: "erreur: la commande 'theme' requiert un numéro de thème (0-2)",
+    en: "error: 'theme' command requires a theme number (0-2)",
   },
   bashError: {
     fr: "erreur: la commande 'bash' requiert un nom de fichier en argument",
