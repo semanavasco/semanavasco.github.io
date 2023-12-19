@@ -273,6 +273,10 @@ var localisationTextes = {
     fr: "Exécute un script bash spécifié.",
     en: "Executes a specified bash script.",
   },
+  echoDescription: {
+    fr: "Affiche une chaîne de caractères spécifiée.",
+    en: "Prints a specified string.",
+  },
   helpErreur: {
     fr: "erreur: la commande 'help' ne prend aucun argument",
     en: "error: 'help' command does not take any argument",
@@ -291,7 +295,7 @@ var localisationTextes = {
   },
   catErreur: {
     fr: "erreur: la commande 'cat' requiert un nom de fichier en argument",
-    en: 'error: "cat" command requires a file name as argument',
+    en: "error: 'cat' command requires a file name as argument",
   },
   themeErreur: {
     fr: "erreur: la commande 'theme' requiert un numéro de thème (0-2)",
@@ -299,7 +303,11 @@ var localisationTextes = {
   },
   bashError: {
     fr: "erreur: la commande 'bash' requiert un nom de fichier en argument",
-    en: 'error: "bash" command requires a file name as argument',
+    en: "error: 'bash' command requires a file name as argument",
+  },
+  echoError: {
+    fr: "erreur: la commande 'echo' requiert une chaîne de caractères en argument",
+    en: "error: 'echo' command requires string as argument",
   },
   erreur: {
     fr: "erreur: ",

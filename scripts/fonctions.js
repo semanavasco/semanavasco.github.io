@@ -25,7 +25,7 @@ function autoCompletion(argument, position) {
 
 // Change le thème du terminal
 function changerTheme(theme) {
-  if (isNaN(theme) || Number(theme) < 0 || Number(theme) > 9)
+  if (isNaN(theme) || Number(theme) < 0 || Number(theme) > 2)
     return reponseTerminal(
       `<p class="terminalOutput"><span class="error">${localisationTextes.themeInexistantErreur[lang]}'${theme}'${localisationTextes.themeEntreErreur[lang]}</span></p>`
     );

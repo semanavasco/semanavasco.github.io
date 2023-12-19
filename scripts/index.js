@@ -97,6 +97,7 @@ document.addEventListener("keydown", async function (event) {
         <span class="comment">theme</span>          <span class="question">${localisationTextes.themeDescription[lang]}</span><br/>
         <span class="comment">lang</span>           <span class="question">${localisationTextes.langDescription[lang]}</span><br/>
         <span class="comment">bash</span>           <span class="question">${localisationTextes.bashDescription[lang]}</span><br/>
+        <span class="comment">echo</span>           <span class="question">${localisationTextes.echoDescription[lang]}</span><br/>
        </p>`
           );
         break;
@@ -258,6 +259,27 @@ document.addEventListener("keydown", async function (event) {
           reponseTerminal(
             `<p class="terminalOutput"><span class="error">${localisationTextes.fichierErreur[lang]}'${arguments[1]}'${localisationTextes.existepasErreur[lang]}</span></p>`
           );
+        break;
+
+      case "echo":
+        if (arguments.length === 1)
+          reponseTerminal(
+            `<p class="terminalOutput"><span class="error">${localisationTextes.echoError[lang]}</span></p>`
+          );
+        else {
+          var phrase = commande.match(/'(.*?)'/)
+            ? commande.match(/'(.*?)'/)
+            : commande.match(/"(.*?)"/);
+
+          if (phrase && phrase.length > 1) {
+            reponseTerminal(
+              `<p class="terminalOutput"><span class="normalized">${phrase[1]}</span></p>`
+            );
+          } else
+            reponseTerminal(
+              `<p class="terminalOutput"><span class="error">${localisationTextes.echoError[lang]}</span></p>`
+            );
+        }
         break;
 
       default:
