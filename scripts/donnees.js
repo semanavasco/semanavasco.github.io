@@ -140,6 +140,7 @@ var autoCompletionArgument0 = [
   "bash",
   "help",
   "project",
+  "echo",
 ];
 
 var autoCompletionArgument1 = [

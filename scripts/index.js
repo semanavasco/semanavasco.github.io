@@ -84,22 +84,19 @@ document.addEventListener("keydown", async function (event) {
           reponseTerminal(
             `<p class="terminalOutput"><span class="error">${localisationTextes.helpErreur[lang]}</span></p>`
           );
-        else
-          reponseTerminal(
-            `<p class="terminalOutput">
-        <span class="comment">help</span>           <span class="question">${localisationTextes.helpDescription[lang]}</span><br/>
-        <span class="comment">pwd</span>            <span class="question">${localisationTextes.pwdDescription[lang]}</span><br/>
-        <span class="comment">ls</span>             <span class="question">${localisationTextes.lsDescription[lang]}</span><br/>
-        <span class="comment">cd</span>             <span class="question">${localisationTextes.cdDescription[lang]}</span><br/>
-        <span class="comment">clear</span>          <span class="question">${localisationTextes.clearDescription[lang]}</span><br/>
-        <span class="comment">cat</span>            <span class="question">${localisationTextes.catDescription[lang]}</span><br/>
-        <span class="comment">project</span>        <span class="question">${localisationTextes.projectDescription[lang]}</span><br/>
-        <span class="comment">theme</span>          <span class="question">${localisationTextes.themeDescription[lang]}</span><br/>
-        <span class="comment">lang</span>           <span class="question">${localisationTextes.langDescription[lang]}</span><br/>
-        <span class="comment">bash</span>           <span class="question">${localisationTextes.bashDescription[lang]}</span><br/>
-        <span class="comment">echo</span>           <span class="question">${localisationTextes.echoDescription[lang]}</span><br/>
-       </p>`
-          );
+        else {
+          var helpText = ``;
+
+          autoCompletionArgument0.forEach((helpCommand) => {
+            helpText += `<span class="comment">${helpCommand}</span>${
+              " ".repeat(15 - helpCommand.length)
+            }<span class="question">${
+              localisationTextes[helpCommand + "Description"][lang]
+            }</span><br/>`;
+          });
+
+          reponseTerminal(`<p class="terminalOutput">${helpText}</p>`);
+        }
         break;
 
       case "ls":
