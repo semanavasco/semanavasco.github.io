@@ -33,6 +33,7 @@ input {
   border: transparent;
   width: 70%;
   color: #fff279;
+  cursor: default;
 }
 
 /* Enlever la bordure bleue qui entoure l'input lorsqu'il est sélectionné */
@@ -48,10 +49,12 @@ input:focus {
 /* Colors */
 h1 {
   color: #ff886a;
+  cursor: default;
 }
 
 p {
   color: #fff279;
+  cursor: default;
 }
 
 span.normalized {
