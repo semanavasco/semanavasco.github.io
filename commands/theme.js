@@ -1,8 +1,8 @@
 export const name = "theme";
 
 export const description = {
-  fr: "Change l'apparence du terminal portfolio.",
-  en: "Changes the look of the portfolio terminal.",
+  fr: "Change l'apparence du terminal.",
+  en: "Changes the look of the terminal.",
 };
 
 export const usableArgs = ["0", "1", "2"];
