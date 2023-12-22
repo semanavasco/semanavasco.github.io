@@ -17,7 +17,7 @@ export const success = {
   en: "language changed to: ",
 };
 
-export async function run(comamnd, args) {
+export async function run(command, args) {
   if (args.length === 1 || !usableArgs.includes(args[1])) {
     terminalReply(
       `<p class="terminalOutput"><span class="error">${usage[lang]}</span></p>`

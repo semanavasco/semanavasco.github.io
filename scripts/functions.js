@@ -77,8 +77,8 @@ function createNewInputZone() {
     .getElementById("terminal")
     .appendChild(document.createElement("div"));
 
-  currentLine.classList.add("lignes");
-  currentLine.classList.add("ligneActuelle");
+  currentLine.classList.add("terminalLines");
+  currentLine.classList.add("currentLine");
 
   currentLine.innerHTML = `<p><span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">~</span><span class="information">$</span> </p>
                            <input type="text" name="zonetexte" id="zonetexte" maxlength="100" autofocus>`;
@@ -94,7 +94,7 @@ function terminalReply(reponse) {
     .getElementById("terminal")
     .appendChild(document.createElement("div"));
 
-  terminalReply.classList.add("lignes");
+  terminalReply.classList.add("terminalLines");
   terminalReply.classList.add("ancienneLigne");
 
   terminalReply.innerHTML = reponse;

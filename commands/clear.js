@@ -10,7 +10,7 @@ export const usage = {
   en: "error: bad command usage; usage: clear",
 };
 
-export async function run(comamnd, args) {
+export async function run(command, args) {
   var elements = document.getElementsByClassName("ancienneLigne");
 
   var elementsArray = Array.from(elements);

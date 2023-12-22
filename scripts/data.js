@@ -1,6 +1,6 @@
 var lang = "en";
 
-var commandList = ["help", "clear", "theme", "lang"];
+var commandList = ["help", "clear", "theme", "lang", "echo"];
 
 var textsLocalization = {
   welcomeMessage: {

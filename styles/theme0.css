@@ -10,7 +10,7 @@ body {
   background-color: #282a36;
 }
 
-div.lignes {
+div.terminalLines {
   margin-top: -20px;
 }
 
@@ -38,7 +38,7 @@ input:focus {
   outline: none;
 }
 
-.lignes {
+.terminalLines {
   display: flex;
 }
 

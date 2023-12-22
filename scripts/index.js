@@ -31,7 +31,7 @@ document.addEventListener("keydown", async function (event) {
       .appendChild(document.createElement("div"));
 
     // Giving the old line class to the div
-    oldLine.classList.add("lignes");
+    oldLine.classList.add("terminalLines");
     oldLine.classList.add("ancienneLigne");
 
     // Setting the content of the oldLine with the command content
@@ -39,7 +39,7 @@ document.addEventListener("keydown", async function (event) {
            <p>${command}</p>`;
 
     // Deleting the current input zone
-    let currentLine = document.getElementsByClassName("ligneActuelle")[0];
+    let currentLine = document.getElementsByClassName("currentLine")[0];
     currentLine.remove();
 
     // Running the command

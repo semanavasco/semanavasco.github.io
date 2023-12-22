@@ -10,7 +10,7 @@ export const usage = {
   en: "error: bad command usage; usage: help",
 };
 
-export async function run(comamnd, args) {
+export async function run(command, args) {
   var helpText = "";
 
   for (const cmd of commandList) {
