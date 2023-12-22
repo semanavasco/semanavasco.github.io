@@ -80,7 +80,7 @@ function createNewInputZone() {
   currentLine.classList.add("terminalLines");
   currentLine.classList.add("currentLine");
 
-  currentLine.innerHTML = `<p><span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">~</span><span class="information">$</span> </p>
+  currentLine.innerHTML = `<p><span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">${folders.find((folder) => folder.name === currentFolder).terminal}</span><span class="information">$</span> </p>
                            <input type="text" name="zonetexte" id="zonetexte" maxlength="100" autofocus>`;
 
   var zoneTexte = document.getElementById("zonetexte");

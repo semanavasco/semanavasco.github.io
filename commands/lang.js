@@ -1,4 +1,4 @@
-export const name = "help";
+export const name = "lang";
 
 export const description = {
   fr: "Change la langue du terminal.",

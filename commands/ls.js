@@ -1,4 +1,4 @@
-export const name = "help";
+export const name = "ls";
 
 export const description = {
   fr: "Fournit une liste du contenu du répertoire spécifié.",

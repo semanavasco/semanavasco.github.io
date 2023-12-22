@@ -1,4 +1,4 @@
-export const name = "theme";
+export const name = "echo";
 
 export const description = {
   fr: "Écrit un message dans le terminal.",

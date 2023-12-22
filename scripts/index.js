@@ -35,7 +35,9 @@ document.addEventListener("keydown", async function (event) {
     oldLine.classList.add("ancienneLigne");
 
     // Setting the content of the oldLine with the command content
-    oldLine.innerHTML = `<p><span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">~</span><span class="information">$</span> </p>
+    oldLine.innerHTML = `<p><span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">${
+      folders.find((folder) => folder.name === currentFolder).terminal
+    }</span><span class="information">$</span> </p>
            <p>${command}</p>`;
 
     // Deleting the current input zone
