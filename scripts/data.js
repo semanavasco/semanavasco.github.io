@@ -16,6 +16,10 @@ var commandList = [
   "lang",
 ];
 
+// A list of the commands used
+var commandsUsedArrowUp = [];
+var commandsUsedArrowDown = [];
+
 // Used to display text in different languages
 var textsLocalization = {
   welcomeMessage: {
@@ -50,7 +54,7 @@ var folders = [
   {
     name: "AboutMe",
     terminal: "~/AboutMe",
-    pwd: "~/AboutMe",
+    pwd: "/home/visitor/AboutMe",
     type: "folder",
     childs: ["whoami.txt"],
     ls: ['<span class="normalized">whoami.txt</span>'],
@@ -58,7 +62,7 @@ var folders = [
   {
     name: "Studies",
     terminal: "~/Studies",
-    pwd: "~/Studies",
+    pwd: "/home/visitor/Studies",
     type: "folder",
     childs: ["bts_sio_slam.txt"],
     ls: ['<span class="normalized">bts_sio_slam.txt</span>'],
@@ -66,7 +70,7 @@ var folders = [
   {
     name: "Projects",
     terminal: "~/Projects",
-    pwd: "~/Projects",
+    pwd: "/home/visitor/Projects",
     type: "folder",
     childs: ["personal.txt", "professional.txt"],
     ls: [
@@ -77,7 +81,7 @@ var folders = [
   {
     name: "Ideas",
     terminal: "~/Ideas",
-    pwd: "~/Ideas",
+    pwd: "/home/visitor/Ideas",
     type: "folder",
     childs: ["games.txt"],
     ls: ['<span class="normalized">games.txt</span>'],
@@ -85,7 +89,7 @@ var folders = [
   {
     name: "SocialMedia",
     terminal: "~/SocialMedia",
-    pwd: "~/SocialMedia",
+    pwd: "/home/visitor/SocialMedia",
     type: "folder",
     childs: ["instagram.sh", "discord.sh", "linkedin.sh", "github.sh"],
     ls: [
@@ -98,58 +102,58 @@ var folders = [
   {
     name: "whoami.txt",
     terminal: "~/AboutMe/whoami.txt",
-    pwd: "~/AboutMe",
+    pwd: "/home/visitor/AboutMe",
     type: "file",
   },
   {
     name: "bts_sio_slam.txt",
     terminal: "~/Studies/bts_sio_slam.txt",
-    pwd: "~/Studies",
+    pwd: "/home/visitor/Studies",
     type: "file",
   },
   {
     name: "personal.txt",
     terminal: "~/Projects/personal.txt",
-    pwd: "~/Projects",
+    pwd: "/home/visitor/Projects",
     type: "file",
   },
   {
     name: "professional.txt",
     terminal: "~/Projects/professional.txt",
-    pwd: "~/Projects",
+    pwd: "/home/visitor/Projects",
     type: "file",
   },
   {
     name: "games.txt",
     terminal: "~/Ideas/games.txt",
-    pwd: "~/Ideas",
+    pwd: "/home/visitor/Ideas",
     type: "file",
   },
   {
     name: "instagram.sh",
     terminal: "~/SocialMedia/instagram.sh",
-    pwd: "~/SocialMedia",
+    pwd: "/home/visitor/SocialMedia",
     type: "executable",
     bash: `window.open("https://www.instagram.com/vasco.smn/", "_blank");`,
   },
   {
     name: "discord.sh",
     terminal: "~/SocialMedia/discord.sh",
-    pwd: "~/SocialMedia",
+    pwd: "/home/visitor/SocialMedia",
     type: "executable",
     bash: `window.open("https://discord.com/users/svasco", "_blank");`,
   },
   {
     name: "linkedin.sh",
     terminal: "~/SocialMedia/linkedin.sh",
-    pwd: "~/SocialMedia",
+    pwd: "/home/visitor/SocialMedia",
     type: "executable",
     bash: `window.open("https://www.linkedin.com/in/vascosemana/", "_blank");`,
   },
   {
     name: "github.sh",
     terminal: "~/SocialMedia/github.sh",
-    pwd: "~/SocialMedia",
+    pwd: "/home/visitor/SocialMedia",
     type: "executable",
     bash: `window.open("https://github.com/semanavasco", "_blank");`,
   },

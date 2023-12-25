@@ -15,6 +15,27 @@ export const error = {
   en: "error: the specified file does not exist",
 };
 
+export const usableArgs = [
+  "AboutMe/whoami.txt",
+  "whoami.txt",
+  "Studies/bts_sio_slam.txt",
+  "bts_sio_slam.txt",
+  "Projects/personal.txt",
+  "personal.txt",
+  "Projects/professional.txt",
+  "professional.txt",
+  "Ideas/games.txt",
+  "games.txt",
+  "SocialMedia/instagram.sh",
+  "instagram.sh",
+  "SocialMedia/discord.sh",
+  "discord.sh",
+  "SocialMedia/linkedin.sh",
+  "linkedin.sh",
+  "SocialMedia/github.sh",
+  "github.sh",
+];
+
 export const filesContent = {
   "whoami.txt": {
     fr: `<span class="normalized">Bonjour, je suis Vasco, un étudiant portugais de 18 ans résidant en France, je commence mon BTS SIO spécialisé en Solutions Logicielles (SLAM). Je suis passionné par la programmation, et j'adore apprendre de nouvelles choses ! Je fais des jeux-vidéos, des sites web, des scripts bash, des bots discord, et bien plus pour le fun !</span>`,

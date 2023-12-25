@@ -34,6 +34,17 @@ export const bashScripts = {
   },
 };
 
+export const usableArgs = [
+  "SocialMedia/instagram.sh",
+  "instagram.sh",
+  "SocialMedia/discord.sh",
+  "discord.sh",
+  "SocialMedia/linkedin.sh",
+  "linkedin.sh",
+  "SocialMedia/github.sh",
+  "github.sh",
+];
+
 export async function run(command, args) {
   if (args.length === 1)
     terminalReply(

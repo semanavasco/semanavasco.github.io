@@ -15,6 +15,15 @@ export const error = {
   en: "error: the specified directory does not exist",
 };
 
+export const usableArgs = [
+  "AboutMe",
+  "Studies",
+  "Projects",
+  "Ideas",
+  "SocialMedia",
+  "..",
+];
+
 export async function run(command, args) {
   if (args.length === 1 || args[1] === "") currentFolder = "~";
   else if (

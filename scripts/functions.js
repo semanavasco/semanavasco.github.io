@@ -81,11 +81,11 @@ function createNewInputZone() {
   currentLine.classList.add("currentLine");
 
   currentLine.innerHTML = `<p><span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">${folders.find((folder) => folder.name === currentFolder).terminal}</span><span class="information">$</span> </p>
-                           <input type="text" name="zonetexte" id="zonetexte" maxlength="100" autofocus>`;
+                           <input type="text" name="commandInput" id="commandInput" maxlength="100" autofocus>`;
 
-  var zoneTexte = document.getElementById("zonetexte");
+  var commandInput = document.getElementById("commandInput");
 
-  zoneTexte.focus();
+  commandInput.focus();
 }
 
 // Terminal reply function
