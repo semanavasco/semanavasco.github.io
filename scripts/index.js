@@ -32,7 +32,7 @@ document.addEventListener("keydown", async function (event) {
 
     // Giving the old line class to the div
     oldLine.classList.add("terminalLines");
-    oldLine.classList.add("ancienneLigne");
+    oldLine.classList.add("oldLine");
 
     // Setting the content of the oldLine with the command content
     oldLine.innerHTML = `<p><span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">${

@@ -26,10 +26,12 @@ export async function run(command, args) {
     lang = args[1];
 
     var welcomeMessage = document.getElementById("welcomeMessage");
-    welcomeMessage.innerHTML = textsLocalization.welcomeMessage[lang];
+    if (welcomeMessage)
+      welcomeMessage.innerHTML = textsLocalization.welcomeMessage[lang];
 
     var helpMessage = document.getElementById("helpMessage");
-    helpMessage.innerHTML = textsLocalization.helpMessage[lang];
+    if (helpMessage)
+      helpMessage.innerHTML = textsLocalization.helpMessage[lang];
 
     terminalReply(
       `<p class="terminalOutput"><span class="comment">${success[lang]}'${args[1]}'</span></p>`

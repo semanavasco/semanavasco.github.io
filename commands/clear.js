@@ -11,7 +11,7 @@ export const usage = {
 };
 
 export async function run(command, args) {
-  var elements = document.getElementsByClassName("ancienneLigne");
+  var elements = document.getElementsByClassName("oldLine");
 
   var elementsArray = Array.from(elements);
 

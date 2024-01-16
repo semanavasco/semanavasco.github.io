@@ -95,7 +95,7 @@ function terminalReply(reponse) {
     .appendChild(document.createElement("div"));
 
   terminalReply.classList.add("terminalLines");
-  terminalReply.classList.add("ancienneLigne");
+  terminalReply.classList.add("oldLine");
 
   terminalReply.innerHTML = reponse;
 }
