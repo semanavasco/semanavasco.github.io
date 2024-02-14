@@ -1,24 +1,34 @@
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="index.css" />
-    <title>Saint Valentin</title>
-  </head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Vasco Valadares Semana">
+        <meta name="description" content="Vasco Valadares Semana's portfolio">
+        <meta name="keywords" content="Vasco, Valadares, Semana, portfolio, terminal, website, web, developer, develop, development, programmer, program, programming, code, coding, coder, computer, science, software, engineer, engineering, software engineer, software engineering, software developer, software development, web developer, web development, web programmer, web programming, web designer, web design, web development, web development">
+        <meta property="og:image" content="https://media.discordapp.net/attachments/1059620194978369556/1185356686790230036/terminal.png">
+        
+        <title>Vasco Valadares Semana</title>
 
-  <body>
-    <h1 id="titre">Veux-tu être ma valentine ?</h1>
-    <h1 id="erreur"></h1>
+        <link id="styleLink" rel="stylesheet" href="styles/theme0.css">
+        <link rel="icon" href="assets/images/terminal.ico" type="image/x-icon">
 
-    <img src="image_mignonne.png" alt="Image mignonne" id="img" />
+        <script src="scripts/data.js" defer></script>
+        <script src="scripts/functions.js" defer></script>
+        <script src="scripts/index.js" defer></script>
+    </head>
+    
+    <body id="page">
+        <div id="terminal">
+            <h1 id="logoMessage" class="terminalLines oldLine">░██████╗███████╗███╗░░░███╗░█████╗░███╗░░██╗░█████╗░<br />██╔════╝██╔════╝████╗░████║██╔══██╗████╗░██║██╔══██╗<br />╚█████╗░█████╗░░██╔████╔██║███████║██╔██╗██║███████║<br />░╚═══██╗██╔══╝░░██║╚██╔╝██║██╔══██║██║╚████║██╔══██║<br />██████╔╝███████╗██║░╚═╝░██║██║░░██║██║░╚███║██║░░██║<br />╚═════╝░╚══════╝╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚═╝<br />━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</h1>
 
-    <div>
-      <button id="oui">Oui</button>
-      <button id="non">Non</button>
-    </div>
+            <p id="welcomeMessage" class="terminalLines oldLine">Welcome to the <span class="information">terminal portfolio</span>, presented by <span class="information">svasco</span>.</p>
 
-    <script src="index.js"></script>
-  </body>
+            <p id="helpMessage" class="terminalLines oldLine">Type <span class="important">'help'</span> to get a list of the available commands.</p>
+
+            <div class="terminalLines currentLine"><p><span class="information">visitor@semanavasco</span><span class="normalized">:</span><span class="comment">~</span><span class="information">$</span> </p><input type="text" name="commandInput" id="commandInput" maxlength="100" autofocus></div>
+        </div>
+    </body>
 </html>
