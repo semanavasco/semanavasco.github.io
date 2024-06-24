@@ -1,0 +1,89 @@
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../assets/fonts/JetBrainsMono-Regular.ttf");
+}
+
+body {
+  font-family: "JetBrains Mono", sans-serif;
+  font-size: large;
+  margin: 20px;
+  background-color: #282a36;
+}
+
+div.terminalLines {
+  margin-top: -20px;
+}
+
+p {
+  line-height: 30px;
+}
+
+.terminalOutput {
+  margin-left: 30px;
+}
+
+input {
+  font-family: "JetBrains Mono", sans-serif;
+  background-color: transparent;
+  color: #f8f8f2;
+  font-size: large;
+  border: transparent;
+  width: 70%;
+  color: #ff79c6;
+  cursor: default;
+  margin-left: -2px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.terminalLines {
+  display: flex;
+}
+
+h1 {
+  color: #bd93f9;
+  cursor: default;
+}
+
+p {
+  color: #ff79c6;
+  cursor: default;
+}
+
+span.normalized {
+  color: #f8f8f2;
+}
+
+span.command {
+  color: #ff79c6;
+}
+
+span.information {
+  color: #bd93f9;
+}
+
+span.comment {
+  color: #8be9fd;
+}
+
+span.question {
+  color: #6272a4;
+}
+
+span.error {
+  color: #ff5555;
+}
+
+span.success {
+  color: #50fa7b;
+}
+
+span.important {
+  color: #ffb86c;
+}
+
+span.warning {
+  color: #f1fa8c;
+}
