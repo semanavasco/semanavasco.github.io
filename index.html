@@ -27,7 +27,7 @@
     </div>
 
     <header>
-      <nav id="navmenu">
+      <nav id="nav-menu">
         <a href="#" class="current-page">./Accueil</a>
         <a href="pages/a-propos.html">./A-Propos</a>
         <a href="pages/bts-sio.html">./BTS-SIO</a>
@@ -37,11 +37,13 @@
         <a href="pages/veille-technologique.html">./Veille-Technologique</a>
         <a href="pages/contact.html">./Contact</a>
       </nav>
+
       <button
         onclick="modifierNavigation()"
-        class="nav-control secondary-button"
+        id="nav-control"
+        class="secondary-button"
       >
-        󰍜
+        <img src="../assets/menu.svg" alt="Navigation Control" />
       </button>
     </header>
 
@@ -68,7 +70,7 @@
           <h1>
             <span class="code neutral">Vasco VALADARES SEMANA</span><br /><span
               class="code main small-text"
-              >
+              ><img src="assets/position.svg" alt="Position" />
             </span>
             <span class="small-text">Le Mesnil Saint Denis, France</span>
           </h1>

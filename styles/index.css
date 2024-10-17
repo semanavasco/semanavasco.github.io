@@ -1,5 +1,7 @@
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@4/distr/fira_code.css);
+
 * {
-  font-family: "FiraCode Nerd Font";
+  font-family: "Fira Code", monospace;
   font-size: 24px;
 
   /* COULEURS */
@@ -172,7 +174,7 @@ nav a.current-page {
   border-bottom: var(--main-color) solid 3px;
 }
 
-.nav-control {
+#nav-control {
   position: absolute;
   right: 0;
   top: 0;
@@ -206,7 +208,7 @@ section {
     display: block;
   }
 
-  .nav-control {
+  #nav-control {
     display: block;
   }
 }
