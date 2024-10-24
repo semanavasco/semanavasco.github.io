@@ -10,3 +10,14 @@ section#bts-sio {
   margin-bottom: 1rem;
   padding: 1rem;
 }
+
+/* Responsive design */
+@media screen and (max-width: 900px) {
+  section#bts-sio {
+    padding: 1rem;
+  }
+
+  .bts-sio-spe {
+    flex-direction: column;
+  }
+}
