@@ -1,0 +1,44 @@
+section#ecole-entreprise {
+  align-items: start;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.groups {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.group p {
+  text-align: center;
+}
+
+.informations {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  text-align: center;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 900px) {
+  .groups {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    margin: 0.5rem;
+  }
+
+  .informations {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+}
