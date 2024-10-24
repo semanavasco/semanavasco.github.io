@@ -13,13 +13,19 @@ document.onmousemove = (event) => {
   }, 2500);
 };
 
-function modifierNavigation() {
+function modifierNavigation(chemin) {
   const navigation = document.getElementById("nav-menu");
   for (const e of navigation.children) e.classList.toggle("active");
 
   const control = document.getElementById("nav-control");
   const controlSpan = control.children[0];
-  if (controlSpan.attributes.getNamedItem("src").value === "assets/menu.svg")
-    controlSpan.attributes.getNamedItem("src").value = "assets/close.svg";
-  else controlSpan.attributes.getNamedItem("src").value = "assets/menu.svg";
+  if (
+    controlSpan.attributes.getNamedItem("src").value ===
+    chemin + "assets/menu.svg"
+  )
+    controlSpan.attributes.getNamedItem("src").value =
+      chemin + "assets/close.svg";
+  else
+    controlSpan.attributes.getNamedItem("src").value =
+      chemin + "assets/menu.svg";
 }
