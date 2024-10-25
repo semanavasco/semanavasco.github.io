@@ -4,6 +4,10 @@ section#bts-sio {
   padding: 2rem;
 }
 
+#description {
+  padding: 1rem;
+}
+
 .bts-sio-spe {
   display: flex;
   flex-direction: row;
