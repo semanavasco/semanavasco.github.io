@@ -47,8 +47,68 @@
       </button>
     </header>
 
-    <section>
-      <img src="https://letscontrolit.com/wiki/images/7/74/WIP.gif" alt="wip" />
+    <section id="contact">
+      <h1>
+        <span class="code commentary">// Vous avez des questions ?<br /></span
+        ><span class="code neutral">></span
+        ><span class="code main">console</span
+        ><span class="code neutral">.</span
+        ><span class="code secondary">log</span><span class="code main">(</span
+        ><span class="code neutral">Portfolio.Contact</span
+        ><span class="code main">);</span>
+      </h1>
+
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input
+          type="hidden"
+          name="access_key"
+          value="715d3468-7085-4632-80d0-27bed529ce1e"
+        />
+
+        <input
+          type="hidden"
+          name="subject"
+          value="Contact depuis le Portfolio"
+        />
+
+        <label for="name">NOM et Prénom</label>
+        <input
+          type="text"
+          name="name"
+          placeholder="Entrez votre nom et prénom..."
+          required
+        />
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          placeholder="Entrez votre email..."
+          required
+        />
+        <label for="message">Contenu du Message</label>
+        <textarea
+          name="message"
+          placeholder="Entrez le contenu de votre message..."
+          required
+        ></textarea>
+
+        <input
+          type="checkbox"
+          name="botcheck"
+          class="hidden"
+          style="display: none"
+        />
+
+        <input
+          type="hidden"
+          name="redirect"
+          value="https://mywebsite.com/thanks.html"
+        />
+
+        <button class="secondary-button" type="submit">
+          Envoyer le Message
+        </button>
+      </form>
     </section>
   </body>
 </html>
