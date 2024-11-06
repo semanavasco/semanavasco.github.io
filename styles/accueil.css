@@ -26,3 +26,14 @@ img.main-image {
   justify-content: center;
   margin-bottom: 2rem;
 }
+
+/* Responsive design */
+@media screen and (max-width: 900px) {
+  section#accueil {
+    padding: 1rem;
+  }
+
+  .information .texte {
+    padding: 0.5rem;
+  }
+}

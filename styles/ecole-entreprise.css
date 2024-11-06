@@ -31,6 +31,10 @@ section#ecole-entreprise {
 
 /* RESPONSIVE */
 @media screen and (max-width: 900px) {
+  section#ecole-entreprise {
+    padding: 1rem;
+  }
+
   .groups {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
