@@ -55,6 +55,7 @@ section#missions {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .tag {
@@ -81,6 +82,7 @@ section#missions {
 .buttons button {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   font-size: 14px;
 }
@@ -91,12 +93,24 @@ section#missions {
 }
 
 /* Responsive design */
+@media screen and (max-width: 1200px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media screen and (max-width: 900px) {
   section#missions {
-    padding: 0.5rem;
+    padding: 1rem;
   }
 
   .projects {
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .buttons {
+    flex-direction: column;
   }
 }
