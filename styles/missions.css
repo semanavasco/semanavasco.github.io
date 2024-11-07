@@ -6,7 +6,7 @@ section#missions {
 }
 
 /* Projects Container */
-.projects {
+#projects {
   display: grid;
   padding: 1rem;
   gap: 2rem;
@@ -95,7 +95,7 @@ section#missions {
 
 /* Responsive design */
 @media screen and (max-width: 1200px) {
-  .projects {
+  #projects {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -105,7 +105,7 @@ section#missions {
     padding: 1rem;
   }
 
-  .projects {
+  #projects {
     grid-template-columns: 1fr;
   }
 }
