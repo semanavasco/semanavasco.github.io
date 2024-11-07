@@ -2,6 +2,7 @@ section#ecole-entreprise {
   align-items: start;
   flex-direction: column;
   padding: 2rem;
+  padding-top: 0.5rem;
 }
 
 .groups {

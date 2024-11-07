@@ -2,10 +2,11 @@ section#contact {
   align-items: start;
   flex-direction: column;
   padding: 2rem;
+  padding-top: 0.5rem;
 }
 
 form {
-  margin-top: 5rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
