@@ -19,13 +19,8 @@ function modifierNavigation(chemin) {
 
   const control = document.getElementById("nav-control");
   const controlSpan = control.children[0];
-  if (
-    controlSpan.attributes.getNamedItem("src").value ===
-    chemin + "assets/menu.svg"
-  )
-    controlSpan.attributes.getNamedItem("src").value =
-      chemin + "assets/close.svg";
-  else
-    controlSpan.attributes.getNamedItem("src").value =
-      chemin + "assets/menu.svg";
+
+  if (controlSpan.textContent.includes("menu"))
+    controlSpan.textContent = "close";
+  else controlSpan.textContent = "menu";
 }

@@ -27,6 +27,12 @@ img.main-image {
   margin-bottom: 2rem;
 }
 
+#residence {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 /* Responsive design */
 @media screen and (max-width: 900px) {
   section#accueil {

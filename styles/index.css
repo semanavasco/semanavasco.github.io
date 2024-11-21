@@ -191,7 +191,7 @@ section {
 }
 
 /* RESPONSIVE */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1770px) {
   nav {
     flex-direction: column;
     align-items: center;
