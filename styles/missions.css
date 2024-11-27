@@ -80,19 +80,6 @@ section#missions {
   gap: 1rem;
 }
 
-.buttons button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-size: 14px;
-}
-
-.buttons button img {
-  width: 16px;
-  border: none;
-}
-
 /* Responsive design */
 @media screen and (max-width: 1200px) {
   #projects {

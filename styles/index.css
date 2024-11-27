@@ -76,6 +76,11 @@ button {
   box-shadow: 0 8px var(--secondary-color);
   border: 2px solid var(--main-color);
   transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 14px;
 }
 
 button:hover {
