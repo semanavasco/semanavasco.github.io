@@ -30,6 +30,10 @@ section#ecole-entreprise {
   margin-bottom: 1rem;
 }
 
+#my-future {
+  margin: 1rem;
+}
+
 /* RESPONSIVE */
 @media screen and (max-width: 900px) {
   section#ecole-entreprise {
@@ -45,5 +49,9 @@ section#ecole-entreprise {
   .informations {
     flex-direction: column;
     padding: 0.5rem;
+  }
+
+  #my-future {
+    margin: 0.5rem;
   }
 }
