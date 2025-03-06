@@ -5,6 +5,11 @@ section#missions {
   padding-top: 0.5rem;
 }
 
+/* Description Container */
+#description {
+  margin-bottom: 2rem;
+}
+
 /* Projects Container */
 #projects {
   display: grid;
