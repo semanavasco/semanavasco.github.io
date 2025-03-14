@@ -1,118 +1,155 @@
 <!DOCTYPE html>
 
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vasco VALADARES SEMANA - École et Entreprise</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vasco VALADARES SEMANA - École et Entreprise</title>
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/ecole-entreprise.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+    />
 
-  <link rel="stylesheet" href="../styles/index.css" />
-  <link rel="stylesheet" href="../styles/ecole-entreprise.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+    <script src="../scripts/index.js" defer></script>
+  </head>
 
-  <script src="../scripts/index.js" defer></script>
-</head>
+  <body>
+    <div id="mouse-light"></div>
 
-<body>
-  <div id="mouse-light"></div>
-
-  <div aria-disabled id="hidden-text">
-    <h1>QUI SUIS-JE</h1>
-    <h1>ALTERNANCE</h1>
-    <h1>BTS SIO SLAM</h1>
-    <h1>DEVELOPPEUR</h1>
-    <h1>IMAGINATION</h1>
-    <h1>PASSIONNE</h1>
-    <h1>QUI SUIS-JE</h1>
-    <h1>ALTERNANCE</h1>
-  </div>
-
-  <header>
-    <nav id="nav-menu">
-      <a href="../index.html">./Accueil</a>
-      <a href="../pages/a-propos.html">./A-Propos</a>
-      <a href="../pages/bts-sio.html">./BTS-SIO</a>
-      <a href="#" class="current-page">./Ecole-et-Entreprise</a>
-      <a href="../pages/missions.html">./Missions-E5</a>
-      <a href="../pages/projets.html">./Projets-E6</a>
-      <a href="../pages/veille-technologique.html">./Veille-Technologique</a>
-      <a href="../pages/contact.html">./Contact</a>
-    </nav>
-
-    <button onclick="modifierNavigation('../')" id="nav-control" class="secondary-button">
-      <span class="material-symbols-rounded"> menu </span>
-    </button>
-  </header>
-
-  <section id="ecole-entreprise">
-    <h1>
-      <span class="code commentary">// Mon école et entreprise ?<br /></span><span class="code neutral">></span><span class="code main">console</span><span class="code neutral">.</span><span class="code secondary">log</span><span class="code main">(</span><span class="code neutral">Portfolio.Ecole_Entreprise</span><span class="code main">);</span>
-    </h1>
-
-    <div class="groups">
-      <div class="group">
-        <h2 class="code">
-          ENSITECH
-          <span class="code commentary small-text">// C'est mon école !<br /></span>
-        </h2>
-
-        <div class="informations">
-          <img class="logo" src="../assets/images/ensitech.png" alt="Logo Ensitech" />
-
-          <p>
-            ENSITECH offre des formations diplômantes et certifiantes, du
-            Bac+2 au Bac+5, en Développement & Innovation et en Sécurité,
-            Systèmes et Réseaux. L'école propose un cadre moderne et un
-            accompagnement personnalisé pour ses étudiants, favorisant leur
-            insertion professionnelle via un réseau de partenaires en
-            alternance.
-          </p>
-        </div>
-
-        <p>
-          J'ai choisi la spécialité Solutions Logicielles et Applications
-          Métiers pour mon BTS SIO.
-        </p>
-      </div>
-
-      <div class="group">
-        <h2 class="code">
-          SABSYSTEM
-          <span class="code commentary small-text">// C'est mon entreprise !<br /></span>
-        </h2>
-
-        <div class="informations">
-          <img class="logo" src="../assets/images/sabsystem.png" alt="Logo SabSystem" />
-
-          <p>
-            SAB SYSTEM offre une solution tout-en-un, dans le cloud et
-            plug&play pour digitaliser les hôtels simplement et sans travaux.
-            Ces solutions incluent : Un wifi privé, dédié et sécurisé dans
-            chaque chambre; un accès internet "open bar" pour un plus grand
-            confort; des centaines de chaînes TV et radio du monde entier,
-            etc.
-          </p>
-        </div>
-
-        <p>
-          Je suis embauché en tant que Développeur de Solutions Logicielles,
-          DevOps et Administrateur Systèmes et Réseaux.
-        </p>
-      </div>
+    <div aria-disabled id="hidden-text">
+      <h1>QUI SUIS-JE</h1>
+      <h1>ALTERNANCE</h1>
+      <h1>BTS SIO SLAM</h1>
+      <h1>DEVELOPPEUR</h1>
+      <h1>IMAGINATION</h1>
+      <h1>PASSIONNE</h1>
+      <h1>QUI SUIS-JE</h1>
+      <h1>ALTERNANCE</h1>
     </div>
 
-    <h1>
-      <span class="code commentary">// Mon futur ?<br /></span><span class="code neutral">></span><span class="code main">console</span><span class="code neutral">.</span><span class="code secondary">log</span><span class="code main">(</span><span class="code neutral">Portfolio.Futur</span><span class="code main">);</span>
-    </h1>
+    <header>
+      <nav id="nav-menu">
+        <a href="../index.html">./Accueil</a>
+        <a href="../pages/a-propos.html">./A-Propos</a>
+        <a href="../pages/bts-sio.html">./BTS-SIO</a>
+        <a href="#" class="current-page">./Ecole-et-Entreprise</a>
+        <a href="../pages/missions.html">./Missions-E5</a>
+        <a href="../pages/projets.html">./Projets-E6</a>
+        <a href="../pages/veille-technologique.html">./Veille-Technologique</a>
+        <a href="../pages/contact.html">./Contact</a>
+      </nav>
 
-    <p id="my-future">
-      Je souhaite m'orienter vers le métier de Développeur de Systèmes Embarqués, ou de Développeur de Logiciels. J'ai
-      choisi cette voie car j'aime la programmation et résoudre des problèmes. Pour ce faire, je souhaite poursuivre mes études
-      dans l'enseignement supérieur en alternance, afin de continuer à acquérir de l'expérience professionnelle tout en
-      approfondissant mes connaissances théoriques.
-    </p>
-  </section>
-</body>
+      <button
+        onclick="modifierNavigation('../')"
+        id="nav-control"
+        class="secondary-button"
+      >
+        <span class="material-symbols-rounded"> menu </span>
+      </button>
+    </header>
 
+    <section id="ecole-entreprise">
+      <h1>
+        <span class="code commentary">// Mon école et entreprise ?<br /></span
+        ><span class="code neutral">></span
+        ><span class="code main">console</span
+        ><span class="code neutral">.</span
+        ><span class="code secondary">log</span><span class="code main">(</span
+        ><span class="code neutral">Portfolio.Ecole_Entreprise</span
+        ><span class="code main">);</span>
+      </h1>
+
+      <div class="groups">
+        <div class="group">
+          <h2 class="code">
+            ENSITECH
+            <span class="code commentary small-text"
+              >// C'est mon école !<br
+            /></span>
+          </h2>
+
+          <div class="informations">
+            <img
+              class="logo"
+              src="../assets/images/ensitech.png"
+              alt="Logo Ensitech"
+            />
+
+            <p>
+              ENSITECH offre des formations diplômantes et certifiantes, du
+              Bac+2 au Bac+5, en Développement & Innovation et en Sécurité,
+              Systèmes et Réseaux. L'école propose un cadre moderne et un
+              accompagnement personnalisé pour ses étudiants, favorisant leur
+              insertion professionnelle via un réseau de partenaires en
+              alternance.
+            </p>
+          </div>
+
+          <p>
+            J'ai choisi la spécialité Solutions Logicielles et Applications
+            Métiers pour mon BTS SIO.
+          </p>
+        </div>
+
+        <div class="group">
+          <h2 class="code">
+            SABSYSTEM
+            <span class="code commentary small-text"
+              >// C'est mon entreprise !<br
+            /></span>
+          </h2>
+
+          <div class="informations">
+            <img
+              class="logo"
+              src="../assets/images/sabsystem.png"
+              alt="Logo SabSystem"
+            />
+
+            <p>
+              SAB SYSTEM offre une solution tout-en-un, dans le cloud et
+              plug&play pour digitaliser les hôtels simplement et sans travaux.
+              Ces solutions incluent : Un wifi privé, dédié et sécurisé dans
+              chaque chambre; un accès internet "open bar" pour un plus grand
+              confort; des centaines de chaînes TV et radio du monde entier,
+              etc.
+            </p>
+          </div>
+
+          <p>
+            Je suis embauché en tant que Développeur de Solutions Logicielles,
+            DevOps et Administrateur Systèmes et Réseaux.
+          </p>
+        </div>
+      </div>
+
+      <h1>
+        <span class="code commentary">// Mon futur ?<br /></span
+        ><span class="code neutral">></span
+        ><span class="code main">console</span
+        ><span class="code neutral">.</span
+        ><span class="code secondary">log</span><span class="code main">(</span
+        ><span class="code neutral">Portfolio.Futur</span
+        ><span class="code main">);</span>
+      </h1>
+
+      <p id="my-future">
+        Je souhaite m'orienter vers le métier de Développeur de Systèmes
+        Embarqués, ou de Développeur de Logiciels. J'ai choisi cette voie car
+        j'aime la programmation et résoudre des problèmes. Pour ce faire, je
+        souhaite poursuivre mes études dans l'enseignement supérieur en
+        alternance, afin de continuer à acquérir de l'expérience professionnelle
+        tout en approfondissant mes connaissances théoriques.
+      </p>
+    </section>
+
+    <div id="scroll-to-top">
+      <button class="secondary-button" onclick="scrollToTop()">
+        <span class="material-symbols-rounded"> keyboard_arrow_up </span>
+      </button>
+    </div>
+  </body>
 </html>

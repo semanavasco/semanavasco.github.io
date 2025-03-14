@@ -1,123 +1,154 @@
 <!DOCTYPE html>
 
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vasco VALADARES SEMANA - BTS SIO</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vasco VALADARES SEMANA - BTS SIO</title>
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/bts-sio.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+    />
 
-  <link rel="stylesheet" href="../styles/index.css" />
-  <link rel="stylesheet" href="../styles/bts-sio.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+    <script src="../scripts/index.js" defer></script>
+  </head>
 
-  <script src="../scripts/index.js" defer></script>
-</head>
+  <body>
+    <div id="mouse-light"></div>
 
-<body>
-  <div id="mouse-light"></div>
-
-  <div aria-disabled id="hidden-text">
-    <h1>QUI SUIS-JE</h1>
-    <h1>ALTERNANCE</h1>
-    <h1>BTS SIO SLAM</h1>
-    <h1>DEVELOPPEUR</h1>
-    <h1>IMAGINATION</h1>
-    <h1>PASSIONNE</h1>
-    <h1>QUI SUIS-JE</h1>
-    <h1>ALTERNANCE</h1>
-  </div>
-
-  <header>
-    <nav id="nav-menu">
-      <a href="../index.html">./Accueil</a>
-      <a href="../pages/a-propos.html">./A-Propos</a>
-      <a href="#" class="current-page">./BTS-SIO</a>
-      <a href="../pages/ecole-entreprise.html">./Ecole-et-Entreprise</a>
-      <a href="../pages/missions.html">./Missions-E5</a>
-      <a href="../pages/projets.html">./Projets-E6</a>
-      <a href="../pages/veille-technologique.html">./Veille-Technologique</a>
-      <a href="../pages/contact.html">./Contact</a>
-    </nav>
-
-    <button onclick="modifierNavigation('../')" id="nav-control" class="secondary-button">
-      <span class="material-symbols-rounded"> menu </span>
-    </button>
-  </header>
-
-  <section id="bts-sio">
-    <h1>
-      <span class="code commentary">// Qu'est-ce que le BTS SIO ?<br /></span><span class="code neutral">></span><span class="code main">console</span><span class="code neutral">.</span><span class="code secondary">log</span><span class="code main">(</span><span class="code neutral">Portfolio.BTS_SIO.Description</span><span class="code main">);</span>
-    </h1>
-
-    <p id="description">
-      Le
-      <span class="code main" style="font-size: 24px">BTS SIO</span> (<span class="code main" style="font-size: 24px">S</span>ervices
-      <span class="code main" style="font-size: 24px">I</span>nformatiques aux
-      <span class="code main" style="font-size: 24px">O</span>rganisations)
-      est un diplôme national de l'enseignement supérieur français. Il forme
-      des informaticiens qui seront capables de gérer des parcs informatiques,
-      d'administrer des réseaux, de développer des applications, de concevoir
-      des bases de données, de sécuriser des systèmes d'information, de mettre
-      en place des solutions de virtualisation et de cloud computing.
-    </p>
-
-    <h1>
-      <span class="code commentary">// Quelles sont les différentes spécialités ?<br /></span><span class="code neutral">></span><span class="code main">console</span><span class="code neutral">.</span><span class="code secondary">log</span><span class="code main">(</span><span class="code neutral">Portfolio.BTS_SIO.Specialites</span><span class="code main">);</span>
-    </h1>
-
-    <div class="bts-sio-spe">
-      <div class="spe">
-        <h2 class="code">
-          SLAM
-          <span class="code commentary small-text">// C'est ma spécialité !<br /></span>
-        </h2>
-
-        <p>
-          <span class="code main" style="font-size: 24px">S</span>olutions
-          <span class="code main" style="font-size: 24px">L</span>ogicielles
-          et
-          <span class="code main" style="font-size: 24px">A</span>pplications
-          <span class="code main" style="font-size: 24px">M</span>étiers.
-          Cette spécialité forme des développeurs d'applications
-          informatiques.
-        </p>
-
-        <h2>DÉBOUCHÉS</h2>
-
-        <ul>
-          <li>Développeur d'applications</li>
-          <li>Analyste programmeur</li>
-          <li>Concepteur développeur</li>
-          <li>Intégrateur web</li>
-          <li>Administrateur de base de données</li>
-        </ul>
-      </div>
-
-      <div class="spe">
-        <h2 class="code">SISR</h2>
-
-        <p>
-          <span class="code main" style="font-size: 24px">S</span>olutions
-          d'<span class="code main" style="font-size: 24px">I</span>nfrastructure,
-          <span class="code main" style="font-size: 24px">S</span>ystèmes et
-          <span class="code main" style="font-size: 24px">R</span>éseaux.
-          Cette spécialité forme des administrateurs de réseaux et de
-          systèmes.
-        </p>
-
-        <h2>DÉBOUCHÉS</h2>
-
-        <ul>
-          <li>Administrateur systèmes et réseaux</li>
-          <li>Technicien support</li>
-          <li>Technicien réseaux</li>
-          <li>Technicien systèmes</li>
-          <li>Technicien de maintenance</li>
-        </ul>
-      </div>
+    <div aria-disabled id="hidden-text">
+      <h1>QUI SUIS-JE</h1>
+      <h1>ALTERNANCE</h1>
+      <h1>BTS SIO SLAM</h1>
+      <h1>DEVELOPPEUR</h1>
+      <h1>IMAGINATION</h1>
+      <h1>PASSIONNE</h1>
+      <h1>QUI SUIS-JE</h1>
+      <h1>ALTERNANCE</h1>
     </div>
-  </section>
-</body>
 
+    <header>
+      <nav id="nav-menu">
+        <a href="../index.html">./Accueil</a>
+        <a href="../pages/a-propos.html">./A-Propos</a>
+        <a href="#" class="current-page">./BTS-SIO</a>
+        <a href="../pages/ecole-entreprise.html">./Ecole-et-Entreprise</a>
+        <a href="../pages/missions.html">./Missions-E5</a>
+        <a href="../pages/projets.html">./Projets-E6</a>
+        <a href="../pages/veille-technologique.html">./Veille-Technologique</a>
+        <a href="../pages/contact.html">./Contact</a>
+      </nav>
+
+      <button
+        onclick="modifierNavigation('../')"
+        id="nav-control"
+        class="secondary-button"
+      >
+        <span class="material-symbols-rounded"> menu </span>
+      </button>
+    </header>
+
+    <section id="bts-sio">
+      <h1>
+        <span class="code commentary">// Qu'est-ce que le BTS SIO ?<br /></span
+        ><span class="code neutral">></span
+        ><span class="code main">console</span
+        ><span class="code neutral">.</span
+        ><span class="code secondary">log</span><span class="code main">(</span
+        ><span class="code neutral">Portfolio.BTS_SIO.Description</span
+        ><span class="code main">);</span>
+      </h1>
+
+      <p id="description">
+        Le
+        <span class="code main" style="font-size: 24px">BTS SIO</span> (<span
+          class="code main"
+          style="font-size: 24px"
+          >S</span
+        >ervices
+        <span class="code main" style="font-size: 24px">I</span>nformatiques aux
+        <span class="code main" style="font-size: 24px">O</span>rganisations)
+        est un diplôme national de l'enseignement supérieur français. Il forme
+        des informaticiens qui seront capables de gérer des parcs informatiques,
+        d'administrer des réseaux, de développer des applications, de concevoir
+        des bases de données, de sécuriser des systèmes d'information, de mettre
+        en place des solutions de virtualisation et de cloud computing.
+      </p>
+
+      <h1>
+        <span class="code commentary"
+          >// Quelles sont les différentes spécialités ?<br /></span
+        ><span class="code neutral">></span
+        ><span class="code main">console</span
+        ><span class="code neutral">.</span
+        ><span class="code secondary">log</span><span class="code main">(</span
+        ><span class="code neutral">Portfolio.BTS_SIO.Specialites</span
+        ><span class="code main">);</span>
+      </h1>
+
+      <div class="bts-sio-spe">
+        <div class="spe">
+          <h2 class="code">
+            SLAM
+            <span class="code commentary small-text"
+              >// C'est ma spécialité !<br
+            /></span>
+          </h2>
+
+          <p>
+            <span class="code main" style="font-size: 24px">S</span>olutions
+            <span class="code main" style="font-size: 24px">L</span>ogicielles
+            et
+            <span class="code main" style="font-size: 24px">A</span>pplications
+            <span class="code main" style="font-size: 24px">M</span>étiers.
+            Cette spécialité forme des développeurs d'applications
+            informatiques.
+          </p>
+
+          <h2>DÉBOUCHÉS</h2>
+
+          <ul>
+            <li>Développeur d'applications</li>
+            <li>Analyste programmeur</li>
+            <li>Concepteur développeur</li>
+            <li>Intégrateur web</li>
+            <li>Administrateur de base de données</li>
+          </ul>
+        </div>
+
+        <div class="spe">
+          <h2 class="code">SISR</h2>
+
+          <p>
+            <span class="code main" style="font-size: 24px">S</span>olutions
+            d'<span class="code main" style="font-size: 24px">I</span
+            >nfrastructure,
+            <span class="code main" style="font-size: 24px">S</span>ystèmes et
+            <span class="code main" style="font-size: 24px">R</span>éseaux.
+            Cette spécialité forme des administrateurs de réseaux et de
+            systèmes.
+          </p>
+
+          <h2>DÉBOUCHÉS</h2>
+
+          <ul>
+            <li>Administrateur systèmes et réseaux</li>
+            <li>Technicien support</li>
+            <li>Technicien réseaux</li>
+            <li>Technicien systèmes</li>
+            <li>Technicien de maintenance</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div id="scroll-to-top">
+      <button class="secondary-button" onclick="scrollToTop()">
+        <span class="material-symbols-rounded"> keyboard_arrow_up </span>
+      </button>
+    </div>
+  </body>
 </html>

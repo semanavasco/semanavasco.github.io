@@ -1,77 +1,115 @@
 <!DOCTYPE html>
 
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vasco VALADARES SEMANA - Veille Technologique</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vasco VALADARES SEMANA - Veille Technologique</title>
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/veille-technologique.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+    />
 
-  <link rel="stylesheet" href="../styles/index.css" />
-  <link rel="stylesheet" href="../styles/veille-technologique.css" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+    <script src="../scripts/index.js" defer></script>
+  </head>
 
-  <script src="../scripts/index.js" defer></script>
-</head>
+  <body>
+    <div id="mouse-light"></div>
 
-<body>
-  <div id="mouse-light"></div>
-
-  <div aria-disabled id="hidden-text">
-    <h1>QUI SUIS-JE</h1>
-    <h1>ALTERNANCE</h1>
-    <h1>BTS SIO SLAM</h1>
-    <h1>DEVELOPPEUR</h1>
-    <h1>IMAGINATION</h1>
-    <h1>PASSIONNE</h1>
-    <h1>QUI SUIS-JE</h1>
-    <h1>ALTERNANCE</h1>
-  </div>
-
-  <header>
-    <nav id="nav-menu">
-      <a href="../index.html">./Accueil</a>
-      <a href="../pages/a-propos.html">./A-Propos</a>
-      <a href="../pages/bts-sio.html">./BTS-SIO</a>
-      <a href="../pages/ecole-entreprise.html">./Ecole-et-Entreprise</a>
-      <a href="../pages/missions.html">./Missions-E5</a>
-      <a href="../pages/projets.html">./Projets-E6</a>
-      <a href="#" class="current-page">./Veille-Technologique</a>
-      <a href="../pages/contact.html">./Contact</a>
-    </nav>
-
-    <button onclick="modifierNavigation('../')" id="nav-control" class="secondary-button">
-      <span class="material-symbols-rounded"> menu </span>
-    </button>
-  </header>
-
-  <section id="veille-technologique">
-    <h1>
-      <span class="code commentary">// Ma veille technologique...<br /></span><span class="code neutral">></span><span class="code main">console</span><span class="code neutral">.</span><span class="code secondary">log</span><span class="code main">(</span><span class="code neutral">Portfolio.Veille</span><span class="code main">);</span>
-    </h1>
-
-    <div id="informations">
-      <div id="title">
-        <img src="../assets/images/medium.png" alt="Logo Medium Daily Digest">
-        <h1>Medium Daily Digest</h1>
-      </div>
-
-      <p>J'ai choisi la plateforme web <span class="code main normal-text">"Medium Daily Digest"</span> comme outil de veille. Cet outil me permet de recevoir chaque jour des mails sur des sujets de mon choix. Pour cette veille technologique, j'ai sélectionné les sujets suivants :</p>
-
-      <div class="subjects">
-        <div class="subject"><i class="devicon-nodejs-plain"></i> NodeJS</div>
-        <div class="subject"><i class="devicon-javascript-plain"></i> JavaScript</div>
-        <div class="subject"><i class="devicon-python-plain"></i> Python</div>
-      </div>
+    <div aria-disabled id="hidden-text">
+      <h1>QUI SUIS-JE</h1>
+      <h1>ALTERNANCE</h1>
+      <h1>BTS SIO SLAM</h1>
+      <h1>DEVELOPPEUR</h1>
+      <h1>IMAGINATION</h1>
+      <h1>PASSIONNE</h1>
+      <h1>QUI SUIS-JE</h1>
+      <h1>ALTERNANCE</h1>
     </div>
 
-    <h1>
-      <span class="code commentary">// Ce que j'en ai tiré ?<br /></span><span class="code neutral">></span><span class="code main">console</span><span class="code neutral">.</span><span class="code secondary">log</span><span class="code main">(</span><span class="code neutral">Portfolio.Veille_Resultat</span><span class="code main">);</span>
-    </h1>
+    <header>
+      <nav id="nav-menu">
+        <a href="../index.html">./Accueil</a>
+        <a href="../pages/a-propos.html">./A-Propos</a>
+        <a href="../pages/bts-sio.html">./BTS-SIO</a>
+        <a href="../pages/ecole-entreprise.html">./Ecole-et-Entreprise</a>
+        <a href="../pages/missions.html">./Missions-E5</a>
+        <a href="../pages/projets.html">./Projets-E6</a>
+        <a href="#" class="current-page">./Veille-Technologique</a>
+        <a href="../pages/contact.html">./Contact</a>
+      </nav>
 
-    <img src="https://letscontrolit.com/wiki/images/7/74/WIP.gif" alt="wip" />
-  </section>
-</body>
+      <button
+        onclick="modifierNavigation('../')"
+        id="nav-control"
+        class="secondary-button"
+      >
+        <span class="material-symbols-rounded"> menu </span>
+      </button>
+    </header>
 
+    <section id="veille-technologique">
+      <h1>
+        <span class="code commentary">// Ma veille technologique...<br /></span
+        ><span class="code neutral">></span
+        ><span class="code main">console</span
+        ><span class="code neutral">.</span
+        ><span class="code secondary">log</span><span class="code main">(</span
+        ><span class="code neutral">Portfolio.Veille</span
+        ><span class="code main">);</span>
+      </h1>
+
+      <div id="informations">
+        <div id="title">
+          <img
+            src="../assets/images/medium.png"
+            alt="Logo Medium Daily Digest"
+          />
+          <h1>Medium Daily Digest</h1>
+        </div>
+
+        <p>
+          J'ai choisi la plateforme web
+          <span class="code main normal-text">"Medium Daily Digest"</span> comme
+          outil de veille. Cet outil me permet de recevoir chaque jour des mails
+          sur des sujets de mon choix. Pour cette veille technologique, j'ai
+          sélectionné les sujets suivants :
+        </p>
+
+        <div class="subjects">
+          <div class="subject"><i class="devicon-nodejs-plain"></i> NodeJS</div>
+          <div class="subject">
+            <i class="devicon-javascript-plain"></i> JavaScript
+          </div>
+          <div class="subject"><i class="devicon-python-plain"></i> Python</div>
+        </div>
+      </div>
+
+      <h1>
+        <span class="code commentary">// Ce que j'en ai tiré ?<br /></span
+        ><span class="code neutral">></span
+        ><span class="code main">console</span
+        ><span class="code neutral">.</span
+        ><span class="code secondary">log</span><span class="code main">(</span
+        ><span class="code neutral">Portfolio.Veille_Resultat</span
+        ><span class="code main">);</span>
+      </h1>
+
+      <img src="https://letscontrolit.com/wiki/images/7/74/WIP.gif" alt="wip" />
+    </section>
+
+    <div id="scroll-to-top">
+      <button class="secondary-button" onclick="scrollToTop()">
+        <span class="material-symbols-rounded"> keyboard_arrow_up </span>
+      </button>
+    </div>
+  </body>
 </html>

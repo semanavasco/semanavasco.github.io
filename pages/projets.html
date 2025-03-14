@@ -1,53 +1,64 @@
 <!DOCTYPE html>
 
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vasco VALADARES SEMANA - Projets</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vasco VALADARES SEMANA - Projets</title>
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/projets.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+    />
 
-  <link rel="stylesheet" href="../styles/index.css" />
-  <link rel="stylesheet" href="../styles/projets.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+    <script src="../scripts/index.js" defer></script>
+  </head>
 
-  <script src="../scripts/index.js" defer></script>
-</head>
+  <body>
+    <div id="mouse-light"></div>
 
-<body>
-  <div id="mouse-light"></div>
+    <div aria-disabled id="hidden-text">
+      <h1>QUI SUIS-JE</h1>
+      <h1>ALTERNANCE</h1>
+      <h1>BTS SIO SLAM</h1>
+      <h1>DEVELOPPEUR</h1>
+      <h1>IMAGINATION</h1>
+      <h1>PASSIONNE</h1>
+      <h1>QUI SUIS-JE</h1>
+      <h1>ALTERNANCE</h1>
+    </div>
 
-  <div aria-disabled id="hidden-text">
-    <h1>QUI SUIS-JE</h1>
-    <h1>ALTERNANCE</h1>
-    <h1>BTS SIO SLAM</h1>
-    <h1>DEVELOPPEUR</h1>
-    <h1>IMAGINATION</h1>
-    <h1>PASSIONNE</h1>
-    <h1>QUI SUIS-JE</h1>
-    <h1>ALTERNANCE</h1>
-  </div>
+    <header>
+      <nav id="nav-menu">
+        <a href="../index.html">./Accueil</a>
+        <a href="../pages/a-propos.html">./A-Propos</a>
+        <a href="../pages/bts-sio.html">./BTS-SIO</a>
+        <a href="../pages/ecole-entreprise.html">./Ecole-et-Entreprise</a>
+        <a href="../pages/missions.html">./Missions-E5</a>
+        <a href="#" class="current-page">./Projets-E6</a>
+        <a href="../pages/veille-technologique.html">./Veille-Technologique</a>
+        <a href="../pages/contact.html">./Contact</a>
+      </nav>
 
-  <header>
-    <nav id="nav-menu">
-      <a href="../index.html">./Accueil</a>
-      <a href="../pages/a-propos.html">./A-Propos</a>
-      <a href="../pages/bts-sio.html">./BTS-SIO</a>
-      <a href="../pages/ecole-entreprise.html">./Ecole-et-Entreprise</a>
-      <a href="../pages/missions.html">./Missions-E5</a>
-      <a href="#" class="current-page">./Projets-E6</a>
-      <a href="../pages/veille-technologique.html">./Veille-Technologique</a>
-      <a href="../pages/contact.html">./Contact</a>
-    </nav>
+      <button
+        onclick="modifierNavigation('../')"
+        id="nav-control"
+        class="secondary-button"
+      >
+        <span class="material-symbols-rounded"> menu </span>
+      </button>
+    </header>
 
-    <button onclick="modifierNavigation('../')" id="nav-control" class="secondary-button">
-      <span class="material-symbols-rounded"> menu </span>
-    </button>
-  </header>
+    <section>
+      <img src="https://letscontrolit.com/wiki/images/7/74/WIP.gif" alt="wip" />
+    </section>
 
-  <section>
-    <img src="https://letscontrolit.com/wiki/images/7/74/WIP.gif" alt="wip" />
-  </section>
-</body>
-
+    <div id="scroll-to-top">
+      <button class="secondary-button" onclick="scrollToTop()">
+        <span class="material-symbols-rounded"> keyboard_arrow_up </span>
+      </button>
+    </div>
+  </body>
 </html>

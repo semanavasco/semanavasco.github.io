@@ -22,11 +22,18 @@ textarea {
   color: var(--text-color);
   font-size: medium;
   padding: 0.5rem;
+  transition: all 0.3s ease-in-out;
 }
 
 textarea {
   resize: none;
   height: 10rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 2.5px 10px 0 var(--main-color);
 }
 
 /* Responsive design */

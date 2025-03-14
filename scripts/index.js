@@ -24,3 +24,22 @@ function modifierNavigation(chemin) {
     controlSpan.textContent = "close";
   else controlSpan.textContent = "menu";
 }
+
+// Scroll to Top
+const SCROLL_DEPTH_BEFORE_BUTTON = 750;
+
+window.onscroll = () => {
+  const scrollTTBtn = document.getElementById("scroll-to-top");
+
+  if (
+    document.body.scrollTop > SCROLL_DEPTH_BEFORE_BUTTON ||
+    document.documentElement.scrollTop > SCROLL_DEPTH_BEFORE_BUTTON
+  )
+    scrollTTBtn.style.display = "flex";
+  else scrollTTBtn.style.display = "none";
+};
+
+function scrollToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}

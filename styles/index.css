@@ -195,6 +195,15 @@ section {
   overflow-wrap: anywhere;
 }
 
+/* SCROLL TO TOP */
+#scroll-to-top {
+  display: none;
+  position: fixed;
+  padding: 0.75rem 0.5rem;
+  bottom: 0;
+  right: 0;
+}
+
 /* RESPONSIVE */
 @media screen and (max-width: 1770px) {
   nav {
