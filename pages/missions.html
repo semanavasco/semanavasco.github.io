@@ -1,650 +1,650 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vasco VALADARES SEMANA - Missions</title>
-
-    <link rel="stylesheet" href="../styles/index.css" />
-    <link rel="stylesheet" href="../styles/missions.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
-    />
-
-    <script src="../scripts/index.js" defer></script>
-  </head>
-
-  <body>
-    <div id="mouse-light"></div>
-
-    <div aria-disabled id="hidden-text">
-      <h1>QUI SUIS-JE</h1>
-      <h1>ALTERNANCE</h1>
-      <h1>BTS SIO SLAM</h1>
-      <h1>DEVELOPPEUR</h1>
-      <h1>IMAGINATION</h1>
-      <h1>PASSIONNE</h1>
-      <h1>QUI SUIS-JE</h1>
-      <h1>ALTERNANCE</h1>
-    </div>
-
-    <header>
-      <nav id="nav-menu">
-        <a href="../index.html">./Accueil</a>
-        <a href="../pages/a-propos.html">./A-Propos</a>
-        <a href="../pages/bts-sio.html">./BTS-SIO</a>
-        <a href="../pages/ecole-entreprise.html">./Ecole-et-Entreprise</a>
-        <a href="#" class="current-page">./Missions-E5</a>
-        <a href="../pages/projets.html">./Projets-E6</a>
-        <a href="../pages/veille-technologique.html">./Veille-Technologique</a>
-        <a href="../pages/contact.html">./Contact</a>
-      </nav>
-
-      <button
-        onclick="modifierNavigation('../')"
-        id="nav-control"
-        class="secondary-button"
-      >
-        <span class="material-symbols-rounded"> menu </span>
-      </button>
-    </header>
-
-    <section id="missions">
-      <h1>
-        <span class="code commentary">// Mes petites réalisations...<br /></span
-        ><span class="code neutral">></span
-        ><span class="code main">console</span
-        ><span class="code neutral">.</span
-        ><span class="code secondary">log</span><span class="code main">(</span
-        ><span class="code neutral">Portfolio.Missions</span
-        ><span class="code main">);</span>
-      </h1>
-
-      <div id="description">
-        <p>
-          Voici quelques-uns des projets que j'ai réalisés. Ils sont classés
-          dans l'ordre : projets globaux, projets en formation, projets en
-          entreprise et enfin les projets personnels. Vous pouvez cliquer sur
-          les boutons pour accéder au site ou au code source.
-        </p>
-
-        <button
-          class="main-button"
-          onclick="window.open('../assets/docs/TABLEAU_SYNTHESE.pdf', '_blank')"
-        >
-          Tableau de Synthèse
-          <span class="material-symbols-rounded"> open_in_new </span>
-        </button>
-      </div>
-
-      <div id="projects">
-        <!-- Projets Globaux -->
-        <div class="project" id="portfolio">
-          <img src="../assets/images/portfolio.png" alt="Portfolio" />
-
-          <div class="content">
-            <h2>
-              PORTFOLIO
-              <span class="code commentary small-text">// Projet Global</span>
-            </h2>
-
-            <p>Création de mon portfolio.</p>
-
-            <div class="tags">
-              <div class="tag"><i class="devicon-html5-plain"></i> HTML5</div>
-              <div class="tag"><i class="devicon-css3-plain"></i> CSS3</div>
-              <div class="tag">
-                <i class="devicon-javascript-plain"></i> JavaScript
-              </div>
-            </div>
-
-            <div class="buttons">
-              <button
-                class="main-button"
-                onclick="window.location.href = '../index.html'"
-              >
-                Accéder au Site
-              </button>
-              <button
-                class="secondary-button"
-                onclick="window.open('https://github.com/semanavasco/semanavasco.github.io','_blank')"
-              >
-                Voir sur Github
-                <span class="material-symbols-rounded"> open_in_new </span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Projets en Formation -->
-        <div class="project" id="motle">
-          <img src="../assets/images/motle.png" alt="Motle" />
-
-          <div class="content">
-            <h2>
-              MOTLE
-              <span class="code commentary small-text">
-                // Projet en Formation
-              </span>
-            </h2>
-
-            <p>
-              Création d'un mini-jeu web dont le but est de trouver des mots de
-              5 lettres.
-            </p>
-
-            <div class="tags">
-              <div class="tag">
-                <i class="devicon-express-original"></i> Express
-              </div>
-              <div class="tag"><i class="devicon-nodejs-plain"></i> NodeJS</div>
-              <div class="tag"><i class="devicon-css3-plain"></i> CSS3</div>
-              <div class="tag"><i class="devicon-json-plain"></i> JSON</div>
-            </div>
-
-            <div class="buttons">
-              <button
-                class="secondary-button"
-                onclick="window.open('https://github.com/semanavasco/motle','_blank')"
-              >
-                Voir sur Github
-                <span class="material-symbols-rounded"> open_in_new </span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="project" id="scraping-motle">
-          <img
-            src="../assets/images/scraping-motle.png"
-            alt="Scraping for Motle"
-          />
-
-          <div class="content">
-            <h2>
-              SCRAPING FOR MOTLE
-              <span class="code commentary small-text">
-                // Projet en Formation
-              </span>
-            </h2>
-
-            <p>
-              Création d'un script permettant de scraper des mots de 5 lettres
-              dans le site : https://www.liste-de-mots.com/
-            </p>
-
-            <div class="tags">
-              <div class="tag"><i class="devicon-python-plain"></i> Python</div>
-              <div class="tag"><i class="devicon-json-plain"></i> JSON</div>
-            </div>
-
-            <div class="buttons">
-              <button
-                class="secondary-button"
-                onclick="window.open('https://github.com/semanavasco/scraping-motle','_blank')"
-              >
-                Voir sur Github
-                <span class="material-symbols-rounded"> open_in_new </span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="project" id="calculator">
-          <img src="../assets/images/calculator.png" alt="Calculator" />
-
-          <div class="content">
-            <h2>
-              ANDROID CALCULATOR
-              <span class="code commentary small-text">
-                // Projet en Formation
-              </span>
-            </h2>
-
-            <p>
-              Création d'une calculatrice basique pour les systèmes
-              d'exploitation Android.
-            </p>
-
-            <div class="tags">
-              <div class="tag">
-                <i class="devicon-androidstudio-plain"></i> Android Studio
-              </div>
-              <div class="tag"><i class="devicon-java-plain"></i> Java</div>
-            </div>
-
-            <div class="buttons">
-              <button
-                class="secondary-button"
-                onclick="window.open('https://github.com/semanavasco/as-calculator','_blank')"
-              >
-                Voir sur Github
-                <span class="material-symbols-rounded"> open_in_new </span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="project" id="to-do-list">
-          <img src="../assets/images/todo-list.png" alt="To-Do List" />
-
-          <div class="content">
-            <h2>
-              ANDROID TO-DO LIST
-              <span class="code commentary small-text">
-                // Projet en Formation
-              </span>
-            </h2>
-
-            <p>
-              Création d'une "to-do list" basique pour les systèmes
-              d'exploitation Android.
-            </p>
-
-            <div class="tags">
-              <div class="tag">
-                <i class="devicon-androidstudio-plain"></i> Android Studio
-              </div>
-              <div class="tag"><i class="devicon-java-plain"></i> Java</div>
-            </div>
-
-            <div class="buttons">
-              <button
-                class="secondary-button"
-                onclick="window.open('https://github.com/semanavasco/as-to-do-list','_blank')"
-              >
-                Voir sur Github
-                <span class="material-symbols-rounded"> open_in_new </span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Projets en Entreprise -->
-        <div class="project" id="video-surveillance">
-          <img src="../assets/images/motle.png" alt="Video Surveillance" />
-
-          <div class="content">
-            <h2>
-              SYSTÈME VIDÉO SURVEILLANCE
-              <span class="code commentary small-text">
-                // Projet en Entreprise
-              </span>
-            </h2>
-
-            <p>
-              Configuration et maintenance d'un système de vidéo surveillance.
-            </p>
-
-            <div class="tags">
-              <div class="tag"><i class="devicon-bash-plain"></i> Bash</div>
-              <div class="tag">VLC</div>
-            </div>
-
-            <div class="buttons">
-              <button
-                class="main-button"
-                onclick="window.open('../assets/images/docs/xxxxDoc.pdf','_blank')"
-              >
-                Documentation
-                <span class="material-symbols-rounded"> open_in_new </span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="project" id="zoneminder">
-          <img src="../assets/images/motle.png" alt="Zoneminder" />
-
-          <div class="content">
-            <h2>
-              ADAPTATION ZONEMINDER
-              <span class="code commentary small-text">
-                // Projet en Entreprise
-              </span>
-            </h2>
-
-            <p>
-              Adaptation et personnalisation de l'outil open source Zoneminder.
-            </p>
-
-            <div class="tags">
-              <div class="tag"><i class="devicon-php-plain"></i> PHP</div>
-              <div class="tag"><i class="devicon-css3-plain"></i> CSS3</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="project" id="maintenance">
-          <img src="../assets/images/motle.png" alt="Maintenance" />
-
-          <div class="content">
-            <h2>
-              MAINTENANCE SYSTÈMES
-              <span class="code commentary small-text">
-                // Projet en Entreprise
-              </span>
-            </h2>
-
-            <p>
-              Maintenance préventive et corrective des systèmes informatiques.
-            </p>
-          </div>
-        </div>
-
-        <div class="project" id="assistance">
-          <img src="../assets/images/motle.png" alt="Assistance" />
-
-          <div class="content">
-            <h2>
-              ASSISTANCE UTILISATEURS
-              <span class="code commentary small-text">
-                // Projet en Entreprise
-              </span>
-            </h2>
-
-            <p>Support technique et assistance aux utilisateurs.</p>
-          </div>
-        </div>
-
-        <div class="project" id="satellite-scan">
-          <img src="../assets/images/motle.png" alt="Satellite Scan" />
-
-          <div class="content">
-            <h2>
-              SCAN SATELLITES
-              <span class="code commentary small-text">
-                // Projet en Entreprise
-              </span>
-            </h2>
-
-            <p>
-              Développement d'outils pour le scan de satellites et déploiement
-              de chaînes TV.
-            </p>
-
-            <div class="tags">
-              <div class="tag"><i class="devicon-python-plain"></i> Python</div>
-              <div class="tag"><i class="devicon-bash-plain"></i> Bash</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="project" id="web-console">
-          <img src="../assets/images/motle.png" alt="Web Console" />
-
-          <div class="content">
-            <h2>
-              CONSOLE WEB DE GESTION
-              <span class="code commentary small-text">
-                // Projet en Entreprise
-              </span>
-            </h2>
-
-            <p>
-              Développement d'une interface web pour la gestion du scan
-              satellite.
-            </p>
-
-            <div class="tags">
-              <div class="tag"><i class="devicon-python-plain"></i> Python</div>
-              <div class="tag"><i class="devicon-django-plain"></i> Django</div>
-              <div class="tag"><i class="devicon-mysql-plain"></i> MySQL</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="project" id="booking-scraper">
-          <img src="../assets/images/motle.png" alt="Booking Scraper" />
-
-          <div class="content">
-            <h2>
-              SCRAPING BOOKING
-              <span class="code commentary small-text">
-                // Projet en Entreprise
-              </span>
-            </h2>
-
-            <p>Développement d'un script de scraping pour Booking.</p>
-
-            <div class="tags">
-              <div class="tag"><i class="devicon-python-plain"></i> Python</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="project" id="odoo-integration">
-          <img src="../assets/images/motle.png" alt="Odoo Integration" />
-
-          <div class="content">
-            <h2>
-              INTÉGRATION ODOO
-              <span class="code commentary small-text">
-                // Projet en Entreprise
-              </span>
-            </h2>
-
-            <p>Formation et intégration du parc informatique sur Odoo.</p>
-
-            <div class="tags">
-              <div class="tag">Odoo</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Projets Personnels -->
-        <div class="project" id="web-terminal">
-          <img src="../assets/images/web-terminal.png" alt="Web Terminal" />
-
-          <div class="content">
-            <h2>
-              WEB TERMINAL
-              <span class="code commentary small-text"
-                >// Projet Personnel</span
-              >
-            </h2>
-
-            <p>Création d'un terminal web.</p>
-
-            <div class="tags">
-              <div class="tag"><i class="devicon-html5-plain"></i> HTML5</div>
-              <div class="tag"><i class="devicon-css3-plain"></i> CSS3</div>
-              <div class="tag">
-                <i class="devicon-javascript-plain"></i> JavaScript
-              </div>
-            </div>
-
-            <div class="buttons">
-              <button
-                class="main-button"
-                onclick="window.location.href = 'https://semanavasco.live/web-terminal'"
-              >
-                Accéder au Site
-              </button>
-              <button
-                class="secondary-button"
-                onclick="window.open('https://github.com/semanavasco/web-terminal','_blank')"
-              >
-                Voir sur Github
-                <span class="material-symbols-rounded"> open_in_new </span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="project" id="unshaped">
-          <img src="../assets/images/unshaped.png" alt="Unshaped" />
-
-          <div class="content">
-            <h2>
-              UNSHAPED
-              <span class="code commentary small-text"
-                >// Projet Personnel</span
-              >
-            </h2>
-
-            <p>
-              Création d'un petit jeu 2D avec le moteur de jeu Godot.
-              Implémentation d'un menu de réglages, pause, collisions, etc.
-            </p>
-
-            <div class="tags">
-              <div class="tag"><i class="devicon-godot-plain"></i> Godot</div>
-            </div>
-
-            <div class="buttons">
-              <button
-                class="secondary-button"
-                onclick="window.open('https://github.com/semanavasco/unshaped','_blank')"
-              >
-                Voir sur Github
-                <span class="material-symbols-rounded"> open_in_new </span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="project" id="tools-project">
-          <img src="../assets/images/tools-project.png" alt="Tools Project" />
-
-          <div class="content">
-            <h2>
-              TOOLS PROJECT
-              <span class="code commentary small-text"
-                >// Projet Personnel</span
-              >
-            </h2>
-
-            <p>
-              Création d'un bot discord multi-tâches. Fonctionnalités amusantes,
-              de modération, de culture, etc.
-            </p>
-
-            <div class="tags">
-              <div class="tag"><i class="devicon-nodejs-plain"></i> NodeJS</div>
-              <div class="tag">
-                <i class="devicon-discordjs-plain"></i> DiscordJS
-              </div>
-              <div class="tag">
-                <i class="devicon-mongodb-plain"></i> MongoDB
-              </div>
-            </div>
-
-            <div class="buttons">
-              <button
-                class="secondary-button"
-                onclick="window.open('https://github.com/semanavasco/tools-project-main','_blank')"
-              >
-                Voir sur Github
-                <span class="material-symbols-rounded"> open_in_new </span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="project" id="solo-leveling-rp">
-          <img
-            src="../assets/images/solo-leveling-rp.png"
-            alt="Solo Leveling Roleplay"
-          />
-
-          <div class="content">
-            <h2>
-              SOLO LEVELING ROLEPLAY
-              <span class="code commentary small-text"
-                >// Projet Personnel</span
-              >
-            </h2>
-
-            <p>
-              Création d'un bot discord inspiré du Manhwa Solo Leveling pour une
-              communauté de roleplay écrit.
-            </p>
-
-            <div class="tags">
-              <div class="tag"><i class="devicon-nodejs-plain"></i> NodeJS</div>
-              <div class="tag">
-                <i class="devicon-discordjs-plain"></i> DiscordJS
-              </div>
-              <div class="tag">
-                <i class="devicon-canva-original"></i> CanvasAPI
-              </div>
-              <div class="tag">
-                <i class="devicon-postgresql-plain"></i> PostgreSQL
-              </div>
-              <div class="tag">
-                <i class="devicon-sequelize-plain"></i> Sequelize
-              </div>
-            </div>
-
-            <div class="buttons">
-              <button
-                class="main-button"
-                onclick="window.open('../assets/images/docs/SoloLevelingRPDoc.pdf','_blank')"
-              >
-                Documentation
-                <span class="material-symbols-rounded"> open_in_new </span>
-              </button>
-              <button
-                class="secondary-button"
-                onclick="window.open('https://github.com/semanavasco/solo-leveling-rp','_blank')"
-              >
-                Voir sur Github
-                <span class="material-symbols-rounded"> open_in_new </span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="project" id="hyprfiles">
-          <img src="../assets/images/hyprfiles.png" alt="Hyprfiles" />
-
-          <div class="content">
-            <h2>
-              HYPRFILES
-              <span class="code commentary small-text"
-                >// Projet Personnel</span
-              >
-            </h2>
-
-            <p>
-              Customization de mon environnement Linux, création de scripts
-              d'automatisation, logiciels et outils pour l'interface
-              utilisateur, etc.
-            </p>
-
-            <div class="tags">
-              <div class="tag"><i class="devicon-bash-plain"></i> Bash</div>
-              <div class="tag"><i class="devicon-python-plain"></i> Python</div>
-              <div class="tag"><i class="devicon-json-plain"></i> JSON</div>
-              <div class="tag"><i class="devicon-lua-plain"></i> LUA</div>
-            </div>
-
-            <div class="buttons">
-              <button
-                class="secondary-button"
-                onclick="window.open('https://github.com/semanavasco/hyprfiles','_blank')"
-              >
-                Voir sur Github
-                <span class="material-symbols-rounded"> open_in_new </span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div id="scroll-to-top" title="Remonter">
-      <button class="secondary-button" onclick="scrollToTop()">
-        <span class="material-symbols-rounded"> keyboard_arrow_up </span>
-      </button>
-    </div>
-  </body>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Vasco VALADARES SEMANA - Missions</title>
+
+	<link rel="stylesheet" href="../styles/index.css" />
+	<link rel="stylesheet" href="../styles/missions.css" />
+	<link rel="stylesheet" type="text/css"
+		href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+
+	<script src="../scripts/index.js" defer></script>
+</head>
+
+<body>
+	<div id="mouse-light"></div>
+
+	<div aria-disabled id="hidden-text">
+		<h1>QUI SUIS-JE</h1>
+		<h1>ALTERNANCE</h1>
+		<h1>BTS SIO SLAM</h1>
+		<h1>DEVELOPPEUR</h1>
+		<h1>IMAGINATION</h1>
+		<h1>PASSIONNE</h1>
+		<h1>QUI SUIS-JE</h1>
+		<h1>ALTERNANCE</h1>
+	</div>
+
+	<header>
+		<nav id="nav-menu">
+			<a href="../index.html">./Accueil</a>
+			<a href="../pages/a-propos.html">./A-Propos</a>
+			<a href="../pages/bts-sio.html">./BTS-SIO</a>
+			<a href="../pages/ecole-entreprise.html">./Ecole-et-Entreprise</a>
+			<a href="#" class="current-page">./Missions-E5</a>
+			<a href="../pages/projets.html">./Projets-E6</a>
+			<a href="../pages/veille-technologique.html">./Veille-Technologique</a>
+			<a href="../pages/contact.html">./Contact</a>
+		</nav>
+
+		<button onclick="modifierNavigation('../')" id="nav-control" class="secondary-button">
+			<span class="material-symbols-rounded"> menu </span>
+		</button>
+	</header>
+
+	<section id="missions">
+		<h1>
+			<span class="code commentary">// Mes petites réalisations...<br /></span><span
+				class="code neutral">></span><span class="code main">console</span><span
+				class="code neutral">.</span><span class="code secondary">log</span><span
+				class="code main">(</span><span class="code neutral">Portfolio.Missions</span><span
+				class="code main">);</span>
+		</h1>
+
+		<div id="description">
+			<p>
+				Voici quelques-uns des projets que j'ai réalisés. Ils sont classés
+				dans l'ordre : projets globaux, projets en formation, projets en
+				entreprise et enfin les projets personnels. Vous pouvez cliquer sur
+				les boutons pour accéder au site ou au code source.
+			</p>
+
+			<button class="main-button"
+				onclick="window.open('../assets/docs/TABLEAU_SYNTHESE.pdf', '_blank')">
+				Tableau de Synthèse
+				<span class="material-symbols-rounded"> open_in_new </span>
+			</button>
+		</div>
+
+		<div id="projects">
+			<!-- Projets Globaux -->
+			<div class="project" id="portfolio">
+				<img src="../assets/images/portfolio.png" alt="Portfolio" />
+
+				<div class="content">
+					<h2>
+						PORTFOLIO
+						<span class="code commentary small-text">// Projet Global</span>
+					</h2>
+
+					<p>Création de mon portfolio.</p>
+
+					<div class="tags">
+						<div class="tag"><i class="devicon-html5-plain"></i> HTML5</div>
+						<div class="tag"><i class="devicon-css3-plain"></i> CSS3</div>
+						<div class="tag">
+							<i class="devicon-javascript-plain"></i> JavaScript
+						</div>
+					</div>
+
+					<div class="buttons">
+						<button class="main-button"
+							onclick="window.location.href = '../index.html'">
+							Accéder au Site
+						</button>
+						<button class="secondary-button"
+							onclick="window.open('https://github.com/semanavasco/semanavasco.github.io','_blank')">
+							Voir sur Github
+							<span class="material-symbols-rounded"> open_in_new </span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Projets en Formation -->
+			<div class="project" id="motle">
+				<img src="../assets/images/motle.png" alt="Motle" />
+
+				<div class="content">
+					<h2>
+						MOTLE
+						<span class="code commentary small-text">
+							// Projet en Formation
+						</span>
+					</h2>
+
+					<p>
+						Création d'un mini-jeu web dont le but est de trouver des mots de
+						5 lettres.
+					</p>
+
+					<div class="tags">
+						<div class="tag">
+							<i class="devicon-express-original"></i> Express
+						</div>
+						<div class="tag"><i class="devicon-nodejs-plain"></i> NodeJS</div>
+						<div class="tag"><i class="devicon-css3-plain"></i> CSS3</div>
+						<div class="tag"><i class="devicon-json-plain"></i> JSON</div>
+					</div>
+
+					<div class="buttons">
+						<button class="secondary-button"
+							onclick="window.open('https://github.com/semanavasco/motle','_blank')">
+							Voir sur Github
+							<span class="material-symbols-rounded"> open_in_new </span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="project" id="scraping-motle">
+				<img src="../assets/images/scraping-motle.png" alt="Scraping for Motle" />
+
+				<div class="content">
+					<h2>
+						SCRAPING FOR MOTLE
+						<span class="code commentary small-text">
+							// Projet en Formation
+						</span>
+					</h2>
+
+					<p>
+						Création d'un script permettant de scraper des mots de 5 lettres
+						dans le site : https://www.liste-de-mots.com/
+					</p>
+
+					<div class="tags">
+						<div class="tag"><i class="devicon-python-plain"></i> Python</div>
+						<div class="tag"><i class="devicon-json-plain"></i> JSON</div>
+					</div>
+
+					<div class="buttons">
+						<button class="secondary-button"
+							onclick="window.open('https://github.com/semanavasco/scraping-motle','_blank')">
+							Voir sur Github
+							<span class="material-symbols-rounded"> open_in_new </span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="project" id="calculator">
+				<img src="../assets/images/calculator.png" alt="Calculator" />
+
+				<div class="content">
+					<h2>
+						ANDROID CALCULATOR
+						<span class="code commentary small-text">
+							// Projet en Formation
+						</span>
+					</h2>
+
+					<p>
+						Création d'une calculatrice basique pour les systèmes
+						d'exploitation Android.
+					</p>
+
+					<div class="tags">
+						<div class="tag">
+							<i class="devicon-androidstudio-plain"></i> Android Studio
+						</div>
+						<div class="tag"><i class="devicon-java-plain"></i> Java</div>
+					</div>
+
+					<div class="buttons">
+						<button class="secondary-button"
+							onclick="window.open('https://github.com/semanavasco/as-calculator','_blank')">
+							Voir sur Github
+							<span class="material-symbols-rounded"> open_in_new </span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="project" id="to-do-list">
+				<img src="../assets/images/todo-list.png" alt="To-Do List" />
+
+				<div class="content">
+					<h2>
+						ANDROID TO-DO LIST
+						<span class="code commentary small-text">
+							// Projet en Formation
+						</span>
+					</h2>
+
+					<p>
+						Création d'une "to-do list" basique pour les systèmes
+						d'exploitation Android.
+					</p>
+
+					<div class="tags">
+						<div class="tag">
+							<i class="devicon-androidstudio-plain"></i> Android Studio
+						</div>
+						<div class="tag"><i class="devicon-java-plain"></i> Java</div>
+					</div>
+
+					<div class="buttons">
+						<button class="secondary-button"
+							onclick="window.open('https://github.com/semanavasco/as-to-do-list','_blank')">
+							Voir sur Github
+							<span class="material-symbols-rounded"> open_in_new </span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Projets en Entreprise -->
+			<div class="project" id="video-surveillance">
+				<img src="../assets/images/surveillance.jpg" alt="Video Surveillance" />
+
+				<div class="content">
+					<h2>
+						SYSTÈME VIDÉO SURVEILLANCE
+						<span class="code commentary small-text">
+							// Projet en Entreprise
+						</span>
+					</h2>
+
+					<p>
+						Configuration et maintenance d'un système de vidéo surveillance.
+					</p>
+
+					<div class="tags">
+						<div class="tag"><i class="devicon-bash-plain"></i> Bash</div>
+						<div class="tag">VLC</div>
+					</div>
+
+					<div class="buttons">
+						<button class="main-button"
+							onclick="window.open('../assets/docs/xxxx.pdf','_blank')">
+							Documentation
+							<span class="material-symbols-rounded"> open_in_new </span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="project" id="zoneminder">
+				<img src="../assets/images/zoneminder.avif" alt="Zoneminder" />
+
+				<div class="content">
+					<h2>
+						ADAPTATION ZONEMINDER
+						<span class="code commentary small-text">
+							// Projet en Entreprise
+						</span>
+					</h2>
+
+					<p>
+						Adaptation et personnalisation de l'outil open source Zoneminder.
+					</p>
+
+					<div class="tags">
+						<div class="tag"><i class="devicon-php-plain"></i> PHP</div>
+						<div class="tag"><i class="devicon-css3-plain"></i> CSS3</div>
+					</div>
+
+					<div class="buttons">
+						<button class="main-button"
+							onclick="window.open('../assets/docs/xxxx.pdf','_blank')">
+							Documentation
+							<span class="material-symbols-rounded"> open_in_new </span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="project" id="maintenance">
+				<img src="../assets/images/maintenance.png" alt="Maintenance" />
+
+				<div class="content">
+					<h2>
+						MAINTENANCE SYSTÈMES
+						<span class="code commentary small-text">
+							// Projet en Entreprise
+						</span>
+					</h2>
+
+					<p>
+						Maintenance préventive et corrective des systèmes informatiques.
+					</p>
+
+					<div class="buttons">
+						<button class="main-button"
+							onclick="window.open('../assets/docs/xxxx.pdf','_blank')">
+							Documentation
+							<span class="material-symbols-rounded"> open_in_new </span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="project" id="assistance">
+				<img src="../assets/images/assistance.jpg" alt="Assistance" />
+
+				<div class="content">
+					<h2>
+						ASSISTANCE UTILISATEURS
+						<span class="code commentary small-text">
+							// Projet en Entreprise
+						</span>
+					</h2>
+
+					<p>Support technique et assistance aux utilisateurs.</p>
+
+					<div class="buttons">
+						<button class="main-button"
+							onclick="window.open('../assets/docs/xxxx.pdf','_blank')">
+							Documentation
+							<span class="material-symbols-rounded"> open_in_new </span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="project" id="satellite-scan">
+				<img src="../assets/images/satellite.jpg" alt="Satellite Scan" />
+
+				<div class="content">
+					<h2>
+						SCAN SATELLITES
+						<span class="code commentary small-text">
+							// Projet en Entreprise
+						</span>
+					</h2>
+
+					<p>
+						Développement d'outils pour le scan de satellites et déploiement
+						de chaînes TV.
+					</p>
+
+					<div class="tags">
+						<div class="tag"><i class="devicon-python-plain"></i> Python</div>
+						<div class="tag"><i class="devicon-bash-plain"></i> Bash</div>
+					</div>
+
+					<div class="buttons">
+						<button class="main-button"
+							onclick="window.open('../assets/docs/xxxx.pdf','_blank')">
+							Documentation
+							<span class="material-symbols-rounded"> open_in_new </span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="project" id="web-console">
+				<img src="../assets/images/satellite.jpg" alt="Web Console" />
+
+				<div class="content">
+					<h2>
+						CONSOLE WEB DE GESTION
+						<span class="code commentary small-text">
+							// Projet en Entreprise
+						</span>
+					</h2>
+
+					<p>
+						Développement d'une interface web pour la gestion du scan
+						satellite.
+					</p>
+
+					<div class="tags">
+						<div class="tag"><i class="devicon-python-plain"></i> Python</div>
+						<div class="tag"><i class="devicon-django-plain"></i> Django</div>
+						<div class="tag"><i class="devicon-mysql-plain"></i> MySQL</div>
+					</div>
+
+					<div class="buttons">
+						<button class="main-button"
+							onclick="window.open('../assets/docs/xxxx.pdf','_blank')">
+							Documentation
+							<span class="material-symbols-rounded"> open_in_new </span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="project" id="booking-scraper">
+				<img src="../assets/images/booking.jpeg" alt="Booking Scraper" />
+
+				<div class="content">
+					<h2>
+						SCRAPING BOOKING
+						<span class="code commentary small-text">
+							// Projet en Entreprise
+						</span>
+					</h2>
+
+					<p>Développement d'un script de scraping pour Booking.</p>
+
+					<div class="tags">
+						<div class="tag"><i class="devicon-python-plain"></i> Python</div>
+					</div>
+
+					<div class="buttons">
+						<button class="main-button"
+							onclick="window.open('../assets/docs/xxxx.pdf','_blank')">
+							Documentation
+							<span class="material-symbols-rounded"> open_in_new </span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="project" id="odoo-integration">
+				<img src="../assets/images/odoo.webp" alt="Odoo Integration" />
+
+				<div class="content">
+					<h2>
+						INTÉGRATION ODOO
+						<span class="code commentary small-text">
+							// Projet en Entreprise
+						</span>
+					</h2>
+
+					<p>Formation et intégration du parc informatique sur Odoo.</p>
+
+					<div class="tags">
+						<div class="tag">Odoo</div>
+					</div>
+
+					<div class="buttons">
+						<button class="main-button"
+							onclick="window.open('../assets/docs/xxxx.pdf','_blank')">
+							Documentation
+							<span class="material-symbols-rounded"> open_in_new </span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Projets Personnels -->
+			<div class="project" id="web-terminal">
+				<img src="../assets/images/web-terminal.png" alt="Web Terminal" />
+
+				<div class="content">
+					<h2>
+						WEB TERMINAL
+						<span class="code commentary small-text">// Projet Personnel</span>
+					</h2>
+
+					<p>Création d'un terminal web.</p>
+
+					<div class="tags">
+						<div class="tag"><i class="devicon-html5-plain"></i> HTML5</div>
+						<div class="tag"><i class="devicon-css3-plain"></i> CSS3</div>
+						<div class="tag">
+							<i class="devicon-javascript-plain"></i> JavaScript
+						</div>
+					</div>
+
+					<div class="buttons">
+						<button class="main-button"
+							onclick="window.location.href = 'https://semanavasco.live/web-terminal'">
+							Accéder au Site
+						</button>
+						<button class="secondary-button"
+							onclick="window.open('https://github.com/semanavasco/web-terminal','_blank')">
+							Voir sur Github
+							<span class="material-symbols-rounded"> open_in_new </span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="project" id="unshaped">
+				<img src="../assets/images/unshaped.png" alt="Unshaped" />
+
+				<div class="content">
+					<h2>
+						UNSHAPED
+						<span class="code commentary small-text">// Projet Personnel</span>
+					</h2>
+
+					<p>
+						Création d'un petit jeu 2D avec le moteur de jeu Godot.
+						Implémentation d'un menu de réglages, pause, collisions, etc.
+					</p>
+
+					<div class="tags">
+						<div class="tag"><i class="devicon-godot-plain"></i> Godot</div>
+					</div>
+
+					<div class="buttons">
+						<button class="secondary-button"
+							onclick="window.open('https://github.com/semanavasco/unshaped','_blank')">
+							Voir sur Github
+							<span class="material-symbols-rounded"> open_in_new </span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="project" id="tools-project">
+				<img src="../assets/images/tools-project.png" alt="Tools Project" />
+
+				<div class="content">
+					<h2>
+						TOOLS PROJECT
+						<span class="code commentary small-text">// Projet Personnel</span>
+					</h2>
+
+					<p>
+						Création d'un bot discord multi-tâches. Fonctionnalités amusantes,
+						de modération, de culture, etc.
+					</p>
+
+					<div class="tags">
+						<div class="tag"><i class="devicon-nodejs-plain"></i> NodeJS</div>
+						<div class="tag">
+							<i class="devicon-discordjs-plain"></i> DiscordJS
+						</div>
+						<div class="tag">
+							<i class="devicon-mongodb-plain"></i> MongoDB
+						</div>
+					</div>
+
+					<div class="buttons">
+						<button class="secondary-button"
+							onclick="window.open('https://github.com/semanavasco/tools-project-main','_blank')">
+							Voir sur Github
+							<span class="material-symbols-rounded"> open_in_new </span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="project" id="solo-leveling-rp">
+				<img src="../assets/images/solo-leveling-rp.png" alt="Solo Leveling Roleplay" />
+
+				<div class="content">
+					<h2>
+						SOLO LEVELING ROLEPLAY
+						<span class="code commentary small-text">// Projet Personnel</span>
+					</h2>
+
+					<p>
+						Création d'un bot discord inspiré du Manhwa Solo Leveling pour une
+						communauté de roleplay écrit.
+					</p>
+
+					<div class="tags">
+						<div class="tag"><i class="devicon-nodejs-plain"></i> NodeJS</div>
+						<div class="tag">
+							<i class="devicon-discordjs-plain"></i> DiscordJS
+						</div>
+						<div class="tag">
+							<i class="devicon-canva-original"></i> CanvasAPI
+						</div>
+						<div class="tag">
+							<i class="devicon-postgresql-plain"></i> PostgreSQL
+						</div>
+						<div class="tag">
+							<i class="devicon-sequelize-plain"></i> Sequelize
+						</div>
+					</div>
+
+					<div class="buttons">
+						<button class="main-button"
+							onclick="window.open('../assets/images/docs/SoloLevelingRPDoc.pdf','_blank')">
+							Documentation
+							<span class="material-symbols-rounded"> open_in_new </span>
+						</button>
+						<button class="secondary-button"
+							onclick="window.open('https://github.com/semanavasco/solo-leveling-rp','_blank')">
+							Voir sur Github
+							<span class="material-symbols-rounded"> open_in_new </span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="project" id="hyprfiles">
+				<img src="../assets/images/hyprfiles.png" alt="Hyprfiles" />
+
+				<div class="content">
+					<h2>
+						HYPRFILES
+						<span class="code commentary small-text">// Projet Personnel</span>
+					</h2>
+
+					<p>
+						Customization de mon environnement Linux, création de scripts
+						d'automatisation, logiciels et outils pour l'interface
+						utilisateur, etc.
+					</p>
+
+					<div class="tags">
+						<div class="tag"><i class="devicon-bash-plain"></i> Bash</div>
+						<div class="tag"><i class="devicon-python-plain"></i> Python</div>
+						<div class="tag"><i class="devicon-json-plain"></i> JSON</div>
+						<div class="tag"><i class="devicon-lua-plain"></i> LUA</div>
+					</div>
+
+					<div class="buttons">
+						<button class="secondary-button"
+							onclick="window.open('https://github.com/semanavasco/hyprfiles','_blank')">
+							Voir sur Github
+							<span class="material-symbols-rounded"> open_in_new </span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div id="scroll-to-top" title="Remonter">
+		<button class="secondary-button" onclick="scrollToTop()">
+			<span class="material-symbols-rounded"> keyboard_arrow_up </span>
+		</button>
+	</div>
+</body>
+
 </html>
