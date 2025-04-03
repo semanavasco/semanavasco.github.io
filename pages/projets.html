@@ -12,6 +12,11 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
 
     <script src="../scripts/index.js" defer></script>
   </head>
@@ -51,8 +56,94 @@
       </button>
     </header>
 
-    <section>
-      <img src="https://letscontrolit.com/wiki/images/7/74/WIP.gif" alt="wip" />
+    <section id="projets">
+      <h1>
+        <span class="code commentary">// Mes projets en formation...<br /></span
+        ><span class="code neutral">></span
+        ><span class="code main">console</span
+        ><span class="code neutral">.</span
+        ><span class="code secondary">log</span><span class="code main">(</span
+        ><span class="code neutral">Portfolio.Projets</span
+        ><span class="code main">);</span>
+      </h1>
+
+      <div id="projects">
+        <div class="project">
+          <img src="../assets/images/mwc.png" alt="My Watching Companion" />
+
+          <div class="content">
+            <h1>
+              Client Léger
+              <span class="code commentary">// My Watching Companion</span>
+            </h1>
+
+            <p>
+              My Watching Companion est une plateforme web permettant de gérer
+              les films et séries. Elle offre de puissantes fonctionnalités,
+              allant de la création de listes personnalisées à leur partage avec
+              nos amis !
+            </p>
+
+            <div class="tags">
+              <div class="tag"><i class="devicon-nodejs-plain"></i> NodeJS</div>
+              <div class="tag">
+                <i class="devicon-javascript-plain"></i> JavaScript
+              </div>
+              <div class="tag">
+                <i class="devicon-express-original"></i> Express
+              </div>
+              <div class="tag">
+                <i class="devicon-microsoftsqlserver-plain"></i> SQLServer
+              </div>
+            </div>
+
+            <div class="buttons">
+              <button
+                class="main-button"
+                onclick="window.open('../assets/docs/xxxx.pdf','_blank')"
+              >
+                Documentation
+                <span class="material-symbols-rounded"> open_in_new </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <img src="../assets/images/gsj.png" alt="Gest Stock" />
+
+          <div class="content">
+            <h1>
+              Client Lourd
+              <span class="code commentary">// Gest Stock</span>
+            </h1>
+
+            <p>
+              Gest Stock est une application de bureau permettant aux
+              entreprises de gérer leur stock sans complexité. Gest Stock permet
+              de gérer : les fournisseurs, les produits, les catégories, les
+              ventes et les utilisateurs.
+            </p>
+
+            <div class="tags">
+              <div class="tag"><i class="devicon-java-plain"></i> Java</div>
+              <div class="tag">
+                <i class="devicon-microsoftsqlserver-plain"></i> SQLServer
+              </div>
+            </div>
+
+            <div class="buttons">
+              <button
+                class="main-button"
+                onclick="window.open('../assets/docs/xxxx.pdf','_blank')"
+              >
+                Documentation
+                <span class="material-symbols-rounded"> open_in_new </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <div id="scroll-to-top" title="Remonter">

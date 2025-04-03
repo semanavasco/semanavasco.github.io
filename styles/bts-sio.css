@@ -10,10 +10,14 @@ section#bts-sio {
 }
 
 .bts-sio-spe {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 1rem;
-  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 2px 1fr;
+  gap: 2rem;
+  margin: 1rem;
+}
+
+.spe p {
+  padding: 0.5rem;
 }
 
 /* Responsive design */
@@ -23,6 +27,12 @@ section#bts-sio {
   }
 
   .bts-sio-spe {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    margin: 0.5rem;
+  }
+
+  .separator-v {
+    display: none;
   }
 }

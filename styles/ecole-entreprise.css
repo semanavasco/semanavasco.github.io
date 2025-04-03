@@ -7,8 +7,8 @@ section#ecole-entreprise {
 
 .groups {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  grid-template-columns: 1fr 2px 1fr;
+  gap: 2rem;
   margin: 1rem;
 }
 
@@ -28,6 +28,7 @@ section#ecole-entreprise {
   height: 200px;
   margin-right: 1rem;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 
 #my-future {
@@ -35,6 +36,13 @@ section#ecole-entreprise {
 }
 
 /* RESPONSIVE */
+@media screen and (max-width: 1500px) {
+  .informations {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+}
+
 @media screen and (max-width: 900px) {
   section#ecole-entreprise {
     padding: 1rem;
@@ -46,12 +54,11 @@ section#ecole-entreprise {
     margin: 0.5rem;
   }
 
-  .informations {
-    flex-direction: column;
-    padding: 0.5rem;
-  }
-
   #my-future {
     margin: 0.5rem;
+  }
+
+  .separator-v {
+    display: none;
   }
 }

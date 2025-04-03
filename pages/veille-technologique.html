@@ -80,16 +80,32 @@
           J'ai choisi la plateforme web
           <span class="code main normal-text">"Medium Daily Digest"</span> comme
           outil de veille. Cet outil me permet de recevoir chaque jour des mails
-          sur des sujets de mon choix. Pour cette veille technologique, j'ai
-          sélectionné les sujets suivants :
+          sur des sujets de mon choix. Ces sujets m'ont permis de progresser en
+          programmation dans le sens général mais également dans mes projets,
+          aussi bien en formation, qu'en entreprise et même pour mes projets
+          personnels. Pour cette veille technologique, j'ai sélectionné les
+          sujets suivants :
         </p>
 
         <div class="subjects">
-          <div class="subject"><i class="devicon-nodejs-plain"></i> NodeJS</div>
-          <div class="subject">
+          <div
+            class="subject"
+            onclick="window.location.href='https://nodejs.org/en'"
+          >
+            <i class="devicon-nodejs-plain"></i> NodeJS
+          </div>
+          <div
+            class="subject"
+            onclick="window.location.href='https://developer.mozilla.org/fr/docs/Web/JavaScript'"
+          >
             <i class="devicon-javascript-plain"></i> JavaScript
           </div>
-          <div class="subject"><i class="devicon-python-plain"></i> Python</div>
+          <div
+            class="subject"
+            onclick="window.location.href='https://python.org'"
+          >
+            <i class="devicon-python-plain"></i> Python
+          </div>
         </div>
       </div>
 
@@ -103,7 +119,78 @@
         ><span class="code main">);</span>
       </h1>
 
-      <img src="https://letscontrolit.com/wiki/images/7/74/WIP.gif" alt="wip" />
+      <div class="articles">
+        <div class="article">
+          <img src="../assets/images/polyfill.webp" alt="Polyfills" />
+
+          <div class="informations">
+            <h2>
+              <a
+                class="kl"
+                href="https://javascript.plainenglish.io/javascript-interview-array-polyfills-flat-9fd1eb1c254c"
+                >Javascript Interview: Array Polyfills: flat()</a
+              >
+            </h2>
+
+            <p>
+              Grâce à cet article j'ai appris une nouvelle méthode de manipuler
+              des listes en JavaScript. Cela était particulièrement utile dans
+              mes projets web qui nécessitaient la manipulation de tableaux
+              multidimensionnels (notamment
+              <a class="kl" href="missions.html#solo-leveling-rp"
+                >solo-leveling-rp</a
+              >). L'implémentation du polyfill<span class="code main">*</span>
+              de la méthode flat() m'a permis de comprendre en profondeur
+              comment cette fonction travaille de manière récursive pour aplatir
+              des tableaux imbriqués.
+            </p>
+
+            <p>
+              <span class="code main">* : </span>Un polyfill est un fragment de
+              code conçu pour combler l'absence de certaines fonctionnalités
+              dans des environnements plus anciens, permettant ainsi d'utiliser
+              des fonctionnalités modernes tout en assurant la compatibilité
+              avec des navigateurs obsolètes ou pas à jour.
+            </p>
+          </div>
+        </div>
+
+        <div class="article">
+          <div class="informations">
+            <h2>
+              <a
+                class="kl"
+                href="https://medium.com/pythoneers/40-python-one-liners-you-must-try-ae4d3e4d2e5f"
+                >40 Python One-Liners You Must Try</a
+              >
+            </h2>
+
+            <p>
+              Cet article m'a enseigné de nombreuses façons d'utiliser Python
+              pour réduire le nombre de lignes de mes programmes. Cependant,
+              certains de ces "one-liners"<span class="code main">*</span>
+              étaient trop complexes pour être réellement utiles. Cela m'a
+              permis de comprendre qu'il ne s'agit pas seulement de réduire la
+              taille du code, mais aussi de maintenir un équilibre entre
+              lisibilité et concision. Cela m'a aidé à identifier les cas où un
+              code plus long mais plus clair est préférable.
+            </p>
+
+            <p>
+              <span class="code main">* :</span> Un "one-liner" est une ligne de
+              code concise accomplissant une tâche complète en une seule
+              instruction. Utile pour simplifier le code, mais parfois au
+              détriment de la lisibilité.
+            </p>
+          </div>
+
+          <img src="../assets/images/oneliners.jpg" alt="One-Liners" />
+        </div>
+
+        <div class="article">
+          <p>D'autres articles vont être publiés...</p>
+        </div>
+      </div>
     </section>
 
     <div id="scroll-to-top" title="Remonter">
