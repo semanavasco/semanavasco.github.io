@@ -79,3 +79,10 @@ section#projets {
   font-size: 20px;
   margin: 0;
 }
+
+/* Responsive design */
+@media screen and (max-width: 1200px) {
+  #projects {
+    grid-template-columns: 1fr;
+  }
+}
