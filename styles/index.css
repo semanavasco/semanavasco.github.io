@@ -145,9 +145,21 @@ a.kl {
   color: var(--code-caractere);
 }
 
+.snippet {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid #181926;
+  border-radius: 5px;
+  padding: 5px;
+}
+
 .small-text {
   font-size: 20px;
   font-weight: lighter;
+}
+
+.normal-text {
+  font-size: 24px;
+  font-weight: normal;
 }
 
 /* SEPARATEURS */
