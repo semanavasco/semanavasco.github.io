@@ -89,6 +89,11 @@ section#veille-technologique {
   width: 65%;
 }
 
+/* Alternating layout */
+.article:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
 /* HONORABLE MENTIONS */
 .honorable-mentions {
   width: 100%;
@@ -116,13 +121,14 @@ section#veille-technologique {
     padding: 1rem;
   }
 
-  .article {
+  .article,
+  .article:nth-child(even) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .article img {
+  .article .presentation {
     order: -1;
   }
 
