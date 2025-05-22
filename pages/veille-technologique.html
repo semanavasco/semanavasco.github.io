@@ -323,6 +323,65 @@
 
         <div class="article">
           <div class="presentation">
+            <img
+              src="../assets/images/webassembly.png"
+              alt="Porffor WebAssembly"
+            />
+
+            <p>08/2024</p>
+
+            <p><i class="devicon-javascript-plain"></i> JavaScript</p>
+          </div>
+
+          <div class="informations">
+            <h2>
+              <a
+                class="kl"
+                href="https://youtu.be/89ftQzkGwEE?si=UCPMILQ3yd1ltaxt"
+                >Porffor: Compile Your JavaScript To WebAssembly</a
+              >
+            </h2>
+
+            <p>
+              Porffor est un projet expérimental qui explore la compilation AOT
+              <span class="code main">*1</span> de JavaScript vers du
+              WebAssembly<span class="code main">*2</span>. L'objectif principal
+              démontré n'était pas tant une amélioration de la vitesse
+              d'exécution, mais plutôt de réduire la taille des binaires finaux
+              et la consommation de mémoire en évitant d'embarquer un moteur
+              JavaScript complet. Le projet, a été mené par un développeur ayant
+              contribué à Test262<span class="code main">*3</span>. Celui-ci en
+              est à ses débuts mais est considéré comme prometteur pour des cas
+              d'usage où la légèreté est critique, bien que des limitations
+              existent, notamment pour le contenu dynamique des navigateurs ou
+              l'utilisation de fonctionnalités comme
+              <span class="code secondary snippet small-text">eval</span>.
+            </p>
+
+            <p>
+              <span class="code main">*1 :</span> Signifiant "Ahead-Of-Time",
+              c'est une stratégie de compilation où le code source est
+              transformé en code machine avant son exécution, contrairement à la
+              compilation JIT (Just-In-Time) qui se fait pendant l'exécution.
+            </p>
+
+            <p>
+              <span class="code main">*2 :</span> C'est un format binaire de bas
+              niveau conçu pour le web, permettant d'exécuter du code (souvent
+              écrit dans des langages comme C++, Rust, etc) à des performances
+              proches du natif dans les navigateurs.
+            </p>
+
+            <p>
+              <span class="code main">*3 :</span> La suite de tests officielle
+              utilisée pour vérifier la conformité des moteurs JavaScript aux
+              standards ECMAScript.
+            </p>
+          </div>
+        </div>
+
+        <div class="article">
+          <div class="presentation">
             <img src="../assets/images/print.webp" alt="Print Functions" />
 
             <p>04/2024</p>
