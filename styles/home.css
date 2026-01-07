@@ -1,0 +1,40 @@
+section#home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.information .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rework-notice {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 2px dashed var(--secondary-color);
+  border-radius: 10px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 900px) {
+  section#home {
+    padding: 1rem;
+  }
+
+  .information .text {
+    padding: 0.5rem;
+  }
+}

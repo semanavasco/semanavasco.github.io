@@ -4,7 +4,7 @@
   font-family: "Fira Code", monospace;
   font-size: 24px;
 
-  /* COULEURS */
+  /* COLORS */
   --background-color: #181926;
   --text-color: #ffffff;
   --main-color: #c6a0f6;
@@ -14,7 +14,7 @@
   --code-main: #ed8796;
   --code-secondary: #8aadf4;
   --code-tertiary: #f4eac6;
-  --code-caractere: #a6da95;
+  --code-character: #a6da95;
 }
 
 body {
@@ -23,7 +23,7 @@ body {
   margin: 0;
 }
 
-/* EFFETS */
+/* EFFECTS */
 #mouse-light {
   position: fixed;
   top: 0px;
@@ -66,7 +66,7 @@ body {
   background: var(--main-color);
 }
 
-/* BOUTONS */
+/* BUTTONS */
 button {
   padding: 10px 15px 10px 15px;
   font-size: 15px;
@@ -75,7 +75,9 @@ button {
   border-radius: 10px;
   box-shadow: 0 8px var(--secondary-color);
   border: 2px solid var(--main-color);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -104,7 +106,7 @@ button:active {
   color: var(--main-color);
 }
 
-/* TEXTE */
+/* TEXT */
 .section-title {
   font-size: xx-large;
   color: var(--main-color);
@@ -141,8 +143,8 @@ a.kl {
   color: var(--code-tertiary);
   font-weight: bold;
 }
-.code.caractere {
-  color: var(--code-caractere);
+.code.character {
+  color: var(--code-character);
 }
 
 .snippet {
@@ -162,7 +164,7 @@ a.kl {
   font-weight: normal;
 }
 
-/* SEPARATEURS */
+/* SEPARATORS */
 .separator {
   height: 2px;
   width: 100%;
@@ -177,7 +179,7 @@ a.kl {
   border-radius: 100%;
 }
 
-/* BARRE DE NAVIGATION */
+/* NAVIGATION BAR */
 header {
   position: sticky;
   top: 0;
@@ -213,7 +215,7 @@ nav a.current-page {
   display: none;
 }
 
-/* CONTENEURS */
+/* CONTAINERS */
 section {
   display: flex;
   justify-content: center;
