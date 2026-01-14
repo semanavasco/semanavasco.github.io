@@ -1,0 +1,54 @@
+.presentation {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.presentation h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.presentation .subtitle {
+  font-size: 1.5rem;
+  color: var(--main-color);
+  font-weight: normal;
+}
+
+.presentation .description {
+  max-width: 600px;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.socials {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.socials a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.socials a:hover {
+  border-color: var(--main-color);
+  background-color: rgba(198, 160, 246, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .presentation h1 {
+    font-size: 2rem;
+  }
+}

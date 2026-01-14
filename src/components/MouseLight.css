@@ -1,0 +1,13 @@
+#mouse-light {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 800px;
+  height: 800px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+  background: radial-gradient(circle closest-side at center, rgba(155, 89, 182, 0.15), transparent);
+  z-index: -1000;
+  transform: translate(-50%, -50%);
+}

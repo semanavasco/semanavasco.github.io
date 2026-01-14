@@ -1,0 +1,49 @@
+.certificate-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--secondary-color);
+  border-radius: 8px;
+  transition:
+    transform 0.2s,
+    border-color 0.2s;
+  text-decoration: none; /* In case the whole card is a link */
+}
+
+.certificate-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--main-color);
+}
+
+.certificate-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.certificate-title {
+  color: var(--main-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.certificate-date {
+  color: var(--code-tertiary);
+  font-family: monospace;
+  font-size: 1rem;
+}
+
+.certificate-issuer {
+  color: var(--text-color);
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.certificate-icon {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--code-character);
+  vertical-align: middle;
+}

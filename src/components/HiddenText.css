@@ -1,0 +1,26 @@
+#hidden-text {
+  position: fixed;
+  top: -300px;
+  left: -300px;
+  width: 150%;
+  height: 150%;
+  color: rgba(24, 25, 38, 0.5);
+  z-index: -100;
+  transform: rotate(-45deg);
+  pointer-events: none;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#hidden-text h1 {
+  font-size: 250px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  line-height: 1.1;
+  white-space: nowrap;
+  opacity: 1;
+}

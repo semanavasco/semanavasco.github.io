@@ -1,0 +1,59 @@
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  border-left: 2px solid var(--secondary-color);
+  background: linear-gradient(90deg, rgba(96, 74, 124, 0.1) 0%, transparent 100%);
+  margin-bottom: 1.5rem;
+  transition: border-color 0.2s;
+}
+
+.timeline-item:hover {
+  border-left-color: var(--main-color);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.header-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.timeline-title {
+  font-size: 1.5rem;
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+.timeline-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.location {
+  font-size: 1rem;
+  color: var(--code-commentary);
+  font-weight: normal;
+}
+
+.timeline-period {
+  font-family: monospace;
+  color: var(--code-tertiary);
+  font-weight: bold;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+.timeline-description {
+  color: var(--text-color);
+  opacity: 0.9;
+  line-height: 1.5;
+}
