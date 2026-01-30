@@ -1,8 +1,11 @@
-import { portfolioData } from "../data";
+import type { Presentation as PresentationType } from "../data";
 import "./Presentation.css";
 
-export const Presentation = () => {
-  const { presentation } = portfolioData;
+interface Props {
+  presentation: PresentationType;
+}
+
+export const Presentation = ({ presentation }: Props) => {
 
   return (
     <div className="presentation">

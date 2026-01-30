@@ -1,4 +1,4 @@
-import { portfolioData } from "./data";
+import { usePortfolioData } from "./data";
 import { Navbar } from "./components/Navbar";
 import { MouseLight } from "./components/MouseLight";
 import { HiddenText } from "./components/HiddenText";
@@ -10,7 +10,27 @@ import { CertificateCard } from "./components/CertificateCard";
 import "./App.css";
 
 function App() {
-  const { studies, career, projects, certificates } = portfolioData;
+  const { data, loading, error } = usePortfolioData();
+
+  if (loading) {
+    return (
+      <>
+        <MouseLight />
+        <div className="loading">Loading...</div>
+      </>
+    );
+  }
+
+  if (error || !data) {
+    return (
+      <>
+        <MouseLight />
+        <div className="error">Failed to load portfolio data: {error}</div>
+      </>
+    );
+  }
+
+  const { studies, career, projects, certificates, presentation } = data;
 
   return (
     <>
@@ -20,7 +40,7 @@ function App() {
 
       <main>
         <Section id="presentation">
-          <Presentation />
+          <Presentation presentation={presentation} />
         </Section>
 
         <Section id="projects" title="Projects">
