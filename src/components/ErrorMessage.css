@@ -1,0 +1,63 @@
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  background-color: transparent;
+  color: var(--text-color);
+  position: relative;
+  z-index: 10;
+}
+
+.error-icon {
+  font-size: 4rem;
+  color: var(--code-main);
+  margin-bottom: 1.5rem;
+}
+
+.error-icon .material-symbols-rounded {
+  font-size: inherit;
+}
+
+.error-title {
+  font-size: 1.8rem;
+  color: var(--main-color);
+  margin-bottom: 1rem;
+}
+
+.error-text {
+  font-size: 1.1rem;
+  color: var(--code-commentary);
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.retry-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: 1px solid var(--main-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.retry-button:hover {
+  background-color: var(--main-color);
+  color: var(--background-color);
+  transform: translateY(-2px);
+}
+
+.retry-button .material-symbols-rounded {
+  font-size: 1.2rem;
+}

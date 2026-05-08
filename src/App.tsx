@@ -7,16 +7,18 @@ import { Presentation } from "./components/Presentation";
 import { TimelineItem } from "./components/TimelineItem";
 import { ProjectCard } from "./components/ProjectCard";
 import { CertificateCard } from "./components/CertificateCard";
+import { Loading } from "./components/Loading";
+import { ErrorMessage } from "./components/ErrorMessage";
 import "./App.css";
 
 function App() {
-  const { data, loading, error } = usePortfolioData();
+  const { data, loading, error, refetch } = usePortfolioData();
 
   if (loading) {
     return (
       <>
         <MouseLight />
-        <div className="loading">Loading...</div>
+        <Loading />
       </>
     );
   }
@@ -25,7 +27,7 @@ function App() {
     return (
       <>
         <MouseLight />
-        <div className="error">Failed to load portfolio data: {error}</div>
+        <ErrorMessage message={error || "Unknown error"} onRetry={refetch} />
       </>
     );
   }

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useCallback, useReducer } from "react";
 
 export interface ProjectLink {
   label: string;
@@ -58,26 +58,55 @@ export interface PortfolioData {
 
 const GIST_URL = "https://gist.githubusercontent.com/semanavasco/ecda4254b47860601dc694aa0f43fed1/raw/portfolio-data.json";
 
-export function usePortfolioData() {
-  const [data, setData] = useState<PortfolioData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+type State = {
+  data: PortfolioData | null;
+  loading: boolean;
+  error: string | null;
+};
 
-  useEffect(() => {
+type Action =
+  | { type: "FETCH_START" }
+  | { type: "FETCH_SUCCESS"; payload: PortfolioData }
+  | { type: "FETCH_ERROR"; payload: string };
+
+function portfolioReducer(state: State, action: Action): State {
+  switch (action.type) {
+    case "FETCH_START":
+      return { ...state, loading: true, error: null };
+    case "FETCH_SUCCESS":
+      return { ...state, loading: false, data: action.payload, error: null };
+    case "FETCH_ERROR":
+      return { ...state, loading: false, error: action.payload };
+    default:
+      return state;
+  }
+}
+
+export function usePortfolioData() {
+  const [state, dispatch] = useReducer(portfolioReducer, {
+    data: null,
+    loading: true,
+    error: null,
+  });
+
+  const fetchData = useCallback(() => {
+    dispatch({ type: "FETCH_START" });
     fetch(GIST_URL)
       .then((res) => {
         if (!res.ok) throw new Error(`Failed to fetch: ${res.status}`);
         return res.json();
       })
       .then((json: PortfolioData) => {
-        setData(json);
-        setLoading(false);
+        dispatch({ type: "FETCH_SUCCESS", payload: json });
       })
       .catch((err) => {
-        setError(err.message);
-        setLoading(false);
+        dispatch({ type: "FETCH_ERROR", payload: err.message });
       });
   }, []);
 
-  return { data, loading, error };
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
+
+  return { ...state, refetch: fetchData };
 }
