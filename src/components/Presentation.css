@@ -27,6 +27,8 @@
 
 .socials {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
   margin-top: 1rem;
 }
@@ -40,6 +42,7 @@
   border: 1px solid var(--secondary-color);
   border-radius: 8px;
   transition: all 0.2s;
+  white-space: nowrap;
 }
 
 .socials a:hover {
@@ -47,8 +50,42 @@
   background-color: rgba(198, 160, 246, 0.1);
 }
 
+.socials a i,
+.socials a .material-symbols-rounded {
+  font-size: 1.5rem;
+  color: var(--main-color);
+}
+
 @media screen and (max-width: 768px) {
   .presentation h1 {
+    font-size: 2.5rem;
+  }
+
+  .socials {
+    gap: 1rem;
+  }
+
+  .socials a {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .socials a i,
+  .socials a .material-symbols-rounded {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .presentation h1 {
     font-size: 2rem;
+  }
+
+  .presentation .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .presentation .description {
+    font-size: 1rem;
   }
 }
